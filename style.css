@@ -1,0 +1,112 @@
+/* Quant Finance — Sobrio & Académico
+   Paleta:
+   Fondo: #323ca8
+   Acento (títulos/enlaces): #065b61
+   Divisiones / cintillos: #614006
+*/
+
+:root{
+  --bg:#323ca8;
+  --accent:#065b61;
+  --divider:#614006;
+  --paper:#f7f7fb;
+  --text:#111318;
+  --muted:#4b5563;
+}
+
+*{ box-sizing:border-box; }
+
+body{
+  margin:0;
+  background:var(--bg);
+  color:var(--text);
+  font-family: Georgia, "Times New Roman", serif;
+  line-height:1.65;
+}
+
+.container{
+  max-width: 920px;
+  margin: 56px auto;
+  padding: 0 20px;
+}
+
+.card{
+  background:var(--paper);
+  border-radius: 16px;
+  box-shadow: 0 16px 40px rgba(0,0,0,0.20);
+  overflow:hidden;
+  border: 1px solid rgba(97,64,6,0.25);
+}
+
+/* Cintillo superior (muy quant/academia) */
+.ribbon{
+  background: linear-gradient(90deg, rgba(6,91,97,0.95), rgba(6,91,97,0.80));
+  color: #ffffff;
+  padding: 14px 22px;
+  font-size: 0.98rem;
+  letter-spacing: 0.4px;
+}
+
+/* Contenido */
+.content{
+  padding: 26px 28px 10px 28px;
+}
+
+h1{
+  margin: 6px 0 6px 0;
+  font-size: 2.35rem;
+  letter-spacing: 0.2px;
+}
+
+.tagline{
+  margin: 0 0 18px 0;
+  color: var(--muted);
+  font-style: italic;
+}
+
+/* Secciones con línea de división (color #614006) */
+.section{
+  margin-top: 24px;
+  padding-top: 12px;
+  border-top: 2px solid var(--divider);
+}
+
+h2{
+  margin: 0 0 10px 0;
+  font-size: 1.25rem;
+  color: var(--accent);
+  letter-spacing: 0.2px;
+}
+
+/* Enlaces */
+a{
+  color: var(--accent);
+  text-decoration: none;
+  border-bottom: 1px solid rgba(6,91,97,0.35);
+}
+a:hover{
+  border-bottom-color: rgba(6,91,97,0.95);
+}
+
+/* “Bloques” tipo research note */
+.note{
+  margin: 10px 0 0 0;
+  padding: 12px 14px;
+  background: rgba(50,60,168,0.06);
+  border-left: 4px solid var(--divider);
+  border-radius: 10px;
+}
+
+/* Footer */
+footer{
+  padding: 14px 28px 22px 28px;
+  color: var(--muted);
+  font-size: 0.92rem;
+}
+
+.footerLine{
+  height: 2px;
+  background: var(--divider);
+  opacity: 0.75;
+  margin: 0 0 12px 0;
+}
