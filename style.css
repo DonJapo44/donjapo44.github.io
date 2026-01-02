@@ -153,21 +153,21 @@ footer{
   margin: 0 0 12px 0;
 }
 
-/* Footer socials (smaller, clean, 3 rows) */
+/* Footer socials (vertical, academic) */
 .footerSocial{
   margin-top: 10px;
   display: flex;
-  flex-direction: column;
-  gap: 8px;
+  flex-direction: column;   /* uno encima de otro */
+  align-items: flex-start;  /* alineados a la izquierda */
+  gap: 10px;                /* separación clara */
   max-width: 420px;
 }
 
 .footerSocial a{
-  display: grid;
-  grid-template-columns: 18px 1fr;
+  display: inline-flex;
   align-items: center;
   gap: 10px;
-  font-size: 0.92rem;      /* más pequeño */
+  font-size: 0.92rem;       /* pequeño y sobrio */
   color: var(--accent);
   text-decoration: none;
 }
@@ -178,6 +178,7 @@ footer{
 
 .footerSocial i{
   font-size: 0.95rem;
+  min-width: 18px;
   text-align: center;
 }
 
