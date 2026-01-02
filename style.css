@@ -38,6 +38,10 @@ body{
   border: 1px solid rgba(97,64,6,0.25);
   box-shadow: 0 16px 40px rgba(0,0,0,0.20);
 }
+/* ===== Content wrapper for Research / Cinema ===== */
+.content{
+  padding: 28px 34px 14px 34px;
+}
 
 /* Top ribbon */
 .ribbon{
@@ -89,6 +93,13 @@ body{
   margin: 14px 28px 0 28px;
   border-radius: 999px;
 }
+.note{
+  margin-top: 12px;
+  padding: 14px 18px;
+  background: rgba(50,60,168,0.06);
+  border-left: 4px solid var(--divider);
+  border-radius: 10px;
+}
 
 /* Home link cards */
 .linkGrid{
@@ -133,6 +144,10 @@ body{
   margin: 0;
   color: var(--muted);
   font-size: 1.0rem;
+}
+.section{
+  margin-top: 26px;
+  padding-top: 14px;
 }
 
 /* Links (global) */
