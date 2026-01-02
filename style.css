@@ -150,3 +150,89 @@ footer{
   background: rgba(50,60,168,0.08); /* #323ca8 */
   border-left: 4px solid #614006;   /* divider */
 }
+/* ===== Home Hero ===== */
+.hero{
+  padding: 28px 28px 10px 28px;
+}
+
+.name{
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: 3.0rem;
+  font-weight: 700;
+  margin: 6px 0 6px 0;
+  letter-spacing: 0.3px;
+}
+
+.subtitle{
+  margin: 0 0 16px 0;
+  color: var(--muted);
+  font-size: 1.08rem;
+  font-style: italic;
+}
+
+/* Banda/placa para el intro: cuant, sobria, con color */
+.introPlate{
+  margin-top: 12px;
+  padding: 14px 16px;
+  border-radius: 14px;
+  background: linear-gradient(
+    135deg,
+    rgba(50,60,168,0.10),
+    rgba(6,91,97,0.10)
+  );
+  border: 1px solid rgba(97,64,6,0.35);
+}
+
+/* ===== Home Links as Cards ===== */
+.linkGrid{
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+  margin-top: 18px;
+  padding: 0 28px 10px 28px;
+}
+
+@media (max-width: 720px){
+  .linkGrid{ grid-template-columns: 1fr; }
+}
+
+.linkCard{
+  display: block;
+  padding: 16px 16px;
+  border-radius: 16px;
+  background: #ffffff;
+  border: 2px solid rgba(97,64,6,0.45);
+  box-shadow: 0 12px 26px rgba(0,0,0,0.12);
+  text-decoration: none;
+  transition: transform 120ms ease, box-shadow 120ms ease, border-color 120ms ease;
+}
+
+.linkCard:hover{
+  transform: translateY(-2px);
+  box-shadow: 0 16px 34px rgba(0,0,0,0.16);
+  border-color: rgba(97,64,6,0.85);
+}
+
+.linkTitle{
+  font-family: "Playfair Display", Georgia, serif;
+  color: var(--accent); /* #065b61 */
+  font-size: 1.45rem;
+  font-weight: 700;
+  margin: 0 0 6px 0;
+  letter-spacing: 0.2px;
+}
+
+.linkText{
+  margin: 0;
+  color: var(--muted);
+  font-size: 1.0rem;
+}
+
+/* Línea divisoria elegante en Home */
+.homeDivider{
+  height: 2px;
+  background: var(--divider); /* #614006 */
+  opacity: 0.75;
+  margin: 14px 28px 0 28px;
+  border-radius: 999px;
+}
