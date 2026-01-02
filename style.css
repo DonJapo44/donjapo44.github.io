@@ -20,8 +20,8 @@ body{
   margin:0;
   background:var(--bg);
   color:var(--text);
-  font-family: Georgia, "Times New Roman", serif;
-  line-height:1.65;
+  font-family: "Source Serif 4", Georgia, serif;
+  line-height:1.7;
 }
 
 .container{
@@ -54,14 +54,17 @@ body{
 
 h1{
   margin: 6px 0 6px 0;
-  font-size: 2.35rem;
-  letter-spacing: 0.2px;
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: 2.6rem;
+  font-weight: 700;
+  letter-spacing: 0.3px;
 }
 
 .tagline{
   margin: 0 0 18px 0;
   color: var(--muted);
   font-style: italic;
+  font-size: 1.05rem;
 }
 
 /* Secciones con línea de división (color #614006) */
@@ -73,10 +76,13 @@ h1{
 
 h2{
   margin: 0 0 10px 0;
-  font-size: 1.25rem;
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: 1.35rem;
+  font-weight: 600;
   color: var(--accent);
-  letter-spacing: 0.2px;
+  letter-spacing: 0.25px;
 }
+
 
 /* Enlaces */
 a{
