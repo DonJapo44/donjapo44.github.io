@@ -237,32 +237,37 @@ footer{
   border-radius: 999px;
 }
 /* ===== Social / Contact Bar ===== */
+/* ===== Social / Contact Bar (clean, academic) ===== */
 .socialBar{
-  margin-top: 14px;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 14px;
+  margin-top: 18px;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 12px;
+  max-width: 520px;
 }
 
 .socialBar a{
   display: inline-flex;
   align-items: center;
-  gap: 8px;
-  padding: 8px 12px;
-  border-radius: 999px;
-  font-size: 0.98rem;
+  gap: 10px;
+  padding: 10px 14px;
+  border-radius: 14px;
+  font-size: 1.0rem;
   color: var(--accent); /* #065b61 */
-  background: rgba(255,255,255,0.85);
+  background: rgba(255,255,255,0.90);
   border: 1px solid rgba(97,64,6,0.45); /* #614006 */
   text-decoration: none;
-  box-shadow: 0 8px 16px rgba(0,0,0,0.12);
+  box-shadow: 0 10px 18px rgba(0,0,0,0.14);
 }
 
 .socialBar a:hover{
   border-color: rgba(97,64,6,0.85);
-  box-shadow: 0 12px 22px rgba(0,0,0,0.18);
+  box-shadow: 0 14px 24px rgba(0,0,0,0.18);
 }
 
 .socialBar i{
-  font-size: 1.05rem;
+  font-size: 1.1rem;
+  min-width: 20px;
+  text-align: center;
 }
+
