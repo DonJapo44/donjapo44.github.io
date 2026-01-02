@@ -236,3 +236,33 @@ footer{
   margin: 14px 28px 0 28px;
   border-radius: 999px;
 }
+/* ===== Social / Contact Bar ===== */
+.socialBar{
+  margin-top: 14px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+}
+
+.socialBar a{
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 12px;
+  border-radius: 999px;
+  font-size: 0.98rem;
+  color: var(--accent); /* #065b61 */
+  background: rgba(255,255,255,0.85);
+  border: 1px solid rgba(97,64,6,0.45); /* #614006 */
+  text-decoration: none;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.12);
+}
+
+.socialBar a:hover{
+  border-color: rgba(97,64,6,0.85);
+  box-shadow: 0 12px 22px rgba(0,0,0,0.18);
+}
+
+.socialBar i{
+  font-size: 1.05rem;
+}
