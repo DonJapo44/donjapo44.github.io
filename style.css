@@ -202,3 +202,10 @@ footer{
   font-size: 0.88rem;
   color: var(--muted);
 }
+.meta{
+  margin: 6px 0 14px 0;
+  color: var(--muted);
+  font-size: 0.95rem;
+  font-style: italic;
+}
+
