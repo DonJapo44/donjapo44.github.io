@@ -208,4 +208,24 @@ footer{
   font-size: 0.95rem;
   font-style: italic;
 }
+/* ===== Figures (cinema posts) ===== */
+figure{
+  margin: 24px auto;
+  text-align: center;
+}
+
+figure img{
+  display: block;
+  margin: 0 auto;
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+figcaption{
+  margin-top: 8px;
+  color: var(--muted);
+  font-size: 0.9rem;
+  font-style: italic;
+}
 
