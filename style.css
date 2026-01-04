@@ -42,6 +42,9 @@ body{
 .content{
   padding: 28px 44px 14px 44px;
 }
+.content p{
+  text-align: justify;
+}
 
 /* Top ribbon */
 .ribbon{
