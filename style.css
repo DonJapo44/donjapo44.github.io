@@ -237,4 +237,8 @@ figcaption{
   font-size: 0.9rem;
   font-style: italic;
 }
+/* Center embedded tweets */
+.twitter-tweet{
+  margin: 24px auto !important;
+}
 
