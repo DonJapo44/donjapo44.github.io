@@ -38,13 +38,17 @@ body{
   border: 1px solid rgba(97,64,6,0.25);
   box-shadow: 0 16px 40px rgba(0,0,0,0.20);
 }
-/* ===== Content wrapper for Research / Cinema ===== */
+/* ===== Typography for reading ===== */
 .content{
-  padding: 28px 44px 14px 44px;
+  max-width: 760px;   /* limita ancho de lectura */
+  margin: 0 auto;     /* centra el bloque de texto dentro de la card */
 }
+
 .content p{
-  text-align: justify;
-  hyphens: auto;
+  text-align: left;
+  line-height: 1.85;  /* más aire */
+  letter-spacing: 0.01em;
+  margin: 0 0 14px 0;
 }
 
 /* Top ribbon */
