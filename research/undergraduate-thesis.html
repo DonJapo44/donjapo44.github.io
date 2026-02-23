@@ -1,10 +1,116 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Undergraduate Thesis</title>
+  <meta charset="UTF-8">
+  <title>Undergraduate Thesis | Javier Gómez Morales</title>
+
+  <!-- Main stylesheet -->
+  <link rel="stylesheet" href="../style.css">
+
+  <!-- Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@500;600;700&family=Source+Serif+4:wght@400;600&display=swap" rel="stylesheet">
 </head>
+
 <body>
-  <h1>Undergraduate Thesis</h1>
-  <p>Content coming soon.</p>
+
+  <div class="container">
+    <div class="card">
+
+      <!-- Top ribbon -->
+      <div class="ribbon">
+        Research · Undergraduate Thesis · UNAM
+      </div>
+
+      <!-- Main content -->
+      <div class="content">
+
+        <h1>Undergraduate Thesis</h1>
+
+        <p class="subtitle">
+          <em>Análisis de componentes principales de matrices de correlación de datos financieros del S&amp;P 500 desde la econofísica</em>
+        </p>
+
+        <p class="meta">
+          Universidad Nacional Autónoma de México · February 2026 · Advisor: Dr. Manuel Mijaíl Martínez Ramos
+        </p>
+
+        <!-- Navigation -->
+        <nav class="topNav">
+          <a class="navItem" href="../research.html">Research</a>
+          <a class="navItem" href="../index.html">Home</a>
+        </nav>
+
+        <!-- Section: Abstract -->
+        <div class="section">
+          <h2>Abstract</h2>
+          <p>
+            This thesis studies collective behavior in financial markets using daily adjusted prices of a set of S&amp;P 500
+            companies from January 3, 2012 to December 29, 2023. It analyzes how correlation matrices evolve over time
+            through spectral methods, focusing on eigenvalues, squared eigenvector components, and eigenvalue-weighted
+            eigenvector constructions. Within this framework, Discrete Market States (<em>MS</em>) are investigated, and the
+            <em>COVID</em> period is examined as a distinct market regime. Squared eigenvector analysis combined with
+            <em>k</em>-Means clustering highlights sectors and firms with stronger relative participation in the market’s
+            collective dynamics, particularly for <em>q</em> = 40 and <em>k</em> = 5. Overall, the spectral-based approaches
+            capture meaningful structure, but they do not fully reproduce the <em>MS</em> obtained by direct clustering of
+            correlation matrices.
+          </p>
+        </div>
+
+        <!-- Section: Keywords -->
+        <div class="section">
+          <h2>Keywords</h2>
+          <p>
+            Econophysics, Discrete Market States (<em>MS</em>), <em>COVID</em> state, Correlation Matrices, Eigenvalues,
+            Eigenvectors, <em>k</em>-Means.
+          </p>
+        </div>
+
+        <!-- Section: Links -->
+        <div class="section">
+          <h2>Links</h2>
+          <div class="note">
+            <strong>Repository link:</strong> pending. The official UNAM institutional repository link will be added here when available.
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Footer -->
+      <footer>
+
+        <div class="footerLine"></div>
+
+        <div class="footerSocial">
+          <a href="mailto:japogm@ciencias.unam.mx">
+            <i class="fa-solid fa-envelope"></i>
+            <span>japogm@ciencias.unam.mx</span>
+          </a>
+
+          <a href="https://x.com/Japogm" target="_blank" rel="noopener">
+            <i class="fa-brands fa-x-twitter"></i>
+            <span>@Japogm</span>
+          </a>
+
+          <a href="https://www.instagram.com/Japogm" target="_blank" rel="noopener">
+            <i class="fa-brands fa-instagram"></i>
+            <span>@Japogm</span>
+          </a>
+        </div>
+
+        <p class="footerCopy">
+          © <span id="year"></span> — Personal page
+        </p>
+
+      </footer>
+
+    </div>
+  </div>
+
+  <script src="../year.js"></script>
 </body>
 </html>
