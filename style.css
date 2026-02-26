@@ -43,6 +43,12 @@ h1, h2{
   box-shadow: 0 16px 40px rgba(0,0,0,0.20);
 }
 /* ===== Editorial reading style ===== */
+/* Make a card span the full row (2 columns) */
+.spanTwo{
+  grid-column: 1 / -1;
+  max-width: 520px;
+  justify-self: center;
+}
 
 .content{
   max-width: 760px;     /* ancho óptimo de lectura */
