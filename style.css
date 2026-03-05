@@ -53,6 +53,13 @@ h1, h2{
   justify-self: center;
 }
 
+@media (max-width: 720px){
+  .spanTwo{
+    max-width: 100%;
+    justify-self: stretch;
+  }
+}
+
 .content{
   max-width: 760px;     /* ancho óptimo de lectura */
   margin: 0 auto;       /* centra el texto dentro de la card */
@@ -299,7 +306,6 @@ figcaption{
    Usage: wrap the post body with <div class="sciencePost">...</div>
    ========================================================= */
 .sciencePost{
-  /* This adds the breathing room you want without touching other pages */
   padding: 22px 28px 30px 28px;
 }
 
@@ -333,7 +339,7 @@ figcaption{
   border: 1px solid rgba(97,64,6,0.25);
   border-left: 4px solid rgba(97,64,6,0.70);
   border-radius: 12px;
-  overflow-x: auto; /* if a formula is too wide */
+  overflow-x: auto;
 }
 
 /* Optional: slightly tighter HR inside cards for science posts */
