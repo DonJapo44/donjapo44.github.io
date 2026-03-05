@@ -14,6 +14,20 @@
 
   <!-- Icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- MathJax configuration -->
+  <script>
+    window.MathJax = {
+      tex: {
+        inlineMath: [['\\(','\\)'], ['$', '$']],
+        displayMath: [['\\[','\\]'], ['$$','$$']]
+      },
+      options: {
+        skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+      }
+    };
+  </script>
+  <script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 </head>
 
 <body>
@@ -40,9 +54,29 @@
           <a class="navItem" href="../../../index.html">Home</a>
         </nav>
 
-        <!-- Section: Placeholder -->
+        <!-- Section: Notes -->
         <div class="section">
           <h2>Notes</h2>
+
+          <p>
+            This is a MathJax test. Inline math should render like this:
+            \(\dot{x} = \frac{dx}{dt}\) and \(\delta S = 0\).
+          </p>
+
+          <p>
+            A standard form of the Lagrangian is
+            \[
+              L(q,\dot{q},t)=T(q,\dot{q},t)-V(q,t).
+            \]
+          </p>
+
+          <p>
+            The Euler–Lagrange equations should render as:
+            \[
+              \frac{d}{dt}\left(\frac{\partial L}{\partial \dot{q}_i}\right)
+              -\frac{\partial L}{\partial q_i}=0.
+            \]
+          </p>
 
           <p>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit.
