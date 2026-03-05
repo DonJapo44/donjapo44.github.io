@@ -28,6 +28,28 @@
     };
   </script>
   <script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+  <!-- Page-local fix (only for this file) -->
+  <style>
+    /* Only affects this page */
+    .sciencePost{
+      padding: 24px 44px 34px 44px; /* more inner margin */
+    }
+    @media (max-width: 720px){
+      .sciencePost{ padding: 18px 18px 26px 18px; }
+    }
+    .sciencePost section{
+      max-width: 760px;
+      margin: 0 auto;
+    }
+    .scienceIntro{
+      max-width: 760px;
+      margin: 0 auto 10px auto;
+      color: var(--muted);
+      font-style: italic;
+      font-size: 1.05rem;
+    }
+  </style>
 </head>
 
 <body>
@@ -43,23 +65,23 @@
       <header class="hero">
         <h1>Chapter 1. Equations of motion.</h1>
 
-        <p class="subtitle">
-          A distinctive editorial choice of this book is that it opens with the <em>Lagrangian formulation</em>
-          of mechanics, instead of introducing the subject through Newton’s laws. In other words, dynamics is
-          presented from the start as a variational problem: the equations of motion emerge as conditions on the
-          action functional, rather than being postulated as force laws.
-        </p>
-
         <p class="meta">
           <i class="fa-regular fa-calendar"></i>
           <time datetime="2026-03-05">March 5, 2026</time>
         </p>
       </header>
 
-      <hr>
+      <div class="postDivider"></div>
 
-      <!-- Science post wrapper: does not affect other pages -->
+      <!-- Put the “Lagrangian formulation” comment AFTER the date divider -->
       <div class="sciencePost">
+
+        <p class="scienceIntro">
+          A distinctive editorial choice of this book is that it opens with the <em>Lagrangian formulation</em>
+          of mechanics, instead of introducing the subject through Newton’s laws. In other words, dynamics is
+          presented from the start as a variational problem: the equations of motion emerge as conditions on the
+          action functional, rather than being postulated as force laws.
+        </p>
 
         <section>
           <h2>3) First-order expansion (the “first variation”)</h2>
@@ -148,11 +170,6 @@
       </footer>
 
     </div>
-  </div>
-
-</body>
-</html>
-
   </div>
 
 </body>
