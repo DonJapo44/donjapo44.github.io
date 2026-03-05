@@ -29,11 +29,11 @@
   </script>
   <script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 
-  <!-- Page-local fix (only for this file) -->
+  <!-- Page-local spacing fix (only for this file) -->
   <style>
     /* Only affects this page */
     .sciencePost{
-      padding: 24px 44px 34px 44px; /* more inner margin */
+      padding: 26px 52px 34px 52px; /* more inner margin */
     }
     @media (max-width: 720px){
       .sciencePost{ padding: 18px 18px 26px 18px; }
@@ -44,10 +44,10 @@
     }
     .scienceIntro{
       max-width: 760px;
-      margin: 0 auto 10px auto;
-      color: var(--muted);
-      font-style: italic;
-      font-size: 1.05rem;
+      margin: 0 auto 14px auto;
+      color: var(--text);
+      font-style: normal;
+      font-size: 1.0rem;
     }
   </style>
 </head>
@@ -73,12 +73,11 @@
 
       <div class="postDivider"></div>
 
-      <!-- Put the “Lagrangian formulation” comment AFTER the date divider -->
       <div class="sciencePost">
 
         <p class="scienceIntro">
-          A distinctive editorial choice of this book is that it opens with the <em>Lagrangian formulation</em>
-          of mechanics, instead of introducing the subject through Newton’s laws. In other words, dynamics is
+          A distinctive editorial choice of this book is that it opens with the Lagrangian formulation of
+          mechanics, instead of introducing the subject through Newton’s laws. In other words, dynamics is
           presented from the start as a variational problem: the equations of motion emerge as conditions on the
           action functional, rather than being postulated as force laws.
         </p>
@@ -145,32 +144,101 @@
           </div>
 
           <p>
-            In an intuitive way: there is a change in the action that is proportional to the deviation. The change
-            presumably makes the action greater; otherwise we haven’t got a minimum. But then if the change is
-            proportional to the deviation, reversing the sign of the deviation will make the action less. We would
-            get the action to increase one way and to decrease the other way.
+            Intuitively, if the change in the action were strictly proportional to the deviation, then changing
+            the sign of the deviation would change the sign of the action’s change. But a minimum cannot behave
+            that way: a perturbation cannot make the action larger in one direction and smaller in the opposite
+            direction. Therefore, at a minimum the linear contribution must vanish, i.e. \(\delta S=0\) at first
+            order for all admissible variations.
           </p>
 
+          <h2>Integration by parts</h2>
+
           <p>
-            This is the core point: if the leading change in \(S\) were truly linear, it would flip sign under
-            \(\delta q \mapsto -\delta q\), and the original path could not be a minimum. Therefore, at an extremum
-            the linear contribution must vanish, i.e. \(\delta S=0\) for all admissible variations (typically with
-            \(\delta q(t_1)=\delta q(t_2)=0\)). From this condition, the Euler–Lagrange equation follows after an
-            integration by parts.
+            To proceed, focus on the second term in \(\delta S\). It has the form
+            \(\int_{t_1}^{t_2} A(t)\,\frac{d}{dt}(\delta q)\,dt\). Applying integration by parts gives
           </p>
+
+          <div class="math-block">
+            $$
+            \int_{t_1}^{t_2} A(t)\,\frac{d}{dt}\big(\delta q\big)\,dt
+            =
+            \Big[ A(t)\,\delta q(t) \Big]_{t_1}^{t_2}
+            -
+            \int_{t_1}^{t_2} \frac{dA}{dt}\,\delta q(t)\,dt.
+            $$
+          </div>
+
+          <p>
+            In our case,
+            \[
+              A(t)=\frac{\partial L}{\partial \dot{q}}.
+            \]
+            Hence
+          </p>
+
+          <div class="math-block">
+            $$
+            \int_{t_1}^{t_2}
+            \frac{\partial L}{\partial \dot{q}}\,
+            \frac{d}{dt}\big(\delta q\big)\,dt
+            =
+            \Big[
+              \frac{\partial L}{\partial \dot{q}}\,\delta q
+            \Big]_{t_1}^{t_2}
+            -
+            \int_{t_1}^{t_2}
+            \frac{d}{dt}\!\left(\frac{\partial L}{\partial \dot{q}}\right)\,
+            \delta q\,dt.
+            $$
+          </div>
+
+          <p>
+            The boundary term vanishes because the variations are taken with fixed endpoints:
+            \(\delta q(t_1)=\delta q(t_2)=0\). This condition expresses the idea that we compare paths that start
+            and end at the same points in configuration space; only the intermediate shape of the path is allowed
+            to vary. In that setting,
+            \(\big[ \frac{\partial L}{\partial \dot{q}}\delta q \big]_{t_1}^{t_2}=0\).
+          </p>
+
         </section>
 
       </div><!-- /sciencePost -->
 
+      <!-- Footer -->
       <footer>
+
         <div class="footerLine"></div>
-        <div class="footerCopy">
-          Notes for personal study. Typeset with MathJax.
+
+        <div class="footerSocial">
+          <a href="mailto:japogm@ciencias.unam.mx">
+            <i class="fa-solid fa-envelope"></i>
+            <span>japogm@ciencias.unam.mx</span>
+          </a>
+
+          <a href="https://x.com/Japogm" target="_blank" rel="noopener">
+            <i class="fa-brands fa-x-twitter"></i>
+            <span>@Japogm</span>
+          </a>
+
+          <a href="https://www.instagram.com/Japogm" target="_blank" rel="noopener">
+            <i class="fa-brands fa-instagram"></i>
+            <span>@Japogm</span>
+          </a>
         </div>
+
+        <p class="footerCopy">
+          © <span id="year"></span> — Personal page
+        </p>
+
       </footer>
 
     </div>
   </div>
+
+  <!-- Year -->
+  <script>
+    document.getElementById("year").textContent=new Date().getFullYear();
+  </script>
 
 </body>
 </html>
