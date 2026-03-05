@@ -2,18 +2,54 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Javier Gómez Morales | Personal Page</title>
+  <title>Chapter 1. Equations of motion. | Landau — Classical Mechanics (March 5, 2026)</title>
 
-  <!-- Google Fonts -->
+  <!-- Main stylesheet -->
+  <link rel="stylesheet" href="../../../style.css">
+
+  <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@500;600;700&family=Source+Serif+4:wght@400;600&display=swap" rel="stylesheet">
 
-  <!-- Font Awesome Icons -->
+  <!-- Icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
-  <!-- Main stylesheet -->
-  <link rel="stylesheet" href="style.css">
+  <!-- MathJax configuration -->
+  <script>
+    window.MathJax = {
+      tex: {
+        inlineMath: [['\\(','\\)'], ['$', '$']],
+        displayMath: [['\\[','\\]'], ['$$','$$']]
+      },
+      options: {
+        skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+      }
+    };
+  </script>
+  <script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+  <!-- Page-local spacing fix (only for this file) -->
+  <style>
+    /* Only affects this page */
+    .sciencePost{
+      padding: 24px 44px 34px 44px; /* more inner margin */
+    }
+    @media (max-width: 720px){
+      .sciencePost{ padding: 18px 18px 26px 18px; }
+    }
+    .sciencePost section{
+      max-width: 760px;
+      margin: 0 auto;
+    }
+    .scienceIntro{
+      max-width: 760px;
+      margin: 0 auto 14px auto;
+      color: var(--text);      /* normal body color */
+      font-style: normal;      /* normal body style */
+      font-size: 1.0rem;       /* same as body */
+    }
+  </style>
 </head>
 
 <body>
@@ -23,53 +59,108 @@
 
       <!-- Top ribbon -->
       <div class="ribbon">
-        Quant Finance · Research Notes · Scenes in Motion
+        Scientific Notes · Landau · Classical Mechanics
       </div>
 
-      <!-- Hero section -->
-      <div class="hero">
-        <h1 class="name">Javier Gómez Morales</h1>
-        <p class="subtitle">Physics · Econophysics · Applied Mathematics for Finance</p>
+      <header class="hero">
+        <h1>Chapter 1. Equations of motion.</h1>
 
-        <div class="introPlate">
+        <p class="meta">
+          <i class="fa-regular fa-calendar"></i>
+          <time datetime="2026-03-05">March 5, 2026</time>
+        </p>
+      </header>
+
+      <div class="postDivider"></div>
+
+      <div class="sciencePost">
+
+        <!-- Normal body text (not italic) -->
+        <p class="scienceIntro">
+          A distinctive editorial choice of this book is that it opens with the Lagrangian formulation of
+          mechanics, instead of introducing the subject through Newton’s laws. In other words, dynamics is
+          presented from the start as a variational problem: the equations of motion emerge as conditions on the
+          action functional, rather than being postulated as force laws.
+        </p>
+
+        <section>
+          <h2>3) First-order expansion (the “first variation”)</h2>
+
           <p>
-            I am a physicist from UNAM, México.<br>
-            I am currently studying the Master’s degree in Mathematical Sciences at UNAM.
+            Consider a trajectory \(q(t)\) and a small deviation \(\delta q(t)\). The corresponding deviation of
+            the velocity is \(\delta \dot{q}(t)=\frac{d}{dt}\delta q(t)\). A first-order multivariable Taylor
+            expansion of the Lagrangian around \((q,\dot{q},t)\) gives
           </p>
-        </div>
-      </div>
 
-      <!-- Divider -->
-      <div class="homeDivider"></div>
+          <div class="math-block">
+            $$
+            L\!\big(q+\delta q,\ \dot{q}+\delta \dot{q},\ t\big)
+            =
+            L(q,\dot{q},t)
+            +
+            \frac{\partial L}{\partial q}\,\delta q
+            +
+            \frac{\partial L}{\partial \dot{q}}\,\delta \dot{q}
+            +
+            \mathcal{O}\!\big((\delta q)^2\big).
+            $$
+          </div>
 
-      <!-- Main navigation cards -->
-      <div class="linkGrid">
-
-        <a class="linkCard" href="research.html">
-          <div class="linkTitle">Research</div>
-          <p class="linkText">
-            Thesis work and ongoing research in quantitative finance.
-            Methods, figures, and evolving interpretations.
+          <p>
+            Substituting into the action difference \(S[q+\delta q]-S[q]\) and keeping only terms linear in the
+            deviation yields
           </p>
-        </a>
 
-        <a class="linkCard" href="scientific-notes.html">
-          <div class="linkTitle">Scientific Notes</div>
-          <p class="linkText">
-            Reading notes and commentary on scientific texts.
-            Starting with Landau’s <em>Mechanics</em>.
+          <div class="math-block">
+            $$
+            S[q+\delta q]-S[q]
+            =
+            \int_{t_1}^{t_2}
+            \left(
+              \frac{\partial L}{\partial q}\,\delta q
+              +
+              \frac{\partial L}{\partial \dot{q}}\,\delta \dot{q}
+            \right)\,dt
+            +
+            \mathcal{O}\!\big((\delta q)^2\big).
+            $$
+          </div>
+
+          <p>
+            <strong>Definition.</strong> The <em>first variation</em> \(\delta S\) is the linear part in
+            \(\delta q\) and \(\delta \dot{q}\):
           </p>
-        </a>
 
-       <a class="linkCard spanTwo" href="cinema.html">
-      <div class="linkTitle">Scenes in Motion</div>
-      <p class="linkText">
-        Observations on films and television series.
-        Notes from a fan’s perspective.
-      </p>
-    </a>
+          <div class="math-block">
+            $$
+            \delta S
+            =
+            \int_{t_1}^{t_2}
+            \left(
+              \frac{\partial L}{\partial q}\,\delta q
+              +
+              \frac{\partial L}{\partial \dot{q}}\,\delta \dot{q}
+            \right)\,dt.
+            $$
+          </div>
 
-      </div>
+          <p>
+            In an intuitive way: there is a change in the action that is proportional to the deviation. The change
+            presumably makes the action greater; otherwise we haven’t got a minimum. But then if the change is
+            proportional to the deviation, reversing the sign of the deviation will make the action less. We would
+            get the action to increase one way and to decrease the other way.
+          </p>
+
+          <p>
+            This is the core point: if the leading change in \(S\) were truly linear, it would flip sign under
+            \(\delta q \mapsto -\delta q\), and the original path could not be a minimum. Therefore, at an extremum
+            the linear contribution must vanish, i.e. \(\delta S=0\) for all admissible variations (typically with
+            \(\delta q(t_1)=\delta q(t_2)=0\)). From this condition, the Euler–Lagrange equation follows after an
+            integration by parts.
+          </p>
+        </section>
+
+      </div><!-- /sciencePost -->
 
       <!-- Footer -->
       <footer>
@@ -102,6 +193,10 @@
     </div>
   </div>
 
-  <script src="year.js"></script>
+  <!-- Year -->
+  <script>
+    document.getElementById("year").textContent=new Date().getFullYear();
+  </script>
+
 </body>
 </html>
