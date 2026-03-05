@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Chapter 1 | Landau — Classical Mechanics</title>
+  <title>Chapter 1 | Landau — Classical Mechanics (March 5, 2026)</title>
 
   <!-- Main stylesheet -->
   <link rel="stylesheet" href="../../../style.css">
@@ -40,97 +40,101 @@
         Scientific Notes · Landau · Classical Mechanics
       </div>
 
-      <div class="content">
-
-        <h1>Chapter 1</h1>
-
+      <header class="hero">
+        <h1>Chapter 1 — Variational Setup (First Variation)</h1>
         <p class="subtitle">
-          <em>The Equations of Motion</em>
+          One distinctive feature of <em>Landau &amp; Lifshitz</em> is that the book begins with the
+          Lagrangian formulation of mechanics, rather than building the subject from Newton’s laws
+          as is more common in many Western introductory treatments.
+        </p>
+        <p class="meta">
+          <i class="fa-regular fa-calendar"></i>
+          <time datetime="2026-03-05">March 5, 2026</time>
+        </p>
+      </header>
+
+      <hr>
+
+      <section>
+        <h2>3) First-order expansion (the “first variation”)</h2>
+
+        <p>
+          Consider a trajectory \(q(t)\) and a small deviation \(\delta q(t)\).
+          The corresponding velocity deviation is \(\delta \dot{q}(t)=\frac{d}{dt}\delta q(t)\).
+          A first-order multivariable Taylor expansion of the Lagrangian around \((q,\dot{q},t)\) yields
         </p>
 
-        <!-- Navigation -->
-        <nav class="topNav">
-          <a class="navItem" href="../../../scientific-notes.html">Scientific Notes</a>
-          <a class="navItem" href="../../../index.html">Home</a>
-        </nav>
-
-        <!-- Section: Notes -->
-        <div class="section">
-          <h2>Notes</h2>
-
-          <p>
-            This is a MathJax test. Inline math should render like this:
-            \(\dot{x} = \frac{dx}{dt}\) and \(\delta S = 0\).
-          </p>
-
-          <p>
-            A standard form of the Lagrangian is
-            \[
-              L(q,\dot{q},t)=T(q,\dot{q},t)-V(q,t).
-            \]
-          </p>
-
-          <p>
-            The Euler–Lagrange equations should render as:
-            \[
-              \frac{d}{dt}\left(\frac{\partial L}{\partial \dot{q}_i}\right)
-              -\frac{\partial L}{\partial q_i}=0.
-            \]
-          </p>
-
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-            Sed non risus. Suspendisse lectus tortor, dignissim sit amet,
-            adipiscing nec, ultricies sed, dolor. Cras elementum ultrices diam.
-          </p>
-
-          <p>
-            Maecenas ligula massa, varius a, semper congue, euismod non, mi.
-            Proin porttitor, orci nec nonummy molestie, enim est eleifend mi,
-            non fermentum diam nisl sit amet erat.
-          </p>
-
-          <p>
-            Duis semper. Duis arcu massa, scelerisque vitae, consequat in,
-            pretium a, enim. Pellentesque congue. Ut in risus volutpat libero
-            pharetra tempor.
-          </p>
-
+        <div class="math-block">
+          $$
+          L\!\big(q+\delta q,\ \dot{q}+\delta \dot{q},\ t\big)
+          =
+          L(q,\dot{q},t)
+          +
+          \frac{\partial L}{\partial q}\,\delta q
+          +
+          \frac{\partial L}{\partial \dot{q}}\,\delta \dot{q}
+          +
+          \mathcal{O}\!\big((\delta q)^2\big).
+          $$
         </div>
 
-      </div>
-
-      <!-- Footer -->
-      <footer>
-
-        <div class="footerLine"></div>
-
-        <div class="footerSocial">
-          <a href="mailto:japogm@ciencias.unam.mx">
-            <i class="fa-solid fa-envelope"></i>
-            <span>japogm@ciencias.unam.mx</span>
-          </a>
-
-          <a href="https://x.com/Japogm" target="_blank" rel="noopener">
-            <i class="fa-brands fa-x-twitter"></i>
-            <span>@Japogm</span>
-          </a>
-
-          <a href="https://www.instagram.com/Japogm" target="_blank" rel="noopener">
-            <i class="fa-brands fa-instagram"></i>
-            <span>@Japogm</span>
-          </a>
-        </div>
-
-        <p class="footerCopy">
-          © <span id="year"></span> — Personal page
+        <p>
+          Substituting this expansion into the difference of actions,
+          \(S[q+\delta q]-S[q]\), and keeping only the terms that are linear in the deviation,
+          one obtains
         </p>
 
-      </footer>
+        <div class="math-block">
+          $$
+          S[q+\delta q]-S[q]
+          =
+          \int_{t_1}^{t_2}
+          \left(
+            \frac{\partial L}{\partial q}\,\delta q
+            +
+            \frac{\partial L}{\partial \dot{q}}\,\delta \dot{q}
+          \right)\,dt
+          +
+          \mathcal{O}\!\big((\delta q)^2\big).
+          $$
+        </div>
+
+        <p>
+          <strong>Definition.</strong> The <em>first variation</em> \(\delta S\) is precisely the linear part in
+          \(\delta q\) and \(\delta \dot{q}\):
+        </p>
+
+        <div class="math-block">
+          $$
+          \delta S
+          =
+          \int_{t_1}^{t_2}
+          \left(
+            \frac{\partial L}{\partial q}\,\delta q
+            +
+            \frac{\partial L}{\partial \dot{q}}\,\delta \dot{q}
+          \right)\,dt.
+          $$
+        </div>
+
+        <p>
+          In a purely geometric way: there is a change in the action that is proportional to the deviation.
+          The change presumably makes the action greater; otherwise we haven’t got a minimum.
+          But then if the change is proportional to the deviation, reversing the sign of the deviation will make
+          the action less. We would get the action to increase one way and to decrease the other way.
+        </p>
+
+        <p>
+          This is the basic reason why, at an extremum (minimum, maximum, or saddle in function space),
+          the <em>linear</em> term must vanish: for a true minimum, the leading nonzero contribution cannot be
+          odd under \(\delta q \mapsto -\delta q\). In practice, one enforces this by requiring
+          \(\delta S=0\) for all admissible variations \(\delta q(t)\) (typically with
+          \(\delta q(t_1)=\delta q(t_2)=0\)), and the Euler–Lagrange equation follows after an integration by parts.
+        </p>
+      </section>
 
     </div>
   </div>
 
-  <script src="../../../year.js"></script>
 </body>
 </html>
