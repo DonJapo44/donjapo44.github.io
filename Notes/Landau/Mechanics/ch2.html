@@ -434,6 +434,153 @@
     $$
   </div>
 </section>
+<section>
+  <h2>Mechanical Similarity</h2>
+
+  <p>
+    The derivation of the mechanical-similarity relations begins by scaling the trajectory and the
+    time variable according to
+  </p>
+
+  <div class="math-block">
+    $$
+    \mathbf{r}'=\alpha \mathbf{r},
+    \qquad
+    t'=\beta t.
+    $$
+  </div>
+
+  <p>
+    Under this transformation, the velocity changes as
+  </p>
+
+  <div class="math-block">
+    $$
+    \mathbf{v}'
+    =
+    \frac{d\mathbf{r}'}{dt'}
+    =
+    \frac{\alpha}{\beta}\,\mathbf{v}.
+    $$
+  </div>
+
+  <p>
+    Therefore, the kinetic energy scales as
+  </p>
+
+  <div class="math-block">
+    $$
+    T'\sim (\mathbf{v}')^2
+    =
+    \left(\frac{\alpha}{\beta}\right)^2 T.
+    $$
+  </div>
+
+  <p>
+    Suppose now that the potential is homogeneous of degree \(k\), that is,
+  </p>
+
+  <div class="math-block">
+    $$
+    U(\alpha \mathbf{r})=\alpha^k U(\mathbf{r}).
+    $$
+  </div>
+
+  <p>
+    Then the potential energy transforms as
+  </p>
+
+  <div class="math-block">
+    $$
+    U'=\alpha^k U.
+    $$
+  </div>
+
+  <p>
+    For the transformed motion to satisfy equations of the same form, the kinetic and potential
+    terms must scale with the same factor. Hence,
+  </p>
+
+  <div class="math-block">
+    $$
+    \left(\frac{\alpha}{\beta}\right)^2=\alpha^k.
+    $$
+  </div>
+
+  <p>
+    Solving for \(\beta\), one obtains
+  </p>
+
+  <div class="math-block">
+    $$
+    \beta=\alpha^{\,1-k/2}.
+    $$
+  </div>
+
+  <p>
+    Since \(\alpha=l'/l\), it follows that
+  </p>
+
+  <div class="math-block">
+    $$
+    \frac{t'}{t}
+    =
+    \left(\frac{l'}{l}\right)^{1-k/2}.
+    $$
+  </div>
+
+  <p>
+    Next, because \(v\sim l/t\), the velocity scales as
+  </p>
+
+  <div class="math-block">
+    $$
+    \frac{v'}{v}
+    =
+    \frac{\alpha}{\beta}
+    =
+    \alpha^{k/2}
+    =
+    \left(\frac{l'}{l}\right)^{k/2}.
+    $$
+  </div>
+
+  <p>
+    The total energy scales in the same way as either \(T\) or \(U\), and therefore
+  </p>
+
+  <div class="math-block">
+    $$
+    \frac{E'}{E}
+    =
+    \alpha^k
+    =
+    \left(\frac{l'}{l}\right)^k.
+    $$
+  </div>
+
+  <p>
+    Finally, since the angular momentum behaves as \(M\sim rv\), one finds
+  </p>
+
+  <div class="math-block">
+    $$
+    \frac{M'}{M}
+    =
+    \alpha\cdot \alpha^{k/2}
+    =
+    \alpha^{1+k/2}
+    =
+    \left(\frac{l'}{l}\right)^{1+k/2}.
+    $$
+  </div>
+
+  <p>
+    These are the mechanical-similarity relations. They show how time, velocity, energy, and
+    angular momentum must transform when the coordinates are rescaled in a system whose potential
+    is a homogeneous function of degree \(k\).
+  </p>
+</section>
         <!-- =========================
              End of content
              ========================= -->
