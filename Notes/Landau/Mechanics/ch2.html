@@ -69,527 +69,536 @@
           <i class="fa-regular fa-calendar"></i>
           <time datetime="2026-03-15">March 15, 2026</time>
         </p>
+
+        <!-- Navigation -->
+        <nav class="topNav">
+          <a class="navItem" href="../../../index.html">
+            <i class="fa-solid fa-house"></i>
+            <span>Home</span>
+          </a>
+
+          <a class="navItem" href="../../../scientific-notes.html">
+            <i class="fa-solid fa-book-open"></i>
+            <span>Scientific Notes</span>
+          </a>
+        </nav>
       </header>
 
       <div class="postDivider"></div>
 
       <div class="sciencePost">
 
-        <!-- =========================
-             Start writing sections here
-             ========================= -->
-
         <section>
-         <p class="scienceIntro">
-          One of the most eye-opening and intellectually satisfying aspects of this chapter is the way
-          the conservation laws emerge directly from symmetry principles. It is quite elegant to see that
-          <strong>conservation of energy</strong> follows from the <em>homogeneity of time</em>, that
-          <strong>linear momentum</strong> follows as a conservation law from the <em>homogeneity of space</em>,
-          and that <strong>angular momentum</strong> follows as a conservation law from the <em>isotropy of space</em>.
-          In this way, Landau presents the basic structure of mechanics not as a list of separate facts,
-          but as a unified consequence of the symmetries of nature.
-        </p>
+          <p class="scienceIntro">
+            One of the most eye-opening and intellectually satisfying aspects of this chapter is the way
+            the conservation laws emerge directly from symmetry principles. It is quite elegant to see that
+            <strong>conservation of energy</strong> follows from the <em>homogeneity of time</em>, that
+            <strong>linear momentum</strong> follows as a conservation law from the <em>homogeneity of space</em>,
+            and that <strong>angular momentum</strong> follows as a conservation law from the <em>isotropy of space</em>.
+            In this way, Landau presents the basic structure of mechanics not as a list of separate facts,
+            but as a unified consequence of the symmetries of nature.
+          </p>
         </section>
 
-        <!-- Example section block -->
         <section>
-  <h2>Euler’s theorem for homogeneous functions</h2>
-
-  <p>
-    Before discussing conservation laws, it is useful to recall Euler’s theorem for homogeneous
-    functions. Let \(f(x_1,\dots,x_n)\) be a differentiable function homogeneous of degree \(k\),
-    meaning that
-  </p>
-
-  <div class="math-block">
-    $$
-    f(\lambda x_1,\dots,\lambda x_n)=\lambda^k f(x_1,\dots,x_n).
-    $$
-  </div>
-
-  <p>
-    Define the auxiliary one-variable function
-  </p>
-
-  <div class="math-block">
-    $$
-    g(\lambda)=f(\lambda x_1,\dots,\lambda x_n).
-    $$
-  </div>
-
-  <p>
-    By homogeneity, this can also be written as
-  </p>
-
-  <div class="math-block">
-    $$
-    g(\lambda)=\lambda^k f(x_1,\dots,x_n).
-    $$
-  </div>
-
-  <p>
-    Differentiating this expression with respect to \(\lambda\), one obtains
-  </p>
-
-  <div class="math-block">
-    $$
-    g'(\lambda)=k\lambda^{k-1}f(x_1,\dots,x_n).
-    $$
-  </div>
-
-  <p>
-    On the other hand, applying the chain rule directly to
-    \(g(\lambda)=f(\lambda x_1,\dots,\lambda x_n)\) gives
-  </p>
-
-  <div class="math-block">
-    $$
-    g'(\lambda)
-    =
-    \sum_{i=1}^n x_i\,\frac{\partial f}{\partial x_i}(\lambda x_1,\dots,\lambda x_n).
-    $$
-  </div>
-
-  <p>
-    Since both expressions represent the same derivative, they must be equal. Therefore,
-  </p>
-
-  <div class="math-block">
-    $$
-    \sum_{i=1}^n x_i\,\frac{\partial f}{\partial x_i}(\lambda x_1,\dots,\lambda x_n)
-    =
-    k\lambda^{k-1}f(x_1,\dots,x_n).
-    $$
-  </div>
-
-  <p>
-    Evaluating at \(\lambda=1\), one arrives at
-  </p>
-
-  <div class="math-block">
-    $$
-    \sum_{i=1}^n x_i\,\frac{\partial f}{\partial x_i}(x_1,\dots,x_n)
-    =
-    k f(x_1,\dots,x_n).
-    $$
-  </div>
-
-  <p>
-    Hence,
-  </p>
-
-  <div class="math-block">
-    $$
-    \sum_{i=1}^n x_i\,\frac{\partial f}{\partial x_i}=k f,
-    $$
-  </div>
-
-  <p>
-    which is precisely Euler’s theorem for homogeneous functions.
-  </p>
-</section>
-<section>
-  <h2>Euler’s theorem applied to the kinetic energy</h2>
-
-  <p>
-    In mechanics, the kinetic energy
-  </p>
-
-  <div class="math-block">
-    $$
-    T=T(\dot{q}_1,\dots,\dot{q}_n)
-    $$
-  </div>
-
-  <p>
-    is a homogeneous function of degree \(2\) in the generalized velocities. Therefore, by
-    Euler’s theorem,
-  </p>
-
-  <div class="math-block">
-    $$
-    \sum_i \dot{q}_i\,\frac{\partial T}{\partial \dot{q}_i}=2T.
-    $$
-  </div>
-</section>
-<section>
-  <h2>Momentum</h2>
-
-  <p>
-    Consider an infinitesimal translation of the whole system,
-  </p>
-
-  <div class="math-block">
-    $$
-    \mathbf{r}_a \to \mathbf{r}_a+\boldsymbol{\epsilon},
-    $$
-  </div>
-
-  <p>
-    so that each position changes by
-    \(\delta \mathbf{r}_a=\boldsymbol{\epsilon}\). Since \(\boldsymbol{\epsilon}\) is constant,
-    the velocities do not change:
-  </p>
-
-  <div class="math-block">
-    $$
-    \delta \dot{\mathbf{r}}_a=0.
-    $$
-  </div>
-
-  <p>
-    The first-order Taylor expansion of the Lagrangian then gives
-  </p>
-
-  <div class="math-block">
-    $$
-    \delta L
-    =
-    \sum_a \frac{\partial L}{\partial \mathbf{r}_a}\cdot \delta \mathbf{r}_a
-    +
-    \sum_a \frac{\partial L}{\partial \dot{\mathbf{r}}_a}\cdot \delta \dot{\mathbf{r}}_a.
-    $$
-  </div>
-
-  <p>
-    Since \(\delta \dot{\mathbf{r}}_a=0\), this reduces to
-  </p>
-
-  <div class="math-block">
-    $$
-    \delta L
-    =
-    \sum_a \frac{\partial L}{\partial \mathbf{r}_a}\cdot \boldsymbol{\epsilon}.
-    $$
-  </div>
-
-  <p>
-    If space is homogeneous, a global translation cannot change the physics, and therefore
-    \(\delta L=0\). Because \(\boldsymbol{\epsilon}\) is arbitrary, it follows that
-  </p>
-
-  <div class="math-block">
-    $$
-    \sum_a \frac{\partial L}{\partial \mathbf{r}_a}=0.
-    $$
-  </div>
-
-  <p>
-    Landau then uses the Lagrange equations,
-  </p>
-
-  <div class="math-block">
-    $$
-    \frac{d}{dt}\left(\frac{\partial L}{\partial \dot{\mathbf{r}}_a}\right)
-    -
-    \frac{\partial L}{\partial \mathbf{r}_a}
-    =
-    0,
-    $$
-  </div>
-
-  <p>
-    to replace \(\partial L/\partial \mathbf{r}_a\) by a time derivative:
-  </p>
-
-  <div class="math-block">
-    $$
-    \frac{\partial L}{\partial \mathbf{r}_a}
-    =
-    \frac{d}{dt}\left(\frac{\partial L}{\partial \dot{\mathbf{r}}_a}\right).
-    $$
-  </div>
-
-  <p>
-    Substituting this into the previous result, one obtains
-  </p>
-
-  <div class="math-block">
-    $$
-    \frac{d}{dt}\left(\sum_a \frac{\partial L}{\partial \dot{\mathbf{r}}_a}\right)=0.
-    $$
-  </div>
-
-  <p>
-    Thus, the sum of the conjugate momenta is conserved. This quantity is the total linear
-    momentum, defined by
-  </p>
-
-  <div class="math-block">
-    $$
-    \mathbf{P}
-    =
-    \sum_a \mathbf{p}_a
-    =
-    \sum_a \frac{\partial L}{\partial \dot{\mathbf{r}}_a}.
-    $$
-  </div>
-</section>
-<section>
-  <h2>Angular Momentum</h2>
-
-  <p>
-    Consider an infinitesimal rotation by \(\delta \boldsymbol{\phi}\). The corresponding variations
-    of the position and velocity vectors are
-  </p>
-
-  <div class="math-block">
-    $$
-    \delta \mathbf{r}_a=\delta \boldsymbol{\phi}\times \mathbf{r}_a,
-    \qquad
-    \delta \mathbf{v}_a=\delta \boldsymbol{\phi}\times \mathbf{v}_a.
-    $$
-  </div>
-
-  <p>
-    The first-order variation of the Lagrangian is therefore
-  </p>
-
-  <div class="math-block">
-    $$
-    \delta L
-    =
-    \sum_a \frac{\partial L}{\partial \mathbf{r}_a}\cdot \delta \mathbf{r}_a
-    +
-    \sum_a \frac{\partial L}{\partial \mathbf{v}_a}\cdot \delta \mathbf{v}_a.
-    $$
-  </div>
-
-  <p>
-    Using the definitions
-  </p>
-
-  <div class="math-block">
-    $$
-    \mathbf{p}_a=\frac{\partial L}{\partial \mathbf{v}_a},
-    \qquad
-    \frac{\partial L}{\partial \mathbf{r}_a}=\dot{\mathbf{p}}_a,
-    $$
-  </div>
-
-  <p>
-    this becomes
-  </p>
-
-  <div class="math-block">
-    $$
-    \delta L
-    =
-    \delta \boldsymbol{\phi}\cdot
-    \sum_a
-    \left(
-      \mathbf{r}_a\times \dot{\mathbf{p}}_a
-      +
-      \mathbf{v}_a\times \mathbf{p}_a
-    \right).
-    $$
-  </div>
-
-  <p>
-    Now observe that
-  </p>
-
-  <div class="math-block">
-    $$
-    \frac{d}{dt}\big(\mathbf{r}_a\times \mathbf{p}_a\big)
-    =
-    \mathbf{v}_a\times \mathbf{p}_a
-    +
-    \mathbf{r}_a\times \dot{\mathbf{p}}_a.
-    $$
-  </div>
-
-  <p>
-    Therefore,
-  </p>
-
-  <div class="math-block">
-    $$
-    \delta L
-    =
-    \delta \boldsymbol{\phi}\cdot
-    \frac{d}{dt}
-    \sum_a
-    \big(\mathbf{r}_a\times \mathbf{p}_a\big).
-    $$
-  </div>
-
-  <p>
-    If space is isotropic, then \(\delta L=0\) for any infinitesimal rotation. It follows that
-  </p>
-
-  <div class="math-block">
-    $$
-    \frac{d}{dt}
-    \sum_a
-    \big(\mathbf{r}_a\times \mathbf{p}_a\big)
-    =
-    0.
-    $$
-  </div>
-
-  <p>
-    Hence, the conserved quantity is the total angular momentum,
-  </p>
-
-  <div class="math-block">
-    $$
-    \mathbf{M}
-    =
-    \sum_a \mathbf{r}_a\times \mathbf{p}_a.
-    $$
-  </div>
-</section>
-<section>
-  <h2>Mechanical Similarity</h2>
-
-  <p>
-    The derivation of the mechanical-similarity relations begins by scaling the trajectory and the
-    time variable according to
-  </p>
-
-  <div class="math-block">
-    $$
-    \mathbf{r}'=\alpha \mathbf{r},
-    \qquad
-    t'=\beta t.
-    $$
-  </div>
-
-  <p>
-    Under this transformation, the velocity changes as
-  </p>
-
-  <div class="math-block">
-    $$
-    \mathbf{v}'
-    =
-    \frac{d\mathbf{r}'}{dt'}
-    =
-    \frac{\alpha}{\beta}\,\mathbf{v}.
-    $$
-  </div>
-
-  <p>
-    Therefore, the kinetic energy scales as
-  </p>
-
-  <div class="math-block">
-    $$
-    T'\sim (\mathbf{v}')^2
-    =
-    \left(\frac{\alpha}{\beta}\right)^2 T.
-    $$
-  </div>
-
-  <p>
-    Suppose now that the potential is homogeneous of degree \(k\), that is,
-  </p>
-
-  <div class="math-block">
-    $$
-    U(\alpha \mathbf{r})=\alpha^k U(\mathbf{r}).
-    $$
-  </div>
-
-  <p>
-    Then the potential energy transforms as
-  </p>
-
-  <div class="math-block">
-    $$
-    U'=\alpha^k U.
-    $$
-  </div>
-
-  <p>
-    For the transformed motion to satisfy equations of the same form, the kinetic and potential
-    terms must scale with the same factor. Hence,
-  </p>
-
-  <div class="math-block">
-    $$
-    \left(\frac{\alpha}{\beta}\right)^2=\alpha^k.
-    $$
-  </div>
-
-  <p>
-    Solving for \(\beta\), one obtains
-  </p>
-
-  <div class="math-block">
-    $$
-    \beta=\alpha^{\,1-k/2}.
-    $$
-  </div>
-
-  <p>
-    Since \(\alpha=l'/l\), it follows that
-  </p>
-
-  <div class="math-block">
-    $$
-    \frac{t'}{t}
-    =
-    \left(\frac{l'}{l}\right)^{1-k/2}.
-    $$
-  </div>
-
-  <p>
-    Next, because \(v\sim l/t\), the velocity scales as
-  </p>
-
-  <div class="math-block">
-    $$
-    \frac{v'}{v}
-    =
-    \frac{\alpha}{\beta}
-    =
-    \alpha^{k/2}
-    =
-    \left(\frac{l'}{l}\right)^{k/2}.
-    $$
-  </div>
-
-  <p>
-    The total energy scales in the same way as either \(T\) or \(U\), and therefore
-  </p>
-
-  <div class="math-block">
-    $$
-    \frac{E'}{E}
-    =
-    \alpha^k
-    =
-    \left(\frac{l'}{l}\right)^k.
-    $$
-  </div>
-
-  <p>
-    Finally, since the angular momentum behaves as \(M\sim rv\), one finds
-  </p>
-
-  <div class="math-block">
-    $$
-    \frac{M'}{M}
-    =
-    \alpha\cdot \alpha^{k/2}
-    =
-    \alpha^{1+k/2}
-    =
-    \left(\frac{l'}{l}\right)^{1+k/2}.
-    $$
-  </div>
-
-  <p>
-    These are the mechanical-similarity relations. They show how time, velocity, energy, and
-    angular momentum must transform when the coordinates are rescaled in a system whose potential
-    is a homogeneous function of degree \(k\).
-  </p>
-</section>
-        <!-- =========================
-             End of content
-             ========================= -->
+          <h2>Euler’s theorem for homogeneous functions</h2>
+
+          <p>
+            Before discussing conservation laws, it is useful to recall Euler’s theorem for homogeneous
+            functions. Let \(f(x_1,\dots,x_n)\) be a differentiable function homogeneous of degree \(k\),
+            meaning that
+          </p>
+
+          <div class="math-block">
+            $$
+            f(\lambda x_1,\dots,\lambda x_n)=\lambda^k f(x_1,\dots,x_n).
+            $$
+          </div>
+
+          <p>
+            Define the auxiliary one-variable function
+          </p>
+
+          <div class="math-block">
+            $$
+            g(\lambda)=f(\lambda x_1,\dots,\lambda x_n).
+            $$
+          </div>
+
+          <p>
+            By homogeneity, this can also be written as
+          </p>
+
+          <div class="math-block">
+            $$
+            g(\lambda)=\lambda^k f(x_1,\dots,x_n).
+            $$
+          </div>
+
+          <p>
+            Differentiating this expression with respect to \(\lambda\), one obtains
+          </p>
+
+          <div class="math-block">
+            $$
+            g'(\lambda)=k\lambda^{k-1}f(x_1,\dots,x_n).
+            $$
+          </div>
+
+          <p>
+            On the other hand, applying the chain rule directly to
+            \(g(\lambda)=f(\lambda x_1,\dots,\lambda x_n)\) gives
+          </p>
+
+          <div class="math-block">
+            $$
+            g'(\lambda)
+            =
+            \sum_{i=1}^n x_i\,\frac{\partial f}{\partial x_i}(\lambda x_1,\dots,\lambda x_n).
+            $$
+          </div>
+
+          <p>
+            Since both expressions represent the same derivative, they must be equal. Therefore,
+          </p>
+
+          <div class="math-block">
+            $$
+            \sum_{i=1}^n x_i\,\frac{\partial f}{\partial x_i}(\lambda x_1,\dots,\lambda x_n)
+            =
+            k\lambda^{k-1}f(x_1,\dots,x_n).
+            $$
+          </div>
+
+          <p>
+            Evaluating at \(\lambda=1\), one arrives at
+          </p>
+
+          <div class="math-block">
+            $$
+            \sum_{i=1}^n x_i\,\frac{\partial f}{\partial x_i}(x_1,\dots,x_n)
+            =
+            k f(x_1,\dots,x_n).
+            $$
+          </div>
+
+          <p>
+            Hence,
+          </p>
+
+          <div class="math-block">
+            $$
+            \sum_{i=1}^n x_i\,\frac{\partial f}{\partial x_i}=k f,
+            $$
+          </div>
+
+          <p>
+            which is precisely Euler’s theorem for homogeneous functions.
+          </p>
+        </section>
+
+        <section>
+          <h2>Euler’s theorem applied to the kinetic energy</h2>
+
+          <p>
+            In mechanics, the kinetic energy
+          </p>
+
+          <div class="math-block">
+            $$
+            T=T(\dot{q}_1,\dots,\dot{q}_n)
+            $$
+          </div>
+
+          <p>
+            is a homogeneous function of degree \(2\) in the generalized velocities. Therefore, by
+            Euler’s theorem,
+          </p>
+
+          <div class="math-block">
+            $$
+            \sum_i \dot{q}_i\,\frac{\partial T}{\partial \dot{q}_i}=2T.
+            $$
+          </div>
+        </section>
+
+        <section>
+          <h2>Momentum</h2>
+
+          <p>
+            Consider an infinitesimal translation of the whole system,
+          </p>
+
+          <div class="math-block">
+            $$
+            \mathbf{r}_a \to \mathbf{r}_a+\boldsymbol{\epsilon},
+            $$
+          </div>
+
+          <p>
+            so that each position changes by
+            \(\delta \mathbf{r}_a=\boldsymbol{\epsilon}\). Since \(\boldsymbol{\epsilon}\) is constant,
+            the velocities do not change:
+          </p>
+
+          <div class="math-block">
+            $$
+            \delta \dot{\mathbf{r}}_a=0.
+            $$
+          </div>
+
+          <p>
+            The first-order Taylor expansion of the Lagrangian then gives
+          </p>
+
+          <div class="math-block">
+            $$
+            \delta L
+            =
+            \sum_a \frac{\partial L}{\partial \mathbf{r}_a}\cdot \delta \mathbf{r}_a
+            +
+            \sum_a \frac{\partial L}{\partial \dot{\mathbf{r}}_a}\cdot \delta \dot{\mathbf{r}}_a.
+            $$
+          </div>
+
+          <p>
+            Since \(\delta \dot{\mathbf{r}}_a=0\), this reduces to
+          </p>
+
+          <div class="math-block">
+            $$
+            \delta L
+            =
+            \sum_a \frac{\partial L}{\partial \mathbf{r}_a}\cdot \boldsymbol{\epsilon}.
+            $$
+          </div>
+
+          <p>
+            If space is homogeneous, a global translation cannot change the physics, and therefore
+            \(\delta L=0\). Because \(\boldsymbol{\epsilon}\) is arbitrary, it follows that
+          </p>
+
+          <div class="math-block">
+            $$
+            \sum_a \frac{\partial L}{\partial \mathbf{r}_a}=0.
+            $$
+          </div>
+
+          <p>
+            Landau then uses the Lagrange equations,
+          </p>
+
+          <div class="math-block">
+            $$
+            \frac{d}{dt}\left(\frac{\partial L}{\partial \dot{\mathbf{r}}_a}\right)
+            -
+            \frac{\partial L}{\partial \mathbf{r}_a}
+            =
+            0,
+            $$
+          </div>
+
+          <p>
+            to replace \(\partial L/\partial \mathbf{r}_a\) by a time derivative:
+          </p>
+
+          <div class="math-block">
+            $$
+            \frac{\partial L}{\partial \mathbf{r}_a}
+            =
+            \frac{d}{dt}\left(\frac{\partial L}{\partial \dot{\mathbf{r}}_a}\right).
+            $$
+          </div>
+
+          <p>
+            Substituting this into the previous result, one obtains
+          </p>
+
+          <div class="math-block">
+            $$
+            \frac{d}{dt}\left(\sum_a \frac{\partial L}{\partial \dot{\mathbf{r}}_a}\right)=0.
+            $$
+          </div>
+
+          <p>
+            Thus, the sum of the conjugate momenta is conserved. This quantity is the total linear
+            momentum, defined by
+          </p>
+
+          <div class="math-block">
+            $$
+            \mathbf{P}
+            =
+            \sum_a \mathbf{p}_a
+            =
+            \sum_a \frac{\partial L}{\partial \dot{\mathbf{r}}_a}.
+            $$
+          </div>
+        </section>
+
+        <section>
+          <h2>Angular Momentum</h2>
+
+          <p>
+            Consider an infinitesimal rotation by \(\delta \boldsymbol{\phi}\). The corresponding variations
+            of the position and velocity vectors are
+          </p>
+
+          <div class="math-block">
+            $$
+            \delta \mathbf{r}_a=\delta \boldsymbol{\phi}\times \mathbf{r}_a,
+            \qquad
+            \delta \mathbf{v}_a=\delta \boldsymbol{\phi}\times \mathbf{v}_a.
+            $$
+          </div>
+
+          <p>
+            The first-order variation of the Lagrangian is therefore
+          </p>
+
+          <div class="math-block">
+            $$
+            \delta L
+            =
+            \sum_a \frac{\partial L}{\partial \mathbf{r}_a}\cdot \delta \mathbf{r}_a
+            +
+            \sum_a \frac{\partial L}{\partial \mathbf{v}_a}\cdot \delta \mathbf{v}_a.
+            $$
+          </div>
+
+          <p>
+            Using the definitions
+          </p>
+
+          <div class="math-block">
+            $$
+            \mathbf{p}_a=\frac{\partial L}{\partial \mathbf{v}_a},
+            \qquad
+            \frac{\partial L}{\partial \mathbf{r}_a}=\dot{\mathbf{p}}_a,
+            $$
+          </div>
+
+          <p>
+            this becomes
+          </p>
+
+          <div class="math-block">
+            $$
+            \delta L
+            =
+            \delta \boldsymbol{\phi}\cdot
+            \sum_a
+            \left(
+              \mathbf{r}_a\times \dot{\mathbf{p}}_a
+              +
+              \mathbf{v}_a\times \mathbf{p}_a
+            \right).
+            $$
+          </div>
+
+          <p>
+            Now observe that
+          </p>
+
+          <div class="math-block">
+            $$
+            \frac{d}{dt}\big(\mathbf{r}_a\times \mathbf{p}_a\big)
+            =
+            \mathbf{v}_a\times \mathbf{p}_a
+            +
+            \mathbf{r}_a\times \dot{\mathbf{p}}_a.
+            $$
+          </div>
+
+          <p>
+            Therefore,
+          </p>
+
+          <div class="math-block">
+            $$
+            \delta L
+            =
+            \delta \boldsymbol{\phi}\cdot
+            \frac{d}{dt}
+            \sum_a
+            \big(\mathbf{r}_a\times \mathbf{p}_a\big).
+            $$
+          </div>
+
+          <p>
+            If space is isotropic, then \(\delta L=0\) for any infinitesimal rotation. It follows that
+          </p>
+
+          <div class="math-block">
+            $$
+            \frac{d}{dt}
+            \sum_a
+            \big(\mathbf{r}_a\times \mathbf{p}_a\big)
+            =
+            0.
+            $$
+          </div>
+
+          <p>
+            Hence, the conserved quantity is the total angular momentum,
+          </p>
+
+          <div class="math-block">
+            $$
+            \mathbf{M}
+            =
+            \sum_a \mathbf{r}_a\times \mathbf{p}_a.
+            $$
+          </div>
+        </section>
+
+        <section>
+          <h2>Mechanical Similarity</h2>
+
+          <p>
+            The derivation of the mechanical-similarity relations begins by scaling the trajectory and the
+            time variable according to
+          </p>
+
+          <div class="math-block">
+            $$
+            \mathbf{r}'=\alpha \mathbf{r},
+            \qquad
+            t'=\beta t.
+            $$
+          </div>
+
+          <p>
+            Under this transformation, the velocity changes as
+          </p>
+
+          <div class="math-block">
+            $$
+            \mathbf{v}'
+            =
+            \frac{d\mathbf{r}'}{dt'}
+            =
+            \frac{\alpha}{\beta}\,\mathbf{v}.
+            $$
+          </div>
+
+          <p>
+            Therefore, the kinetic energy scales as
+          </p>
+
+          <div class="math-block">
+            $$
+            T'\sim (\mathbf{v}')^2
+            =
+            \left(\frac{\alpha}{\beta}\right)^2 T.
+            $$
+          </div>
+
+          <p>
+            Suppose now that the potential is homogeneous of degree \(k\), that is,
+          </p>
+
+          <div class="math-block">
+            $$
+            U(\alpha \mathbf{r})=\alpha^k U(\mathbf{r}).
+            $$
+          </div>
+
+          <p>
+            Then the potential energy transforms as
+          </p>
+
+          <div class="math-block">
+            $$
+            U'=\alpha^k U.
+            $$
+          </div>
+
+          <p>
+            For the transformed motion to satisfy equations of the same form, the kinetic and potential
+            terms must scale with the same factor. Hence,
+          </p>
+
+          <div class="math-block">
+            $$
+            \left(\frac{\alpha}{\beta}\right)^2=\alpha^k.
+            $$
+          </div>
+
+          <p>
+            Solving for \(\beta\), one obtains
+          </p>
+
+          <div class="math-block">
+            $$
+            \beta=\alpha^{\,1-k/2}.
+            $$
+          </div>
+
+          <p>
+            Since \(\alpha=l'/l\), it follows that
+          </p>
+
+          <div class="math-block">
+            $$
+            \frac{t'}{t}
+            =
+            \left(\frac{l'}{l}\right)^{1-k/2}.
+            $$
+          </div>
+
+          <p>
+            Next, because \(v\sim l/t\), the velocity scales as
+          </p>
+
+          <div class="math-block">
+            $$
+            \frac{v'}{v}
+            =
+            \frac{\alpha}{\beta}
+            =
+            \alpha^{k/2}
+            =
+            \left(\frac{l'}{l}\right)^{k/2}.
+            $$
+          </div>
+
+          <p>
+            The total energy scales in the same way as either \(T\) or \(U\), and therefore
+          </p>
+
+          <div class="math-block">
+            $$
+            \frac{E'}{E}
+            =
+            \alpha^k
+            =
+            \left(\frac{l'}{l}\right)^k.
+            $$
+          </div>
+
+          <p>
+            Finally, since the angular momentum behaves as \(M\sim rv\), one finds
+          </p>
+
+          <div class="math-block">
+            $$
+            \frac{M'}{M}
+            =
+            \alpha\cdot \alpha^{k/2}
+            =
+            \alpha^{1+k/2}
+            =
+            \left(\frac{l'}{l}\right)^{1+k/2}.
+            $$
+          </div>
+
+          <p>
+            These are the mechanical-similarity relations. They show how time, velocity, energy, and
+            angular momentum must transform when the coordinates are rescaled in a system whose potential
+            is a homogeneous function of degree \(k\).
+          </p>
+        </section>
 
       </div><!-- /sciencePost -->
 
