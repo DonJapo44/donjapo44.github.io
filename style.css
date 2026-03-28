@@ -124,11 +124,24 @@ h1, h2{
 }
 
 .note{
-  margin-top: 12px;
-  padding: 14px 18px;
-  background: rgba(50,60,168,0.06);
-  border-left: 4px solid var(--divider);
-  border-radius: 10px;
+  margin-top:12px;
+  padding:10px 14px;
+  background:rgba(50,60,168,0.06);
+  border-left:4px solid var(--divider);
+  border-radius:10px;
+}
+
+.note ul{
+  margin:6px 0 0 18px;
+  padding:0;
+}
+
+.note li{
+  margin:0 0 4px 0;
+}
+
+.note li:last-child{
+  margin-bottom:0;
 }
 
 /* Home link cards */
