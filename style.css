@@ -416,3 +416,30 @@ figcaption{
   font-size:1.6rem;
   line-height:1;
 }
+
+.quoteBlock{
+  margin:18px 0 20px auto;
+  padding:10px 6px 2px 6px;
+  max-width:640px;
+  text-align:right;
+}
+
+.quoteBlock p{
+  margin:0 0 8px 0;
+}
+
+.quoteBlock em{
+  font-family:"Crimson Pro", Georgia, serif;
+  font-size:0.98rem;
+  line-height:1.75;
+  color:#3f4652;
+  font-weight:500;
+}
+
+.quoteAttribution{
+  margin:0;
+  color:#6b7280;
+  font-size:0.90rem;
+  text-align:right;
+  font-style:normal;
+}
