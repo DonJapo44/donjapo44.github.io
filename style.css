@@ -1,10 +1,7 @@
-/* Quant Finance — Sobrio & Académico
-   Paleta:
-   Fondo: #323ca8
-   Acento (títulos/enlaces): #065b61
-   Divisiones / cintillos: #614006
-*/
-
+/* =========================================================
+   PERSONAL PAGE — QUANT FINANCE / SCIENTIFIC NOTES / CINEMA
+   Palette
+   ========================================================= */
 :root{
   --bg:#323ca8;
   --accent:#065b61;
@@ -14,115 +11,159 @@
   --muted:#4b5563;
 }
 
-*{ box-sizing:border-box; }
+*{
+  box-sizing:border-box;
+}
 
+/* =========================================================
+   BASE TYPOGRAPHY
+   Libre Franklin for body and UI
+   Libre Baskerville for headings and titles
+   ========================================================= */
 body{
   margin:0;
   background:var(--bg);
   color:var(--text);
-  font-family: "Source Serif 4", Georgia, serif;
-  line-height: 1.85;
+  font-family:"Libre Franklin", Arial, sans-serif;
+  line-height:1.8;
 }
 
 h1, h2{
-  font-family: "Crimson Pro", Georgia, serif;
-  font-weight: 600;
-  letter-spacing: 0.2px;
+  font-family:"Libre Baskerville", Georgia, serif;
+  font-weight:700;
+  letter-spacing:0.1px;
 }
 
-/* Layout */
+/* =========================================================
+   GLOBAL LAYOUT
+   ========================================================= */
 .container{
-  max-width: 920px;
-  margin: 56px auto;
-  padding: 0 20px;
+  max-width:920px;
+  margin:56px auto;
+  padding:0 20px;
 }
 
 .card{
   background:var(--paper);
-  border-radius: 16px;
+  border-radius:16px;
   overflow:hidden;
-  border: 1px solid rgba(97,64,6,0.25);
-  box-shadow: 0 16px 40px rgba(0,0,0,0.20);
-}
-
-/* ===== Editorial reading style ===== */
-/* Make a card span the full row (2 columns) */
-.spanTwo{
-  grid-column: 1 / -1;
-  max-width: 520px;
-  justify-self: center;
-}
-
-@media (max-width: 720px){
-  .spanTwo{
-    max-width: 100%;
-    justify-self: stretch;
-  }
+  border:1px solid rgba(97,64,6,0.25);
+  box-shadow:0 16px 40px rgba(0,0,0,0.20);
 }
 
 .content{
-  max-width: 760px;     /* ancho óptimo de lectura */
-  margin: 0 auto;       /* centra el texto dentro de la card */
+  max-width:760px;
+  margin:0 auto;
 }
 
 .content p{
-  text-align: left;     /* editorial > justify en web */
-  line-height: 1.85;    /* espacio intermedio ideal */
-  margin: 0 0 14px 0;
-  letter-spacing: 0.01em;
+  text-align:left;
+  line-height:1.85;
+  margin:0 0 14px 0;
+  letter-spacing:0.01em;
 }
 
-/* Top ribbon */
+/* =========================================================
+   TOP RIBBON
+   ========================================================= */
 .ribbon{
-  background: linear-gradient(90deg, rgba(6,91,97,0.95), rgba(6,91,97,0.80));
-  color: #ffffff;
-  padding: 14px 22px;
-  font-size: 0.98rem;
-  letter-spacing: 0.4px;
+  background:linear-gradient(90deg, rgba(6,91,97,0.95), rgba(6,91,97,0.80));
+  color:#ffffff;
+  padding:14px 22px;
+  font-size:0.98rem;
+  letter-spacing:0.4px;
+  font-family:"Libre Franklin", Arial, sans-serif;
 }
 
-/* Home hero */
+/* =========================================================
+   HERO SECTION
+   ========================================================= */
 .hero{
-  padding: 28px 28px 10px 28px;
+  padding:28px 28px 10px 28px;
 }
 
 .name{
-  font-family:"Playfair Display", Georgia, serif;
-  font-size: 3.0rem;
-  font-weight: 700;
-  margin: 6px 0 6px 0;
-  letter-spacing: 0.3px;
+  font-family:"Libre Baskerville", Georgia, serif;
+  font-size:2.9rem;
+  font-weight:700;
+  margin:6px 0 8px 0;
+  letter-spacing:0.15px;
 }
 
 .subtitle{
-  margin: 0 0 16px 0;
-  color: var(--muted);
-  font-size: 1.08rem;
-  font-style: italic;
+  margin:0 0 16px 0;
+  color:var(--muted);
+  font-size:1.02rem;
+  font-style:italic;
 }
 
-/* Intro plate */
+/* =========================================================
+   HOME INTRO / PRESENTATION PLATE
+   ========================================================= */
 .introPlate{
-  margin-top: 12px;
-  padding: 14px 16px;
-  border-radius: 14px;
-  background: linear-gradient(
+  margin-top:12px;
+  padding:14px 16px;
+  border-radius:14px;
+  background:linear-gradient(
     135deg,
     rgba(50,60,168,0.10),
     rgba(6,91,97,0.10)
   );
-  border: 1px solid rgba(97,64,6,0.35);
+  border:1px solid rgba(97,64,6,0.35);
 }
 
-/* Divider */
+/* =========================================================
+   QUOTE BLOCK
+   ========================================================= */
+.quoteBlock{
+  margin:18px 0 20px auto;
+  padding:10px 6px 2px 6px;
+  max-width:640px;
+  text-align:right;
+}
+
+.quoteBlock p{
+  margin:0 0 8px 0;
+}
+
+.quoteBlock em{
+  font-family:"Libre Baskerville", Georgia, serif;
+  font-size:0.85rem;
+  line-height:1.75;
+  color:#3f4652;
+  font-weight:400;
+}
+
+.quoteAttribution{
+  margin:0;
+  color:#6b7280;
+  font-size:0.90rem;
+  text-align:right;
+  font-style:normal;
+  font-family:"Libre Franklin", Arial, sans-serif;
+}
+
+/* =========================================================
+   DIVIDERS
+   ========================================================= */
 .homeDivider{
-  height: 2px;
-  background: var(--divider);
-  opacity: 0.75;
-  margin: 14px 28px 0 28px;
-  border-radius: 999px;
+  height:2px;
+  background:var(--divider);
+  opacity:0.75;
+  margin:14px 28px 0 28px;
+  border-radius:999px;
 }
 
+.postDivider{
+  height:1px;
+  background:rgba(97,64,6,0.25);
+  margin:14px 0 18px 0;
+  border-radius:999px;
+}
+
+/* =========================================================
+   NOTES / INFO BOXES
+   ========================================================= */
 .note{
   margin-top:12px;
   padding:10px 14px;
@@ -144,226 +185,191 @@ h1, h2{
   margin-bottom:0;
 }
 
-/* Home link cards */
-.linkGrid{
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 14px;
-  margin-top: 18px;
-  padding: 0 28px 10px 28px;
-}
-
-@media (max-width: 720px){
-  .linkGrid{ grid-template-columns: 1fr; }
-}
-
-.linkCard{
-  display: block;
-  padding: 16px 16px;
-  border-radius: 16px;
-  background: #ffffff;
-  border: 2px solid rgba(97,64,6,0.45);
-  box-shadow: 0 12px 26px rgba(0,0,0,0.12);
-  text-decoration: none;
-  transition: transform 120ms ease, box-shadow 120ms ease, border-color 120ms ease;
-}
-
-.linkCard:hover{
-  transform: translateY(-2px);
-  box-shadow: 0 16px 34px rgba(0,0,0,0.16);
-  border-color: rgba(97,64,6,0.85);
-}
-
-.linkTitle{
-  font-family:"Playfair Display", Georgia, serif;
-  color: var(--accent);
-  font-size: 1.45rem;
-  font-weight: 700;
-  margin: 0 0 6px 0;
-  letter-spacing: 0.2px;
-}
-
-.linkText{
-  margin: 0;
-  color: var(--muted);
-  font-size: 1.0rem;
-}
-
+/* =========================================================
+   SECTION SPACING
+   ========================================================= */
 .section{
-  margin-top: 26px;
-  padding-top: 14px;
-}
-
-/* Links (global) */
-a{
-  color: var(--accent);
-}
-
-/* Footer */
-footer{
-  padding: 14px 28px 22px 28px;
-  color: var(--muted);
-}
-
-.footerLine{
-  height: 2px;
-  background: var(--divider);
-  opacity: 0.75;
-  margin: 0 0 12px 0;
-}
-
-/* Footer socials (vertical, academic) */
-.footerSocial{
-  margin-top: 10px;
-  display: flex;
-  flex-direction: column;   /* uno encima de otro */
-  align-items: flex-start;  /* alineados a la izquierda */
-  gap: 10px;                /* separación clara */
-  max-width: 420px;
-}
-
-.footerSocial a{
-  display: inline-flex;
-  align-items: center;
-  gap: 10px;
-  font-size: 0.92rem;       /* pequeño y sobrio */
-  color: var(--accent);
-  text-decoration: none;
-}
-
-.footerSocial a:hover{
-  text-decoration: underline;
-}
-
-.footerSocial i{
-  font-size: 0.95rem;
-  min-width: 18px;
-  text-align: center;
-}
-
-.footerCopy{
-  margin-top: 14px;
-  font-size: 0.88rem;
-  color: var(--muted);
-}
-
-.meta{
-  margin: 6px 0 14px 0;
-  color: var(--muted);
-  font-size: 0.95rem;
-  font-style: italic;
-}
-
-/* ===== Figures (cinema posts) ===== */
-figure{
-  margin: 24px auto;
-  text-align: center;
-}
-
-figure img{
-  display: block;
-  margin: 0 auto;
-  max-width: 100%;
-  height: auto;
-  border-radius: 10px;
-}
-
-figcaption{
-  margin-top: 8px;
-  color: var(--muted);
-  font-size: 0.9rem;
-  font-style: italic;
-}
-
-/* Center embedded tweets */
-.twitter-tweet{
-  margin: 24px auto !important;
-}
-
-/* ===== Post navigation (cinema/series) ===== */
-.topNav{
-  margin: 10px 0 18px 0;
-  display: flex;
-  gap: 12px;
-  flex-wrap: wrap;
-}
-
-.navItem{
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  padding: 8px 12px;
-  border-radius: 999px;
-  border: 1px solid rgba(97,64,6,0.35);
-  background: rgba(50,60,168,0.06);
-  color: var(--accent);
-  text-decoration: none;
-  font-size: 0.92rem;
-}
-
-.navItem:hover{
-  border-color: rgba(97,64,6,0.75);
-  text-decoration: none;
-}
-
-/* Optional: a subtle divider between header/meta and body */
-.postDivider{
-  height: 1px;
-  background: rgba(97,64,6,0.25);
-  margin: 14px 0 18px 0;
-  border-radius: 999px;
+  margin-top:26px;
+  padding-top:14px;
 }
 
 /* =========================================================
-   SCIENCE POSTS ONLY (does NOT affect other pages)
+   LINKS
+   ========================================================= */
+a{
+  color:var(--accent);
+}
+
+/* =========================================================
+   NAVIGATION PILLS
+   ========================================================= */
+.topNav{
+  margin:10px 0 18px 0;
+  display:flex;
+  gap:12px;
+  flex-wrap:wrap;
+}
+
+.navItem{
+  display:inline-flex;
+  align-items:center;
+  gap:8px;
+  padding:8px 12px;
+  border-radius:999px;
+  border:1px solid rgba(97,64,6,0.35);
+  background:rgba(50,60,168,0.06);
+  color:var(--accent);
+  text-decoration:none;
+  font-size:0.92rem;
+  font-family:"Libre Franklin", Arial, sans-serif;
+}
+
+.navItem:hover{
+  border-color:rgba(97,64,6,0.75);
+  text-decoration:none;
+}
+
+/* =========================================================
+   HOME NAVIGATION CARDS
+   ========================================================= */
+.linkGrid{
+  display:grid;
+  grid-template-columns:repeat(2, minmax(0, 1fr));
+  gap:14px;
+  margin-top:18px;
+  padding:0 28px 10px 28px;
+}
+
+.linkCard{
+  display:block;
+  padding:16px 16px;
+  border-radius:16px;
+  background:#ffffff;
+  border:2px solid rgba(97,64,6,0.45);
+  box-shadow:0 12px 26px rgba(0,0,0,0.12);
+  text-decoration:none;
+  transition:transform 120ms ease, box-shadow 120ms ease, border-color 120ms ease;
+}
+
+.linkCard:hover{
+  transform:translateY(-2px);
+  box-shadow:0 16px 34px rgba(0,0,0,0.16);
+  border-color:rgba(97,64,6,0.85);
+}
+
+.linkTitle{
+  font-family:"Libre Baskerville", Georgia, serif;
+  color:var(--accent);
+  font-size:1.35rem;
+  font-weight:700;
+  margin:0 0 6px 0;
+  letter-spacing:0.1px;
+}
+
+.linkText{
+  margin:0;
+  color:var(--muted);
+  font-size:1rem;
+  font-family:"Libre Franklin", Arial, sans-serif;
+}
+
+/* Card spanning full row */
+.spanTwo{
+  grid-column:1 / -1;
+  max-width:520px;
+  justify-self:center;
+}
+
+/* =========================================================
+   META TEXT
+   ========================================================= */
+.meta{
+  margin:6px 0 14px 0;
+  color:var(--muted);
+  font-size:0.95rem;
+  font-style:italic;
+  font-family:"Libre Franklin", Arial, sans-serif;
+}
+
+/* =========================================================
+   FIGURES / IMAGES FOR POSTS
+   ========================================================= */
+figure{
+  margin:24px auto;
+  text-align:center;
+}
+
+figure img{
+  display:block;
+  margin:0 auto;
+  max-width:100%;
+  height:auto;
+  border-radius:10px;
+}
+
+figcaption{
+  margin-top:8px;
+  color:var(--muted);
+  font-size:0.9rem;
+  font-style:italic;
+  font-family:"Libre Franklin", Arial, sans-serif;
+}
+
+.posterSmall{
+  max-width:420px;
+  width:100%;
+}
+
+/* =========================================================
+   EMBEDDED TWEETS
+   ========================================================= */
+.twitter-tweet{
+  margin:24px auto !important;
+}
+
+/* =========================================================
+   SCIENCE POSTS ONLY
    Usage: wrap the post body with <div class="sciencePost">...</div>
    ========================================================= */
 .sciencePost{
-  padding: 22px 28px 30px 28px;
+  padding:22px 28px 30px 28px;
 }
 
-@media (max-width: 720px){
-  .sciencePost{
-    padding: 18px 18px 26px 18px;
-  }
-}
-
-/* Better reading width + consistent spacing for science notes */
 .sciencePost section{
-  max-width: 760px;
-  margin: 0 auto;
+  max-width:760px;
+  margin:0 auto;
 }
 
 .sciencePost h2{
-  margin: 18px 0 10px 0;
+  margin:18px 0 10px 0;
 }
 
 .sciencePost p{
-  margin: 0 0 14px 0;
-  color: var(--text);
+  margin:0 0 14px 0;
+  color:var(--text);
 }
 
-/* Math blocks, only for science posts */
 .sciencePost .math-block{
-  max-width: 760px;
-  margin: 14px auto 18px auto;
-  padding: 14px 16px;
-  background: rgba(50,60,168,0.06);
-  border: 1px solid rgba(97,64,6,0.25);
-  border-left: 4px solid rgba(97,64,6,0.70);
-  border-radius: 12px;
-  overflow-x: auto;
+  max-width:760px;
+  margin:14px auto 18px auto;
+  padding:14px 16px;
+  background:rgba(50,60,168,0.06);
+  border:1px solid rgba(97,64,6,0.25);
+  border-left:4px solid rgba(97,64,6,0.70);
+  border-radius:12px;
+  overflow-x:auto;
 }
 
-/* Optional: slightly tighter HR inside cards for science posts */
 .sciencePost hr{
-  margin: 14px 0 18px 0;
-  border: 0;
-  height: 1px;
-  background: rgba(97,64,6,0.20);
+  margin:14px 0 18px 0;
+  border:0;
+  height:1px;
+  background:rgba(97,64,6,0.20);
 }
 
-/* ===== Small thumbnails for lists, titles, thesis entries, etc. ===== */
+/* =========================================================
+   THUMBNAILS FOR LISTS / TITLES / ENTRIES
+   ========================================================= */
 .title_with_thumb{
   display:flex;
   align-items:center;
@@ -390,20 +396,7 @@ figcaption{
   background:#fff;
 }
 
-@media (max-width: 720px){
-  .title_with_thumb{
-    gap:10px;
-  }
-
-  .title_with_thumb img.page_thumb{
-    width:105px;
-    height:105px;
-    max-width:105px;
-    min-width:105px;
-    flex:0 0 105px;
-  }
-}
-
+/* Custom bullet alignment for thumbnail list items */
 .thumb_list_item{
   list-style:none;
   display:flex;
@@ -415,35 +408,85 @@ figcaption{
   flex:0 0 auto;
   font-size:1.6rem;
   line-height:1;
+  font-family:"Libre Franklin", Arial, sans-serif;
 }
 
-.quoteBlock{
-  margin:18px 0 20px auto;
-  padding:10px 6px 2px 6px;
-  max-width:640px;
-  text-align:right;
+/* =========================================================
+   FOOTER
+   ========================================================= */
+footer{
+  padding:14px 28px 22px 28px;
+  color:var(--muted);
+  font-family:"Libre Franklin", Arial, sans-serif;
 }
 
-.quoteBlock p{
-  margin:0 0 8px 0;
+.footerLine{
+  height:2px;
+  background:var(--divider);
+  opacity:0.75;
+  margin:0 0 12px 0;
 }
 
-.quoteBlock em{
-  font-family:"Crimson Pro", Georgia, serif;
-  font-size:0.98rem;
-  line-height:1.75;
-  color:#3f4652;
-  font-weight:500;
+.footerSocial{
+  margin-top:10px;
+  display:flex;
+  flex-direction:column;
+  align-items:flex-start;
+  gap:10px;
+  max-width:420px;
 }
 
-.quoteAttribution{
-  margin:0;
-  color:#6b7280;
-  font-size:0.90rem;
-  text-align:right;
-  font-style:normal;
+.footerSocial a{
+  display:inline-flex;
+  align-items:center;
+  gap:10px;
+  font-size:0.92rem;
+  color:var(--accent);
+  text-decoration:none;
 }
-.posterSmall{
-  max-width: 420px;
-  width: 100%;
+
+.footerSocial a:hover{
+  text-decoration:underline;
+}
+
+.footerSocial i{
+  font-size:0.95rem;
+  min-width:18px;
+  text-align:center;
+}
+
+.footerCopy{
+  margin-top:14px;
+  font-size:0.88rem;
+  color:var(--muted);
+}
+
+/* =========================================================
+   RESPONSIVE ADJUSTMENTS
+   ========================================================= */
+@media (max-width: 720px){
+  .spanTwo{
+    max-width:100%;
+    justify-self:stretch;
+  }
+
+  .linkGrid{
+    grid-template-columns:1fr;
+  }
+
+  .sciencePost{
+    padding:18px 18px 26px 18px;
+  }
+
+  .title_with_thumb{
+    gap:10px;
+  }
+
+  .title_with_thumb img.page_thumb{
+    width:105px;
+    height:105px;
+    max-width:105px;
+    min-width:105px;
+    flex:0 0 105px;
+  }
 }
