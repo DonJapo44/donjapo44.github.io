@@ -97,19 +97,6 @@ h1, h2{
   padding:32px 32px 14px 32px;
 }
 
-.hero::before{
-  content:"";
-  position:absolute;
-  top:8px;
-  right:-20px;
-  width:180px;
-  height:180px;
-  background:radial-gradient(circle, rgba(6,91,97,0.30), transparent 58%);
-  border-radius:50%;
-  filter:blur(6px);
-  z-index:0;
-}
-
 .name{
   position:relative;
   font-family:"Libre Baskerville", Georgia, serif;
