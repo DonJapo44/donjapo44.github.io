@@ -158,42 +158,6 @@ h1, h2{
   background:linear-gradient(90deg, rgba(6,91,97,0.95), rgba(6,91,97,0.35));
 }
 
-
-/* =========================================================
-   QUOTE BLOCK
-   ========================================================= */
-.quoteBlock{
-  margin:22px 0 24px auto;
-  padding:18px 16px 12px 18px;
-  max-width:680px;
-  text-align:right;
-  background:rgba(255,255,255,0.92);
-  border-radius:14px;
-  border-left:4px solid var(--divider);
-  box-shadow:0 14px 28px rgba(0,0,0,0.08);
-}
-
-.quoteBlock p{
-  margin:0 0 8px 0;
-}
-
-.quoteBlock em{
-  font-family:"Libre Baskerville", Georgia, serif;
-  font-size:0.85rem;
-  line-height:1.75;
-  color:#3f4652;
-  font-weight:400;
-}
-
-.quoteAttribution{
-  margin:0;
-  color:#6b7280;
-  font-size:0.90rem;
-  text-align:right;
-  font-style:normal;
-  font-family:"Libre Franklin", Arial, sans-serif;
-}
-
 /* =========================================================
    DIVIDERS
    ========================================================= */
@@ -338,7 +302,6 @@ a{
   font-family:"Libre Franklin", Arial, sans-serif;
 }
 
-/* Card spanning full row */
 .spanTwo{
   grid-column:1 / -1;
   max-width:520px;
@@ -374,7 +337,7 @@ figure img{
 
 .videoFeature{
   margin:24px auto 0;
-  max-width:720px;
+  max-width:540px;
   padding:0 18px;
 }
 
@@ -382,7 +345,7 @@ figure img{
   position:relative;
   width:100%;
   padding-top:56.25%;
-  max-width:700px;
+  max-width:525px;
   margin:0 auto;
   overflow:hidden;
   border-radius:18px;
@@ -424,6 +387,39 @@ figcaption{
 }
 
 /* =========================================================
+   WHITMAN POEM
+   ========================================================= */
+.whitmanPoem{
+  padding:20px 32px 28px;
+  text-align:center;
+}
+
+.whitmanTitle{
+  font-family:"Libre Baskerville", Georgia, serif;
+  font-size:0.88rem;
+  font-weight:700;
+  color:var(--text);
+  letter-spacing:0.04em;
+  margin:0 0 6px 0;
+}
+
+.whitmanVerses{
+  font-family:"Libre Baskerville", Georgia, serif;
+  font-style:italic;
+  font-size:0.81rem;
+  line-height:2.1;
+  color:#3a4060;
+  margin:0 0 14px 0;
+}
+
+.whitmanAttrib{
+  font-family:"Libre Franklin", Arial, sans-serif;
+  font-size:0.78rem;
+  color:var(--muted);
+  margin:0;
+}
+
+/* =========================================================
    EMBEDDED TWEETS
    ========================================================= */
 .twitter-tweet{
@@ -432,7 +428,6 @@ figcaption{
 
 /* =========================================================
    SCIENCE POSTS ONLY
-   Usage: wrap the post body with <div class="sciencePost">...</div>
    ========================================================= */
 .sciencePost{
   padding:22px 28px 30px 28px;
@@ -499,7 +494,6 @@ figcaption{
   background:#fff;
 }
 
-/* Custom bullet alignment for thumbnail list items */
 .thumb_list_item{
   list-style:none;
   display:flex;
