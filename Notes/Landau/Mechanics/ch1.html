@@ -2,17 +2,20 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Chapter 1. Equations of motion. | Landau — Classical Mechanics (March 5, 2026)</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Reading notes on Chapter 1 of Landau's Classical Mechanics — equations of motion, the first variation of the action, and inertial frames.">
+  <title>Chapter 1. Equations of motion. | Landau — Classical Mechanics</title>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&family=Libre+Franklin:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <!-- Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
   <!-- Main stylesheet -->
   <link rel="stylesheet" href="../../../style.css">
-
-  <!-- Fonts -->
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&family=Libre+Franklin:wght@400;500;600&display=swap" rel="stylesheet">
-  <!-- Icons -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
   <!-- MathJax configuration -->
   <script>
@@ -48,6 +51,13 @@
       font-style: normal;
       font-size: 1.0rem;
     }
+    /* Navegación entre capítulos */
+    .chapterNav{
+      max-width: 760px;
+      margin: 26px auto 0 auto;
+      display: flex;
+      justify-content: flex-end;
+    }
   </style>
 </head>
 
@@ -58,6 +68,7 @@
 
       <!-- Top ribbon -->
       <div class="ribbon">
+        <i class="fa-solid fa-book-open" aria-hidden="true"></i>&nbsp;
         Scientific Notes · Landau · Classical Mechanics
       </div>
 
@@ -69,7 +80,7 @@
           <time datetime="2026-03-05">March 5, 2026</time>
         </p>
 
-       <!-- Navigation -->
+        <!-- Navigation -->
         <nav class="topNav">
           <a class="navItem" href="../../../index.html">
             <i class="fa-solid fa-house"></i>
@@ -79,6 +90,11 @@
           <a class="navItem" href="../../../scientific-notes.html">
             <i class="fa-solid fa-book-open"></i>
             <span>Scientific Notes</span>
+          </a>
+
+          <a class="navItem" href="ch2.html">
+            <i class="fa-solid fa-arrow-right"></i>
+            <span>Chapter 2</span>
           </a>
         </nav>
       </header>
@@ -230,6 +246,14 @@
           </p>
 
         </section>
+
+        <!-- Navegación al siguiente capítulo -->
+        <nav class="chapterNav">
+          <a class="navItem" href="ch2.html">
+            <span>Chapter 2 · Conservation Laws</span>
+            <i class="fa-solid fa-arrow-right"></i>
+          </a>
+        </nav>
 
       </div><!-- /sciencePost -->
 
