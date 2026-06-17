@@ -99,7 +99,10 @@ h1, h2{
 }
 
 .content p{
-  text-align:left;
+  text-align:justify;
+  hyphens:auto;
+  -webkit-hyphens:auto;
+  overflow-wrap:break-word;
   line-height:1.85;
   margin:0 0 14px 0;
   letter-spacing:0.01em;
@@ -161,6 +164,13 @@ h1, h2{
   background:var(--accent-soft);
   border:1px solid var(--divider-soft);
   border-left:4px solid var(--accent);
+}
+
+.introPlate p{
+  text-align:justify;
+  hyphens:auto;
+  -webkit-hyphens:auto;
+  overflow-wrap:break-word;
 }
 
 /* =========================================================
@@ -504,6 +514,10 @@ body.cinema .whitmanVerses{
 }
 
 .sciencePost p{
+  text-align:justify;
+  hyphens:auto;
+  -webkit-hyphens:auto;
+  overflow-wrap:break-word;
   margin:0 0 14px 0;
   color:var(--text);
 }
@@ -832,6 +846,16 @@ body.cinema .thumb_list_item:hover img.page_thumb{
     max-width:105px;
     min-width:105px;
     flex:0 0 105px;
+  }
+}
+
+@media (max-width: 480px){
+  .content p,
+  .introPlate p,
+  .sciencePost p{
+    text-align:left;
+    hyphens:none;
+    -webkit-hyphens:none;
   }
 }
 
