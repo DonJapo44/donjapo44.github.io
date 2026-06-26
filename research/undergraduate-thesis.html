@@ -1,170 +1,98 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Undergraduate thesis by Javier Gómez Morales — Principal component analysis of S&P 500 correlation matrices from an econophysics perspective. UNAM, 2026.">
-  <title>Undergraduate Thesis | Javier Gómez Morales</title>
-
-  <!-- Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&family=Libre+Franklin:wght@400;500;600&display=swap" rel="stylesheet">
-
-  <!-- Icons -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-
-  <!-- Main stylesheet -->
-  <link rel="stylesheet" href="../style.css">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="../support.js"></script>
 </head>
-
 <body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,300;0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,300;1,6..72,400&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,500;0,8..60,600;1,8..60,400&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  body { margin: 0; background: oklch(0.965 0.008 235); }
+  * { box-sizing: border-box; }
+</style>
+</helmet>
 
-  <div class="container">
-    <div class="card">
+<div style="max-width:920px; margin:0 auto; background:oklch(0.985 0.004 235); box-shadow:0 1px 3px rgba(0,0,0,.07), 0 12px 40px rgba(20,40,80,.06); color:oklch(0.22 0.014 250); min-height:100vh;">
 
-      <!-- Top ribbon -->
-      <div class="ribbon">
-        <i class="fa-solid fa-graduation-cap" aria-hidden="true"></i>&nbsp;
-        Research · Undergraduate Thesis · UNAM
-      </div>
-
-      <!-- Main content -->
-      <div class="content">
-
-        <h1>Undergraduate Thesis</h1>
-
-        <p class="subtitle">
-          <em>Análisis de componentes principales de matrices de correlación de datos financieros del S&amp;P 500 desde la econofísica</em>
-        </p>
-
-        <p class="meta">
-          Universidad Nacional Autónoma de México
-          <br>
-          Facultad de Ciencias
-          <br>
-          February 2026
-          <br>
-          Advisor: Dr. Manuel Mijaíl Martínez Ramos
-        </p>
-
-        <!-- Navigation -->
-        <nav class="topNav">
-          <a class="navItem" href="../index.html">
-            <i class="fa-solid fa-house"></i>
-            <span>Home</span>
-          </a>
-
-          <a class="navItem" href="../research.html">
-            <i class="fa-solid fa-atom"></i>
-            <span>Research</span>
-          </a>
-
-          <a class="navItem" href="../scientific-notes.html">
-            <i class="fa-solid fa-book-open"></i>
-            <span>Scientific Notes</span>
-          </a>
-        </nav>
-
-        <!-- Section: Abstract -->
-        <div class="section">
-          <h2><i class="fa-solid fa-file-lines section_icon" aria-hidden="true"></i> Abstract</h2>
-          <p>
-            This thesis studies collective behavior in financial markets using daily adjusted prices of a set of S&amp;P 500
-            companies from January 3, 2012 to December 29, 2023. It analyzes how correlation matrices evolve over time
-            through spectral methods, focusing on eigenvalues, squared eigenvector components, and eigenvalue-weighted
-            eigenvector constructions. Within this framework, Discrete Market States (<em>MS</em>) are investigated, and the
-            <em>COVID</em> period is examined as a distinct market regime. Squared eigenvector analysis combined with
-            <em>k</em>-Means clustering highlights sectors and firms with stronger relative participation in the market’s
-            collective dynamics, particularly for <em>q</em> = 40 and <em>k</em> = 5. Overall, the spectral-based approaches
-            capture meaningful structure, but they do not fully reproduce the <em>MS</em> obtained by direct clustering of
-            correlation matrices.
-          </p>
-        </div>
-
-        <!-- Section: Illustrative Figure -->
-        <div class="section">
-          <h2><i class="fa-solid fa-chart-area section_icon" aria-hidden="true"></i> Illustrative Figure</h2>
-
-          <figure>
-            <img
-              src="images/AvgMats_q20_k4_cl1.png"
-              alt="Average correlation matrix for q = 20 and k = 4"
-              loading="lazy">
-            <figcaption>
-              Average correlation matrix obtained from a 20-trading-day time window and a 4-cluster k-Means classification, corresponding to one of the market configurations analyzed in the thesis.
-            </figcaption>
-          </figure>
-        </div>
-
-        <!-- Section: Keywords -->
-        <div class="section">
-          <h2><i class="fa-solid fa-tags section_icon" aria-hidden="true"></i> Keywords</h2>
-          <ul class="tagList">
-            <li>Econophysics</li>
-            <li>Discrete Market States (<em>MS</em>)</li>
-            <li><em>COVID</em> state</li>
-            <li>Correlation matrices</li>
-            <li>Eigenvalues</li>
-            <li>Eigenvectors</li>
-            <li><em>k</em>-Means</li>
-          </ul>
-        </div>
-
-        <!-- Section: Links -->
-        <div class="section">
-          <h2><i class="fa-solid fa-link section_icon" aria-hidden="true"></i> Links</h2>
-          <div class="note">
-            <ul>
-              <li>
-                <a href="https://tesiunamdocumentos.dgb.unam.mx/ptd2026/ene_mar/0881908/Index.html" target="_blank" rel="noopener">
-                  Official direct thesis link
-                </a>.
-              </li>
-              <li>
-                <a href="https://tesiunam.dgb.unam.mx" target="_blank" rel="noopener">
-                  TesiUNAM
-                </a>.
-                To find the record manually, enter <em>Javier Gómez Morales</em> in the
-                <em>“Palabra o frase”</em> field.
-              </li>
-            </ul>
-          </div>
-        </div>
-
-      </div>
-
-      <!-- Footer -->
-      <footer>
-
-        <div class="footerLine"></div>
-
-        <div class="footerSocial">
-          <a href="mailto:japogm@ciencias.unam.mx">
-            <i class="fa-solid fa-envelope"></i>
-            <span>japogm@ciencias.unam.mx</span>
-          </a>
-
-          <a href="https://x.com/Japogm" target="_blank" rel="noopener">
-            <i class="fa-brands fa-x-twitter"></i>
-            <span>@Japogm</span>
-          </a>
-
-          <a href="https://www.instagram.com/Japogm" target="_blank" rel="noopener">
-            <i class="fa-brands fa-instagram"></i>
-            <span>@Japogm</span>
-          </a>
-        </div>
-
-        <p class="footerCopy">
-          © <span id="year"></span> — Personal page
-        </p>
-
-      </footer>
-
+  <div style="display:flex; align-items:center; justify-content:space-between; padding:18px 56px; border-bottom:1px solid oklch(0.9 0.012 235); background:#fff; position:sticky; top:0; z-index:5;">
+    <a href="../index.html" style="display:flex; align-items:center; gap:12px; text-decoration:none; color:inherit;">
+      <div style="width:27px; height:27px; border:1.5px solid oklch(0.46 0.15 248); display:flex; align-items:center; justify-content:center; font-family:'IBM Plex Mono',monospace; font-size:11px; font-weight:600; color:oklch(0.46 0.15 248);">J</div>
+      <div style="font-family:'IBM Plex Mono',monospace; font-size:12px; letter-spacing:0.06em; color:oklch(0.3 0.014 250);">Javier Gómez Morales</div>
+    </a>
+    <div style="display:flex; gap:24px; font-family:'IBM Plex Mono',monospace; font-size:12px; letter-spacing:0.04em; color:oklch(0.45 0.014 250);">
+      <a href="../index.html" style="color:inherit; text-decoration:none;">home</a>
+      <a href="../research.html" style="color:oklch(0.46 0.15 248); text-decoration:none;">research</a>
+      <a href="../scientific-notes.html" style="color:inherit; text-decoration:none;">notes</a>
+      <a href="../scenes-in-motion.html" style="color:inherit; text-decoration:none;">cinema</a>
     </div>
   </div>
 
-  <script src="../year.js"></script>
+  <div style="padding:48px 56px 40px; background:linear-gradient(180deg, oklch(0.985 0.012 235), #fff); border-bottom:1px solid oklch(0.9 0.012 235);">
+    <a href="../research.html" style="font-family:'IBM Plex Mono',monospace; font-size:12px; letter-spacing:0.04em; color:oklch(0.5 0.1 198); text-decoration:none;">← Research</a>
+    <div style="font-family:'IBM Plex Mono',monospace; font-size:11px; letter-spacing:0.16em; text-transform:uppercase; color:oklch(0.5 0.1 198); margin:24px 0 16px;">Undergraduate Thesis · UNAM</div>
+    <h1 style="font-family:'Source Serif 4',serif; font-weight:600; font-size:44px; line-height:1.08; letter-spacing:-0.015em; margin:0 0 18px;">Undergraduate Thesis</h1>
+    <p style="font-family:'Newsreader',serif; font-style:italic; font-size:21px; line-height:1.4; color:oklch(0.4 0.05 248); margin:0 0 26px; max-width:680px;">Análisis de componentes principales de matrices de correlación de datos financieros del S&amp;P 500 desde la econofísica</p>
+    <div style="display:grid; grid-template-columns:auto 1fr; gap:6px 18px; font-family:'IBM Plex Mono',monospace; font-size:12px; color:oklch(0.45 0.014 250);">
+      <span style="color:oklch(0.6 0.014 250);">Institution</span><span>Universidad Nacional Autónoma de México · Facultad de Ciencias</span>
+      <span style="color:oklch(0.6 0.014 250);">Date</span><span>February 2026</span>
+      <span style="color:oklch(0.6 0.014 250);">Advisor</span><span>Dr. Manuel Mijaíl Martínez Ramos</span>
+    </div>
+  </div>
+
+  <div style="padding:44px 56px 8px;">
+    <div style="font-family:'IBM Plex Mono',monospace; font-size:11px; font-weight:600; letter-spacing:0.24em; text-transform:uppercase; color:oklch(0.46 0.15 248); margin-bottom:16px;">abstract</div>
+    <p style="font-family:'Source Serif 4',serif; font-size:18px; line-height:1.78; text-align:justify; hyphens:auto; margin:0; color:oklch(0.28 0.012 250);">This thesis studies collective behavior in financial markets using daily adjusted prices of a set of S&amp;P 500 companies from January 3, 2012 to December 29, 2023. It analyzes how correlation matrices evolve over time through spectral methods, focusing on eigenvalues, squared eigenvector components, and eigenvalue-weighted eigenvector constructions. Within this framework, Discrete Market States (<em>MS</em>) are investigated, and the <em>COVID</em> period is examined as a distinct market regime. Squared eigenvector analysis combined with <em>k</em>-Means clustering highlights sectors and firms with stronger relative participation in the market's collective dynamics, particularly for <em>q</em> = 40 and <em>k</em> = 5. Overall, the spectral-based approaches capture meaningful structure, but they do not fully reproduce the <em>MS</em> obtained by direct clustering of correlation matrices.</p>
+  </div>
+
+  <div style="padding:36px 56px 8px;">
+    <figure style="margin:0; display:flex; flex-direction:column; align-items:center; text-align:center;">
+      <div style="border:1px solid oklch(0.88 0.012 235); background:#fff; padding:12px; max-width:340px;">
+        <img src="../images/AvgMats_q20_k4_cl1.png" alt="Average correlation matrix for q = 20 and k = 4" style="width:100%; height:auto; display:block;">
+      </div>
+      <figcaption style="font-family:'Source Serif 4',serif; font-style:italic; font-size:14px; line-height:1.55; color:oklch(0.5 0.014 250); margin-top:14px; max-width:420px;">Average correlation matrix obtained from a 20-trading-day time window and a 4-cluster <em>k</em>-Means classification, one of the market configurations analyzed in the thesis.</figcaption>
+    </figure>
+  </div>
+
+  <div style="padding:40px 56px 8px;">
+    <div style="font-family:'IBM Plex Mono',monospace; font-size:11px; font-weight:600; letter-spacing:0.24em; text-transform:uppercase; color:oklch(0.46 0.15 248); margin-bottom:16px;">keywords</div>
+    <div style="display:flex; flex-wrap:wrap; gap:10px;">
+      <span style="font-family:'IBM Plex Mono',monospace; font-size:12px; color:oklch(0.4 0.05 248); border:1px solid oklch(0.84 0.04 248); background:oklch(0.97 0.015 248); padding:6px 12px;">Econophysics</span>
+      <span style="font-family:'IBM Plex Mono',monospace; font-size:12px; color:oklch(0.4 0.05 248); border:1px solid oklch(0.84 0.04 248); background:oklch(0.97 0.015 248); padding:6px 12px;">Discrete Market States</span>
+      <span style="font-family:'IBM Plex Mono',monospace; font-size:12px; color:oklch(0.4 0.05 248); border:1px solid oklch(0.84 0.04 248); background:oklch(0.97 0.015 248); padding:6px 12px;">COVID state</span>
+      <span style="font-family:'IBM Plex Mono',monospace; font-size:12px; color:oklch(0.4 0.05 248); border:1px solid oklch(0.84 0.04 248); background:oklch(0.97 0.015 248); padding:6px 12px;">Correlation matrices</span>
+      <span style="font-family:'IBM Plex Mono',monospace; font-size:12px; color:oklch(0.4 0.05 248); border:1px solid oklch(0.84 0.04 248); background:oklch(0.97 0.015 248); padding:6px 12px;">Eigenvalues</span>
+      <span style="font-family:'IBM Plex Mono',monospace; font-size:12px; color:oklch(0.4 0.05 248); border:1px solid oklch(0.84 0.04 248); background:oklch(0.97 0.015 248); padding:6px 12px;">Eigenvectors</span>
+      <span style="font-family:'IBM Plex Mono',monospace; font-size:12px; color:oklch(0.4 0.05 248); border:1px solid oklch(0.84 0.04 248); background:oklch(0.97 0.015 248); padding:6px 12px;">k-Means</span>
+    </div>
+  </div>
+
+  <div style="padding:40px 56px 48px;">
+    <div style="font-family:'IBM Plex Mono',monospace; font-size:11px; font-weight:600; letter-spacing:0.24em; text-transform:uppercase; color:oklch(0.46 0.15 248); margin-bottom:16px;">links</div>
+    <a href="https://tesiunamdocumentos.dgb.unam.mx/ptd2026/ene_mar/0881908/Index.html" style="display:flex; align-items:center; justify-content:space-between; gap:18px; text-decoration:none; color:inherit; border:1px solid oklch(0.88 0.012 235); border-left:3px solid oklch(0.46 0.15 248); background:#fff; padding:16px 20px; margin-bottom:12px;">
+      <span style="font-family:'Source Serif 4',serif; font-size:17px;">Official direct thesis link</span>
+      <span style="font-family:'IBM Plex Mono',monospace; font-size:12px; color:oklch(0.46 0.15 248);">open →</span>
+    </a>
+    <a href="https://tesiunam.dgb.unam.mx" style="display:flex; align-items:center; justify-content:space-between; gap:18px; text-decoration:none; color:inherit; border:1px solid oklch(0.88 0.012 235); border-left:3px solid oklch(0.46 0.15 248); background:#fff; padding:16px 20px; margin-bottom:12px;">
+      <span style="font-family:'Source Serif 4',serif; font-size:17px;">TesiUNAM catalogue<span style="font-family:'Source Serif 4',serif; font-style:italic; font-size:14px; color:oklch(0.5 0.014 250); display:block; margin-top:3px;">Search "Javier Gómez Morales" in the "Palabra o frase" field.</span></span>
+      <span style="font-family:'IBM Plex Mono',monospace; font-size:12px; color:oklch(0.46 0.15 248);">open →</span>
+    </a>
+    <div style="display:flex; align-items:center; justify-content:space-between; gap:18px; border:1px dashed oklch(0.82 0.02 248); border-left:3px solid oklch(0.46 0.15 248); background:oklch(0.985 0.006 248); padding:16px 20px;">
+      <span style="font-family:'Source Serif 4',serif; font-size:17px; color:oklch(0.4 0.014 250);">ArXiv Thesis in English<span style="font-family:'Source Serif 4',serif; font-style:italic; font-size:14px; color:oklch(0.55 0.014 250); display:block; margin-top:3px;">An English version is in preparation.</span></span>
+      <span style="font-family:'IBM Plex Mono',monospace; font-size:11px; letter-spacing:0.06em; text-transform:uppercase; color:oklch(0.46 0.15 248); border:1px solid oklch(0.8 0.04 248); padding:4px 9px; white-space:nowrap;">coming soon</span>
+    </div>
+  </div>
+
+  <div style="display:flex; align-items:center; justify-content:space-between; padding:24px 56px; background:#fff; border-top:1px solid oklch(0.9 0.012 235); font-family:'IBM Plex Mono',monospace; font-size:12px; color:oklch(0.45 0.014 250);">
+    <span>japogm@ciencias.unam.mx</span>
+    <span style="display:flex; gap:18px;"><a href="https://x.com/Japogm" style="color:oklch(0.46 0.15 248); text-decoration:none;">x/Japogm</a><a href="https://www.instagram.com/Japogm" style="color:oklch(0.46 0.15 248); text-decoration:none;">ig/Japogm</a></span>
+  </div>
+
+</div>
+</x-dc>
 </body>
 </html>

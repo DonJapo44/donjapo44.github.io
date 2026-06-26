@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="../../support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,300;0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,300;1,6..72,400&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,500;0,8..60,600;1,8..60,400&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  body { margin: 0; background: oklch(0.965 0.008 235); }
+  * { box-sizing: border-box; }
+  mjx-container[display="true"] { margin: 0 !important; }
+  .eq { scrollbar-width: none; -ms-overflow-style: none; }
+  .eq::-webkit-scrollbar { display: none; }
+</style>
+<script>
+  window.MathJax = {
+    tex: { inlineMath: [['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+    svg: { fontCache: 'global' },
+    startup: { typeset: false }
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js" async></script>
+</helmet>
+
+<div style="max-width:820px; margin:0 auto; background:oklch(0.985 0.004 235); box-shadow:0 1px 3px rgba(0,0,0,.07), 0 12px 40px rgba(20,40,80,.06); color:oklch(0.22 0.014 250); min-height:100vh;">
+
+  <div style="display:flex; align-items:center; justify-content:space-between; padding:18px 56px; border-bottom:1px solid oklch(0.9 0.012 235); background:#fff; position:sticky; top:0; z-index:5;">
+    <a href="../../index.html" style="display:flex; align-items:center; gap:12px; text-decoration:none; color:inherit;">
+      <div style="width:27px; height:27px; border:1.5px solid oklch(0.46 0.15 248); display:flex; align-items:center; justify-content:center; font-family:'IBM Plex Mono',monospace; font-size:11px; font-weight:600; color:oklch(0.46 0.15 248);">J</div>
+      <div style="font-family:'IBM Plex Mono',monospace; font-size:12px; letter-spacing:0.06em; color:oklch(0.3 0.014 250);">Javier Gómez Morales</div>
+    </a>
+    <div style="display:flex; gap:24px; font-family:'IBM Plex Mono',monospace; font-size:12px; letter-spacing:0.04em; color:oklch(0.45 0.014 250);">
+      <a href="../../index.html" style="color:inherit; text-decoration:none;">home</a>
+      <a href="../../research.html" style="color:inherit; text-decoration:none;">research</a>
+      <a href="../../scientific-notes.html" style="color:oklch(0.46 0.15 248); text-decoration:none;">notes</a>
+      <a href="../../scenes-in-motion.html" style="color:inherit; text-decoration:none;">cinema</a>
+    </div>
+  </div>
+
+  <div style="padding:48px 56px 36px; background:linear-gradient(180deg, oklch(0.99 0.003 250), #fff); border-bottom:1px solid oklch(0.9 0.012 235);">
+    <a href="../../scientific-notes.html" style="font-family:'IBM Plex Mono',monospace; font-size:12px; letter-spacing:0.04em; color:oklch(0.5 0.1 198); text-decoration:none;">← Scientific Notes</a>
+    <div style="font-family:'IBM Plex Mono',monospace; font-size:11px; letter-spacing:0.16em; text-transform:uppercase; color:oklch(0.5 0.1 198); margin:24px 0 14px;">Landau · Classical Mechanics · Ch. 1</div>
+    <h1 style="font-family:'Source Serif 4',serif; font-weight:600; font-size:42px; line-height:1.08; letter-spacing:-0.015em; margin:0 0 16px;">The Equations of Motion</h1>
+    <div style="font-family:'IBM Plex Mono',monospace; font-size:12px; color:oklch(0.5 0.014 250);">March 5, 2026</div>
+  </div>
+
+  <div style="padding:40px 56px 52px;">
+    <p style="font-family:'Source Serif 4',serif; font-size:18px; line-height:1.8; text-align:justify; hyphens:auto; margin:0 0 18px; color:oklch(0.28 0.012 250);">A distinctive editorial choice of this book is that it opens with the Lagrangian formulation of mechanics, instead of introducing the subject through Newton's laws. In other words, dynamics is presented from the start as a variational problem: the equations of motion emerge as conditions on the action functional, rather than being postulated as force laws.</p>
+
+    <h2 style="font-family:'Source Serif 4',serif; font-weight:600; font-size:25px; margin:40px 0 16px; color:oklch(0.26 0.014 250); padding-bottom:8px; border-bottom:1px solid oklch(0.9 0.012 235);">First-order expansion (the "first variation")</h2>
+    <p style="font-family:'Source Serif 4',serif; font-size:18px; line-height:1.8; text-align:justify; hyphens:auto; margin:0 0 18px; color:oklch(0.28 0.012 250);">Consider a trajectory \(q(t)\) and a small deviation \(\delta q(t)\). The corresponding deviation of the velocity is \(\delta \dot{q}(t)=\frac{d}{dt}\delta q(t)\). A first-order multivariable Taylor expansion of the Lagrangian around \((q,\dot{q},t)\) gives</p>
+    <div class="eq" style="overflow:auto hidden; margin:22px 0; text-align:center;">$$ L\!\big(q+\delta q,\ \dot{q}+\delta \dot{q},\ t\big) = L(q,\dot{q},t) + \frac{\partial L}{\partial q}\,\delta q + \frac{\partial L}{\partial \dot{q}}\,\delta \dot{q} + \mathcal{O}\!\big((\delta q)^2\big). $$</div>
+    <p style="font-family:'Source Serif 4',serif; font-size:18px; line-height:1.8; text-align:justify; hyphens:auto; margin:0 0 18px; color:oklch(0.28 0.012 250);">Substituting into the action difference \(S[q+\delta q]-S[q]\) and keeping only terms linear in the deviation yields</p>
+    <div class="eq" style="overflow:auto hidden; margin:22px 0; text-align:center;">$$ S[q+\delta q]-S[q] = \int_{t_1}^{t_2} \left( \frac{\partial L}{\partial q}\,\delta q + \frac{\partial L}{\partial \dot{q}}\,\delta \dot{q} \right)\,dt + \mathcal{O}\!\big((\delta q)^2\big). $$</div>
+    <p style="font-family:'Source Serif 4',serif; font-size:18px; line-height:1.8; text-align:justify; hyphens:auto; margin:0 0 18px; color:oklch(0.28 0.012 250);"><strong style="font-weight:600;">Definition.</strong> The <em>first variation</em> \(\delta S\) is the linear part in \(\delta q\) and \(\delta \dot{q}\):</p>
+    <div class="eq" style="overflow:auto hidden; margin:22px 0; text-align:center;">$$ \delta S = \int_{t_1}^{t_2} \left( \frac{\partial L}{\partial q}\,\delta q + \frac{\partial L}{\partial \dot{q}}\,\delta \dot{q} \right)\,dt. $$</div>
+    <p style="font-family:'Source Serif 4',serif; font-size:18px; line-height:1.8; text-align:justify; hyphens:auto; margin:0; color:oklch(0.28 0.012 250);">Intuitively, if the change in the action were strictly proportional to the deviation, then changing the sign of the deviation would change the sign of the action's change. But a minimum cannot behave that way: a perturbation cannot make the action larger in one direction and smaller in the opposite direction. Therefore, at a minimum the linear contribution must vanish, i.e. \(\delta S=0\) at first order for all admissible variations.</p>
+
+    <h2 style="font-family:'Source Serif 4',serif; font-weight:600; font-size:25px; margin:40px 0 16px; color:oklch(0.26 0.014 250); padding-bottom:8px; border-bottom:1px solid oklch(0.9 0.012 235);">Integration by parts</h2>
+    <p style="font-family:'Source Serif 4',serif; font-size:18px; line-height:1.8; text-align:justify; hyphens:auto; margin:0 0 18px; color:oklch(0.28 0.012 250);">To proceed, focus on the second term in \(\delta S\). It has the form \(\int_{t_1}^{t_2} A(t)\,\frac{d}{dt}(\delta q)\,dt\). Applying integration by parts gives</p>
+    <div class="eq" style="overflow:auto hidden; margin:22px 0; text-align:center;">$$ \int_{t_1}^{t_2} A(t)\,\frac{d}{dt}\big(\delta q\big)\,dt = \Big[ A(t)\,\delta q(t) \Big]_{t_1}^{t_2} - \int_{t_1}^{t_2} \frac{dA}{dt}\,\delta q(t)\,dt. $$</div>
+    <p style="font-family:'Source Serif 4',serif; font-size:18px; line-height:1.8; text-align:justify; hyphens:auto; margin:0 0 18px; color:oklch(0.28 0.012 250);">In our case, \(A(t)=\frac{\partial L}{\partial \dot{q}}\). Hence</p>
+    <div class="eq" style="overflow:auto hidden; margin:22px 0; text-align:center;">$$ \int_{t_1}^{t_2} \frac{\partial L}{\partial \dot{q}}\, \frac{d}{dt}\big(\delta q\big)\,dt = \Big[ \frac{\partial L}{\partial \dot{q}}\,\delta q \Big]_{t_1}^{t_2} - \int_{t_1}^{t_2} \frac{d}{dt}\!\left(\frac{\partial L}{\partial \dot{q}}\right)\, \delta q\,dt. $$</div>
+    <p style="font-family:'Source Serif 4',serif; font-size:18px; line-height:1.8; text-align:justify; hyphens:auto; margin:0; color:oklch(0.28 0.012 250);">The boundary term vanishes because the variations are taken with fixed endpoints: \(\delta q(t_1)=\delta q(t_2)=0\). This condition expresses the idea that we compare paths that start and end at the same points in configuration space; only the intermediate shape of the path is allowed to vary. In that setting, \(\big[ \frac{\partial L}{\partial \dot{q}}\delta q \big]_{t_1}^{t_2}=0\).</p>
+
+    <h2 style="font-family:'Source Serif 4',serif; font-weight:600; font-size:25px; margin:40px 0 16px; color:oklch(0.26 0.014 250); padding-bottom:8px; border-bottom:1px solid oklch(0.9 0.012 235);">Inertial frames</h2>
+    <p style="font-family:'Source Serif 4',serif; font-size:18px; line-height:1.8; text-align:justify; hyphens:auto; margin:0 0 18px; color:oklch(0.28 0.012 250);">I particularly like how the book motivates the notion of an inertial frame through simple symmetry statements about space.</p>
+    <div style="border:1px solid oklch(0.86 0.03 245); border-left:3px solid oklch(0.46 0.15 248); background:oklch(0.975 0.018 245); padding:16px 20px; margin:0 0 14px;">
+      <div style="font-family:'Source Serif 4',serif; font-size:17px; line-height:1.6; color:oklch(0.28 0.012 250);"><strong style="font-weight:600; color:oklch(0.34 0.09 248);">Homogeneity.</strong> Space is homogeneous if there are no privileged points. Put differently: the laws of physics are the same here as one meter away, or at any other position in space.</div>
+    </div>
+    <div style="border:1px solid oklch(0.84 0.04 198); border-left:3px solid oklch(0.5 0.1 198); background:oklch(0.975 0.02 198); padding:16px 20px; margin:0;">
+      <div style="font-family:'Source Serif 4',serif; font-size:17px; line-height:1.6; color:oklch(0.28 0.012 250);"><strong style="font-weight:600; color:oklch(0.4 0.1 198);">Isotropy.</strong> Space is isotropic if all directions are equivalent. There are no privileged orientations.</div>
+    </div>
+  </div>
+
+  <a href="../../Notes/Landau%20Mechanics/ch2.html" style="display:flex; align-items:center; justify-content:space-between; gap:18px; text-decoration:none; color:inherit; margin:0 56px 48px; border:1px solid oklch(0.88 0.012 235); border-right:3px solid oklch(0.46 0.15 248); background:#fff; padding:20px 22px;">
+    <span>
+      <span style="font-family:'IBM Plex Mono',monospace; font-size:11px; letter-spacing:0.06em; text-transform:uppercase; color:oklch(0.5 0.014 250);">Next chapter</span>
+      <span style="display:block; font-family:'Source Serif 4',serif; font-weight:600; font-size:20px; margin-top:4px;">Chapter 2 · Conservation Laws</span>
+    </span>
+    <span style="font-family:'Newsreader',serif; font-size:26px; color:oklch(0.46 0.15 248);">→</span>
+  </a>
+
+  <div style="display:flex; align-items:center; justify-content:space-between; padding:24px 56px; background:#fff; border-top:1px solid oklch(0.9 0.012 235); font-family:'IBM Plex Mono',monospace; font-size:12px; color:oklch(0.45 0.014 250);">
+    <span>japogm@ciencias.unam.mx</span>
+    <span style="display:flex; gap:18px;"><a href="https://x.com/Japogm" style="color:oklch(0.46 0.15 248); text-decoration:none;">x/Japogm</a><a href="https://www.instagram.com/Japogm" style="color:oklch(0.46 0.15 248); text-decoration:none;">ig/Japogm</a></span>
+  </div>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  componentDidMount() {
+    const go = (n) => {
+      if (window.MathJax && window.MathJax.typesetPromise) {
+        window.MathJax.typesetPromise();
+      } else if (n < 50) {
+        setTimeout(() => go(n + 1), 150);
+      }
+    };
+    go(0);
+  }
+}
+</script>
+</body>
+</html>

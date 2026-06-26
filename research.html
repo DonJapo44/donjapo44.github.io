@@ -1,147 +1,98 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Research by Javier Gómez Morales — quantitative finance and econophysics: correlation structure, eigenvalue methods, and market states.">
-  <title>Research | Javier Gómez Morales</title>
-
-  <!-- Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&family=Libre+Franklin:wght@400;500;600&display=swap" rel="stylesheet">
-
-  <!-- Icons -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-
-  <!-- Main stylesheet -->
-  <link rel="stylesheet" href="style.css">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="support.js"></script>
 </head>
-
 <body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,300;0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,300;1,6..72,400&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,500;0,8..60,600;1,8..60,400&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  body { margin: 0; background: oklch(0.965 0.008 235); }
+  * { box-sizing: border-box; }
+</style>
+</helmet>
 
-  <div class="container">
-    <div class="card">
+<div style="max-width:920px; margin:0 auto; background:oklch(0.985 0.004 235); box-shadow:0 1px 3px rgba(0,0,0,.07), 0 12px 40px rgba(20,40,80,.06); color:oklch(0.22 0.014 250); min-height:100vh;">
 
-      <!-- Top ribbon -->
-      <div class="ribbon">
-        <i class="fa-solid fa-chart-line" aria-hidden="true"></i>&nbsp;
-        Research · Quant Finance · Notes
-      </div>
-
-      <!-- Main content -->
-      <div class="content">
-
-        <h1>Research</h1>
-
-        <!-- Navigation -->
-        <nav class="topNav">
-          <a class="navItem" href="index.html">
-            <i class="fa-solid fa-house"></i>
-            <span>Home</span>
-          </a>
-
-          <a class="navItem" href="scientific-notes.html">
-            <i class="fa-solid fa-book-open"></i>
-            <span>Scientific Notes</span>
-          </a>
-
-          <a class="navItem" href="cinema.html">
-            <i class="fa-solid fa-film"></i>
-            <span>Film &amp; Series</span>
-          </a>
-        </nav>
-
-        <!-- Section: Academic Theses -->
-        <div class="section">
-          <h2><i class="fa-solid fa-graduation-cap section_icon" aria-hidden="true"></i> Academic Theses</h2>
-
-          <p>
-            This section serves as a public record of my thesis work and related research notes
-            in quantitative finance, with an emphasis on correlation structure and eigenvalue methods.
-          </p>
-
-          <div class="note">
-            <strong>Status:</strong> Working on my master's coursework and research thesis. Expected completion in 2028.
-          </div>
-
-          <ul>
-            <li class="thumb_list_item">
-              <span class="custom_bullet" aria-hidden="true">•</span>
-              <div class="title_with_thumb">
-                <img
-                  class="page_thumb"
-                  src="research/images/ClustersOrden_q40_k4_TransMatrix_Flat.png"
-                  alt="Thumbnail of transition matrix figure"
-                  loading="lazy">
-                <div>
-                  <strong>Undergraduate Thesis</strong> (February 2026).
-                  <a href="research/undergraduate-thesis.html">Thesis page</a>
-                </div>
-              </div>
-            </li>
-
-            <li class="thumb_list_item">
-              <span class="custom_bullet" aria-hidden="true">•</span>
-              <div>
-                <strong>Master&#8217;s Thesis</strong> <span class="meta" style="margin:0;">(coming 2028)</span>
-              </div>
-            </li>
-          </ul>
-        </div>
-
-        <!-- Section: Current Interests -->
-        <div class="section">
-          <h2><i class="fa-solid fa-magnifying-glass-chart section_icon" aria-hidden="true"></i> Current Interests</h2>
-          <ul class="tagList">
-            <li>Market states &amp; correlation structure</li>
-            <li>Eigenvalue &amp; eigenvector analysis</li>
-            <li>Clustering methods</li>
-            <li>Hidden Markov states</li>
-            <li>ML on financial return matrices</li>
-            <li>Measure-theoretic probability</li>
-          </ul>
-        </div>
-
-        <!-- Section: Conferences & Participation -->
-        <div class="section">
-          <h2><i class="fa-solid fa-users section_icon" aria-hidden="true"></i> Conferences &amp; Participation</h2>
-          <p class="meta">Coming soon — talks and participation will be listed here.</p>
-        </div>
-
-      </div>
-
-      <!-- Footer -->
-      <footer>
-
-        <div class="footerLine"></div>
-
-        <div class="footerSocial">
-          <a href="mailto:japogm@ciencias.unam.mx">
-            <i class="fa-solid fa-envelope"></i>
-            <span>japogm@ciencias.unam.mx</span>
-          </a>
-
-          <a href="https://x.com/Japogm" target="_blank" rel="noopener">
-            <i class="fa-brands fa-x-twitter"></i>
-            <span>@Japogm</span>
-          </a>
-
-          <a href="https://www.instagram.com/Japogm" target="_blank" rel="noopener">
-            <i class="fa-brands fa-instagram"></i>
-            <span>@Japogm</span>
-          </a>
-        </div>
-
-        <p class="footerCopy">
-          © <span id="year"></span> — Personal page
-        </p>
-
-      </footer>
-
+  <div style="display:flex; align-items:center; justify-content:space-between; padding:18px 52px; border-bottom:1px solid oklch(0.9 0.012 235); background:#fff; position:sticky; top:0; z-index:5;">
+    <a href="index.html" style="display:flex; align-items:center; gap:12px; text-decoration:none; color:inherit;">
+      <div style="width:27px; height:27px; border:1.5px solid oklch(0.46 0.15 248); display:flex; align-items:center; justify-content:center; font-family:'IBM Plex Mono',monospace; font-size:11px; font-weight:600; color:oklch(0.46 0.15 248);">J</div>
+      <div style="font-family:'IBM Plex Mono',monospace; font-size:12px; letter-spacing:0.06em; color:oklch(0.3 0.014 250);">Javier Gómez Morales</div>
+    </a>
+    <div style="display:flex; gap:24px; font-family:'IBM Plex Mono',monospace; font-size:12px; letter-spacing:0.04em; color:oklch(0.45 0.014 250);">
+      <a href="index.html" style="color:inherit; text-decoration:none;">home</a>
+      <a href="research.html" style="color:oklch(0.46 0.15 248); text-decoration:none;">research</a>
+      <a href="scientific-notes.html" style="color:inherit; text-decoration:none;">notes</a>
+      <a href="scenes-in-motion.html" style="color:inherit; text-decoration:none;">cinema</a>
     </div>
   </div>
 
-  <script src="year.js"></script>
+  <div style="padding:58px 52px 44px; background:linear-gradient(180deg, oklch(0.985 0.012 235), #fff); border-bottom:1px solid oklch(0.9 0.012 235);">
+    <div style="font-family:'IBM Plex Mono',monospace; font-size:11px; letter-spacing:0.1em; text-transform:uppercase; color:oklch(0.5 0.1 198); margin-bottom:18px;">Quant Finance · Correlation Structure · Eigenvalues</div>
+    <h1 style="font-family:'Source Serif 4',serif; font-weight:600; font-size:50px; line-height:1.04; letter-spacing:-0.015em; margin:0 0 18px;">Research</h1>
+    <p style="font-family:'Source Serif 4',serif; font-size:18px; line-height:1.68; max-width:640px; margin:0; color:oklch(0.3 0.012 250);">A public record of my thesis work and related research notes in quantitative finance, with an emphasis on correlation structure and eigenvalue methods.</p>
+  </div>
+
+  <div style="padding:44px 52px 8px;">
+    <div style="font-family:'IBM Plex Mono',monospace; font-size:11px; font-weight:600; letter-spacing:0.24em; text-transform:uppercase; color:oklch(0.46 0.15 248); margin-bottom:20px;">academic theses</div>
+
+    <div style="display:flex; align-items:center; gap:14px; background:oklch(0.96 0.018 198); border:1px solid oklch(0.78 0.06 198); border-left:3px solid oklch(0.5 0.1 198); padding:14px 18px; margin-bottom:26px;">
+      <span style="font-family:'IBM Plex Mono',monospace; font-size:10px; letter-spacing:0.08em; text-transform:uppercase; color:#fff; background:oklch(0.5 0.1 198); padding:3px 8px;">Status</span>
+      <span style="font-family:'Source Serif 4',serif; font-size:15px; color:oklch(0.3 0.02 198);">Working on master's coursework and research thesis. Expected completion in 2028.</span>
+    </div>
+
+    <a href="research/undergraduate-thesis.html" style="display:flex; gap:22px; align-items:stretch; text-decoration:none; color:inherit; border:1px solid oklch(0.88 0.012 235); border-top:2px solid oklch(0.46 0.15 248); background:#fff; padding:18px; margin-bottom:14px;">
+      <div style="width:150px; flex-shrink:0; border:1px solid oklch(0.9 0.012 235); background:oklch(0.97 0.006 235); overflow:hidden; display:flex; align-items:center; justify-content:center;">
+        <img src="images/ClustersOrden_q40_k4_TransMatrix_Flat.png" alt="Transition matrix figure" style="width:100%; height:100%; object-fit:cover; display:block;">
+      </div>
+      <div style="flex:1; display:flex; flex-direction:column; justify-content:center;">
+        <div style="font-family:'IBM Plex Mono',monospace; font-size:11px; letter-spacing:0.06em; text-transform:uppercase; color:oklch(0.5 0.1 198); margin-bottom:8px;">February 2026</div>
+        <div style="font-family:'Source Serif 4',serif; font-weight:600; font-size:24px; margin-bottom:6px;">Undergraduate Thesis</div>
+        <div style="font-family:'Source Serif 4',serif; font-size:15px; line-height:1.55; color:oklch(0.5 0.014 250);">Clustering of eigenvalues and eigenvectors in financial correlation matrices.</div>
+        <div style="font-family:'IBM Plex Mono',monospace; font-size:12px; color:oklch(0.46 0.15 248); margin-top:12px;">thesis page →</div>
+      </div>
+    </a>
+
+    <div style="display:flex; gap:22px; align-items:center; border:1px dashed oklch(0.84 0.012 235); background:oklch(0.975 0.005 235); padding:18px; margin-bottom:8px;">
+      <div style="width:150px; flex-shrink:0; aspect-ratio:1/0.7; background:repeating-linear-gradient(135deg, oklch(0.94 0.012 235), oklch(0.94 0.012 235) 8px, oklch(0.91 0.016 235) 8px, oklch(0.91 0.016 235) 16px); display:flex; align-items:center; justify-content:center;">
+        <span style="font-family:'IBM Plex Mono',monospace; font-size:10px; color:oklch(0.55 0.014 250);">2028</span>
+      </div>
+      <div style="flex:1;">
+        <div style="font-family:'IBM Plex Mono',monospace; font-size:11px; letter-spacing:0.06em; text-transform:uppercase; color:oklch(0.55 0.014 250); margin-bottom:8px;">Coming 2028</div>
+        <div style="font-family:'Source Serif 4',serif; font-weight:600; font-size:24px; color:oklch(0.45 0.014 250);">Master's Thesis</div>
+        <div style="font-family:'Source Serif 4',serif; font-size:15px; line-height:1.55; color:oklch(0.55 0.014 250); margin-top:6px;">In progress — to be published upon completion.</div>
+      </div>
+    </div>
+  </div>
+
+  <div style="padding:42px 52px 8px;">
+    <div style="font-family:'IBM Plex Mono',monospace; font-size:11px; font-weight:600; letter-spacing:0.24em; text-transform:uppercase; color:oklch(0.46 0.15 248); margin-bottom:18px;">current interests</div>
+    <div style="display:grid; grid-template-columns:1fr 1fr; gap:10px;">
+      <div style="display:flex; align-items:center; gap:12px; border:1px solid oklch(0.88 0.012 235); background:#fff; padding:14px 16px;"><span style="font-family:'IBM Plex Mono',monospace; font-size:11px; color:oklch(0.5 0.1 198);">01</span><span style="font-family:'Source Serif 4',serif; font-size:16px;">Market states and correlation structure</span></div>
+      <div style="display:flex; align-items:center; gap:12px; border:1px solid oklch(0.88 0.012 235); background:#fff; padding:14px 16px;"><span style="font-family:'IBM Plex Mono',monospace; font-size:11px; color:oklch(0.5 0.1 198);">02</span><span style="font-family:'Source Serif 4',serif; font-size:16px;">Eigenvalue and eigenvector analysis</span></div>
+      <div style="display:flex; align-items:center; gap:12px; border:1px solid oklch(0.88 0.012 235); background:#fff; padding:14px 16px;"><span style="font-family:'IBM Plex Mono',monospace; font-size:11px; color:oklch(0.5 0.1 198);">03</span><span style="font-family:'Source Serif 4',serif; font-size:16px;">Clustering methods</span></div>
+      <div style="display:flex; align-items:center; gap:12px; border:1px solid oklch(0.88 0.012 235); background:#fff; padding:14px 16px;"><span style="font-family:'IBM Plex Mono',monospace; font-size:11px; color:oklch(0.5 0.1 198);">04</span><span style="font-family:'Source Serif 4',serif; font-size:16px;">Hidden Markov states</span></div>
+      <div style="display:flex; align-items:center; gap:12px; border:1px solid oklch(0.88 0.012 235); background:#fff; padding:14px 16px;"><span style="font-family:'IBM Plex Mono',monospace; font-size:11px; color:oklch(0.5 0.1 198);">05</span><span style="font-family:'Source Serif 4',serif; font-size:16px;">Machine learning on financial return matrices</span></div>
+      <div style="display:flex; align-items:center; gap:12px; border:1px solid oklch(0.88 0.012 235); background:#fff; padding:14px 16px;"><span style="font-family:'IBM Plex Mono',monospace; font-size:11px; color:oklch(0.5 0.1 198);">06</span><span style="font-family:'Source Serif 4',serif; font-size:16px;">Measure-theoretic probability</span></div>
+    </div>
+  </div>
+
+  <div style="padding:42px 52px 48px;">
+    <div style="font-family:'IBM Plex Mono',monospace; font-size:11px; font-weight:600; letter-spacing:0.24em; text-transform:uppercase; color:oklch(0.46 0.15 248); margin-bottom:16px;">conferences &amp; participation</div>
+    <div style="border:1px dashed oklch(0.84 0.012 235); background:oklch(0.975 0.005 235); padding:22px; font-family:'Source Serif 4',serif; font-style:italic; font-size:15px; color:oklch(0.55 0.014 250);">No conferences recorded yet — this section will grow as participation is added.</div>
+  </div>
+
+  <div style="display:flex; align-items:center; justify-content:space-between; padding:24px 52px; background:#fff; border-top:1px solid oklch(0.9 0.012 235); font-family:'IBM Plex Mono',monospace; font-size:12px; color:oklch(0.45 0.014 250);">
+    <span>japogm@ciencias.unam.mx</span>
+    <span style="display:flex; gap:18px;"><a href="https://x.com/Japogm" style="color:oklch(0.46 0.15 248); text-decoration:none;">x/Japogm</a><a href="https://www.instagram.com/Japogm" style="color:oklch(0.46 0.15 248); text-decoration:none;">ig/Japogm</a></span>
+  </div>
+
+</div>
+</x-dc>
 </body>
 </html>

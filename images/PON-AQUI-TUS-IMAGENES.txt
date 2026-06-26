@@ -1,0 +1,13 @@
+Coloca aqui TODAS tus imagenes (de research y de cine), con estos nombres exactos:
+
+  - AvgMats_q20_k4_cl1.png
+  - ClustersOrden_q40_k4_TransMatrix_Flat.png
+  - Jim-Jarmusch.jpg
+  - Mario-Galaxy-Movie.jpg
+  - Toad-Galaxy.jpg
+  - btas_perchance_to_dream.jpg
+  - carol.jpg
+  - hail-mary.png
+  - jervis.jpg
+  - pluribus.jpg
+  - song_sung_blue.png

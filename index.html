@@ -1,199 +1,135 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Javier Gómez Morales — Physics, econophysics, and applied mathematics for finance. Research, scientific notes, and film writing.">
-  <title>Javier Gómez Morales | Personal Page</title>
-
-  <!-- Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&family=Libre+Franklin:wght@400;500;600&family=Roboto:wght@300&display=swap" rel="stylesheet">
-
-  <!-- Font Awesome Icons -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-
-  <!-- Main stylesheet -->
-  <link rel="stylesheet" href="style.css">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="support.js"></script>
 </head>
-
 <body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,300;0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,300;1,6..72,400&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,500;0,8..60,600;1,8..60,400&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  body { margin: 0; background: oklch(0.965 0.008 235); }
+  * { box-sizing: border-box; }
+</style>
+</helmet>
 
-  <div class="container">
-    <div class="card">
+<div style="max-width:920px; margin:0 auto; padding:0; background:oklch(0.985 0.004 235); box-shadow:0 1px 3px rgba(0,0,0,.07), 0 12px 40px rgba(20,40,80,.06); color:oklch(0.22 0.014 250); min-height:100vh;">
 
-      <!-- Top ribbon -->
-      <div class="ribbon">
-        Quant Finance · Research · Scientific Notes · Scenes in Motion
-      </div>
+  <div style="display:flex; align-items:center; justify-content:space-between; padding:18px 52px; border-bottom:1px solid oklch(0.9 0.012 235); background:#fff; position:sticky; top:0; z-index:5;">
+    <div style="display:flex; align-items:center; gap:12px;">
+      <div style="width:27px; height:27px; border:1.5px solid oklch(0.46 0.15 248); display:flex; align-items:center; justify-content:center; font-family:'IBM Plex Mono',monospace; font-size:11px; font-weight:600; color:oklch(0.46 0.15 248);">J</div>
+      <div style="font-family:'IBM Plex Mono',monospace; font-size:12px; letter-spacing:0.06em; color:oklch(0.3 0.014 250);">Javier Gómez Morales</div>
+    </div>
+    <div style="display:flex; gap:24px; font-family:'IBM Plex Mono',monospace; font-size:12px; letter-spacing:0.04em; color:oklch(0.45 0.014 250);">
+      <a href="index.html" style="color:oklch(0.46 0.15 248); text-decoration:none;">home</a>
+      <a href="research.html" style="color:inherit; text-decoration:none;">research</a>
+      <a href="scientific-notes.html" style="color:inherit; text-decoration:none;">notes</a>
+      <a href="scenes-in-motion.html" style="color:inherit; text-decoration:none;">cinema</a>
+    </div>
+  </div>
 
-      <!-- Hero section -->
-      <div class="hero">
-        <div class="heroIdent">
-          <svg class="monogram" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 58 114" role="img" aria-label="JGM monogram">
-            <defs>
-              <linearGradient id="mgBg" x1="0" y1="0" x2="0" y2="1">
-                <stop offset="0%"   stop-color="#1e3a8a"/>
-                <stop offset="100%" stop-color="#0c3f49"/>
-              </linearGradient>
-            </defs>
-            <!-- Outer shape -->
-            <rect x="0.9" y="0.9" width="56.2" height="112.2" rx="9" ry="9"
-                  fill="url(#mgBg)" stroke="#14525e" stroke-width="2.8"/>
-            <!-- Inner border -->
-            <rect x="5" y="5" width="48" height="104" rx="5.5" ry="5.5"
-                  fill="none" stroke="#3a8a92" stroke-width="0.65"/>
-            <!-- Golden square ornaments at cardinal points of inner border -->
-            <rect x="27" y="3"   width="4" height="4" fill="#d4af37"/>
-            <rect x="27" y="107" width="4" height="4" fill="#d4af37"/>
-            <rect x="3"  y="55"  width="4" height="4" fill="#d4af37"/>
-            <rect x="51" y="55"  width="4" height="4" fill="#d4af37"/>
-            <!-- J -->
-            <text x="29" y="33"
-                  text-anchor="middle"
-                  font-family="Roboto, sans-serif"
-                  font-size="26" font-weight="300"
-                  fill="#f0f4ff">J</text>
-            <line x1="14" y1="42" x2="44" y2="42" stroke="#14525e" stroke-width="0.9"/>
-            <!-- G -->
-            <text x="29" y="66"
-                  text-anchor="middle"
-                  font-family="Roboto, sans-serif"
-                  font-size="26" font-weight="300"
-                  fill="#f0f4ff">G</text>
-            <line x1="14" y1="75" x2="44" y2="75" stroke="#14525e" stroke-width="0.9"/>
-            <!-- M -->
-            <text x="29" y="99"
-                  text-anchor="middle"
-                  font-family="Roboto, sans-serif"
-                  font-size="26" font-weight="300"
-                  fill="#f0f4ff">M</text>
-          </svg>
-          <div>
-            <h1 class="name">Javier Gómez Morales</h1>
-            <p class="subtitle">Physics · Econophysics · Applied Mathematics for Finance</p>
-          </div>
-        </div>
+  <div style="padding:62px 52px 46px; background:linear-gradient(180deg, oklch(0.985 0.012 235), #fff); border-bottom:1px solid oklch(0.9 0.012 235);">
+    <div style="display:flex; gap:10px; align-items:center; margin-bottom:24px;">
+      <span style="font-family:'IBM Plex Mono',monospace; font-size:11px; letter-spacing:0.1em; text-transform:uppercase; color:#fff; background:oklch(0.46 0.15 248); padding:4px 9px;">Econophysics</span>
+      <span style="font-family:'IBM Plex Mono',monospace; font-size:11px; letter-spacing:0.1em; text-transform:uppercase; color:oklch(0.5 0.1 198); border:1px solid oklch(0.6 0.1 198); padding:3px 9px;">Quant&nbsp;Finance</span>
+    </div>
+    <h1 style="font-family:'Source Serif 4',serif; font-weight:600; font-size:56px; line-height:1.03; letter-spacing:-0.015em; margin:0 0 20px;">Javier Gómez Morales</h1>
+    <p style="font-family:'IBM Plex Mono',monospace; font-size:14px; letter-spacing:0.02em; line-height:1.6; color:oklch(0.4 0.014 250); margin:0 0 30px;">Physics · Econophysics · Applied Mathematics for Finance</p>
+    <p style="font-family:'Source Serif 4',serif; font-size:18px; line-height:1.68; max-width:640px; margin:0; color:oklch(0.3 0.012 250);">My interests move between physics, mathematics, and financial markets understood as complex systems, with a special place in my heart for film. I earned my undergraduate degree in Physics from <span style="color:oklch(0.46 0.15 248);">UNAM</span>, where I am now pursuing a master's degree in Mathematics.</p>
+  </div>
 
-        <div class="introPlate">
-          <p>
-            My interests move between physics, mathematics, and financial markets understood as complex systems,
-            with a special place in my heart for film.
-          </p>
+  <div style="padding:32px 52px 38px; display:flex; gap:0; border-bottom:1px solid oklch(0.9 0.012 235);">
+    <div style="flex:1; padding-right:30px;">
+      <div style="font-family:'IBM Plex Mono',monospace; font-size:34px; font-weight:500; color:oklch(0.46 0.15 248); line-height:1;">{{ years }}<span style="font-size:16px;"> yrs</span></div>
+      <div style="font-family:'IBM Plex Mono',monospace; font-size:11px; letter-spacing:0.06em; text-transform:uppercase; color:oklch(0.5 0.014 250); margin-top:8px; line-height:1.5;">Tutoring high-school<br>students · since 2006</div>
+    </div>
+    <div style="flex:2.2; padding:0 30px; border-left:1px solid oklch(0.9 0.012 235);">
+      <div style="font-family:'Source Serif 4',serif; font-size:16px; line-height:1.62; color:oklch(0.32 0.012 250);">For over two decades I have tutored high-school students in Mathematics, Physics, Statistics, Probability, Chemistry, and Computer Science. My current focus is the clustering of <span style="color:oklch(0.5 0.1 198);">eigenvalues &amp; eigenvectors</span> and <span style="color:oklch(0.46 0.15 248);">Machine Learning</span> applied to financial return matrices.</div>
+    </div>
+  </div>
 
-          <p>
-            I earned my undergraduate degree in Physics from the National Autonomous University of Mexico (UNAM),
-            where I am now pursuing a master’s degree in Mathematics.
-          </p>
+  <div style="padding:44px 52px 14px;">
+    <div style="font-family:'IBM Plex Mono',monospace; font-size:11px; font-weight:600; letter-spacing:0.24em; text-transform:uppercase; color:oklch(0.46 0.15 248); margin-bottom:18px;">sections</div>
+    <div style="display:grid; grid-template-columns:1fr 1fr 1fr; gap:14px;">
 
-          <p>
-            Over the past twenty years, I have worked as a private tutor at the high-school level in Mathematics,
-            Physics, Statistics, Probability, Chemistry, and Computer Science. My current academic attention is focused
-            on clustering techniques for eigenvalues and eigenvectors, as well as the application of <em>Machine Learning</em>
-            models to financial data.
-          </p>
-        </div>
-      </div>
+      <a href="research.html" style="text-decoration:none; color:inherit; border:1px solid oklch(0.88 0.012 235); border-top:2px solid oklch(0.46 0.15 248); background:#fff; padding:22px 18px; display:flex; flex-direction:column; min-height:178px;">
+        <div style="font-family:'IBM Plex Mono',monospace; font-size:11px; color:oklch(0.5 0.1 198); margin-bottom:14px;">01</div>
+        <div style="font-family:'Source Serif 4',serif; font-weight:600; font-size:20px; margin-bottom:8px;">Research</div>
+        <div style="font-family:'Source Serif 4',serif; font-size:14px; line-height:1.5; color:oklch(0.5 0.014 250); flex:1;">Undergraduate thesis, conferences, and ongoing quant work.</div>
+        <div style="font-family:'IBM Plex Mono',monospace; font-size:12px; color:oklch(0.46 0.15 248); margin-top:12px;">open →</div>
+      </a>
 
-      <!-- Divider -->
-      <div class="homeDivider"></div>
+      <a href="scientific-notes.html" style="text-decoration:none; color:inherit; border:1px solid oklch(0.88 0.012 235); border-top:2px solid oklch(0.46 0.15 248); background:#fff; padding:22px 18px; display:flex; flex-direction:column; min-height:178px;">
+        <div style="font-family:'IBM Plex Mono',monospace; font-size:11px; color:oklch(0.5 0.1 198); margin-bottom:14px;">02</div>
+        <div style="font-family:'Source Serif 4',serif; font-weight:600; font-size:20px; margin-bottom:8px;">Scientific Notes</div>
+        <div style="font-family:'Source Serif 4',serif; font-size:14px; line-height:1.5; color:oklch(0.5 0.014 250); flex:1;">Reading notes on scientific texts. Starting with Landau's Mechanics.</div>
+        <div style="font-family:'IBM Plex Mono',monospace; font-size:12px; color:oklch(0.46 0.15 248); margin-top:12px;">open →</div>
+      </a>
 
-      <!-- Main navigation cards -->
-      <div class="linkGrid">
-
-        <a class="linkCard" href="research.html">
-          <div class="linkTitle">Research</div>
-          <p class="linkText">
-            Undergraduate thesis, conference activity, and ongoing work in
-            quantitative finance and econophysics.
-          </p>
-        </a>
-
-        <a class="linkCard" href="scientific-notes.html">
-          <div class="linkTitle">Scientific Notes</div>
-          <p class="linkText">
-            Reading notes and reflections on scientific texts.
-            Starting with Landau’s <em>Classical Mechanics</em>.
-          </p>
-        </a>
-
-        <a class="linkCard spanTwo" href="cinema.html">
-          <div class="linkTitle">Scenes in Motion</div>
-          <p class="linkText">
-            Observations on films and television series that linger in memory.
-            Notes from a fan’s perspective.
-          </p>
-        </a>
-
-      </div>
-
-      <!-- Divider -->
-      <div class="homeDivider"></div>
-
-      <div class="hero">
-        <figure class="videoFeature">
-          <div class="videoWrapper">
-            <iframe src="https://www.youtube.com/embed/6HJbMir1j_k?si=OR_dj-QnVPQP3Zc5"
-                    title="Whatever Works trailer"
-                    loading="lazy"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                    referrerpolicy="strict-origin-when-cross-origin"
-                    allowfullscreen></iframe>
-          </div>
-          <figcaption>
-            <strong>Whatever Works</strong> — Woody Allen, 2009.
-          </figcaption>
-        </figure>
-      </div>
-
-      <!-- Whitman poem -->
-      <div class="whitmanPoem">
-        <p class="whitmanTitle"><strong>When I Heard the Learn&#8217;d Astronomer</strong></p>
-        <p class="whitmanVerses">
-          When I heard the learn&#8217;d astronomer,<br>
-          When the proofs, the figures, were ranged in columns before me,<br>
-          When I was shown the charts and diagrams, to add, divide, and measure them,<br>
-          When I sitting heard the astronomer where he lectured with much applause in the lecture-room,<br>
-          How soon unaccountable I became tired and sick,<br>
-          Till rising and gliding out I wander&#8217;d off by myself,<br>
-          In the mystical moist night-air, and from time to time,<br>
-          Look&#8217;d up in perfect silence at the stars.
-        </p>
-        <p class="whitmanAttrib"><em>&#8212; Walt Whitman</em></p>
-      </div>
-
-      <!-- Footer -->
-      <footer>
-
-        <div class="footerLine"></div>
-
-        <div class="footerSocial">
-          <a href="mailto:japogm@ciencias.unam.mx">
-            <i class="fa-solid fa-envelope"></i>
-            <span>japogm@ciencias.unam.mx</span>
-          </a>
-
-          <a href="https://x.com/Japogm" target="_blank" rel="noopener">
-            <i class="fa-brands fa-x-twitter"></i>
-            <span>@Japogm</span>
-          </a>
-
-          <a href="https://www.instagram.com/Japogm" target="_blank" rel="noopener">
-            <i class="fa-brands fa-instagram"></i>
-            <span>@Japogm</span>
-          </a>
-        </div>
-
-        <p class="footerCopy">
-          © <span id="year"></span> — Personal page
-        </p>
-
-      </footer>
+      <a href="scenes-in-motion.html" style="text-decoration:none; color:inherit; border:1px solid oklch(0.88 0.012 235); border-top:2px solid oklch(0.46 0.15 248); background:#fff; padding:22px 18px; display:flex; flex-direction:column; min-height:178px;">
+        <div style="font-family:'IBM Plex Mono',monospace; font-size:11px; color:oklch(0.5 0.1 198); margin-bottom:14px;">03</div>
+        <div style="font-family:'Source Serif 4',serif; font-weight:600; font-size:20px; margin-bottom:8px;">Scenes in Motion</div>
+        <div style="font-family:'Source Serif 4',serif; font-size:14px; line-height:1.5; color:oklch(0.5 0.014 250); flex:1;">Notes on films and series that linger in memory.</div>
+        <div style="font-family:'IBM Plex Mono',monospace; font-size:12px; color:oklch(0.46 0.15 248); margin-top:12px;">open →</div>
+      </a>
 
     </div>
   </div>
 
-  <script src="year.js"></script>
+  <div style="padding:40px 52px 14px;">
+    <div style="display:flex; gap:20px; align-items:stretch;">
+      <div style="flex:1.4; border:1px solid oklch(0.88 0.012 235); background:#000; overflow:hidden; align-self:stretch;">
+        <div style="position:relative; width:100%; height:100%; min-height:158px; padding-top:56.25%;">
+          <iframe src="https://www.youtube-nocookie.com/embed/6HJbMir1j_k" title="Film clip — Now watching" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen="{{ true }}" style="position:absolute; inset:0; width:100%; height:100%; border:0; display:block;"></iframe>
+        </div>
+      </div>
+      <div style="flex:1; display:flex; flex-direction:column; justify-content:center;">
+        <div style="font-family:'IBM Plex Mono',monospace; font-size:11px; letter-spacing:0.1em; text-transform:uppercase; color:oklch(0.5 0.1 198); margin-bottom:8px;">Now watching</div>
+        <div style="font-family:'Source Serif 4',serif; font-weight:600; font-size:23px; margin-bottom:6px;">Whatever Works</div>
+        <div style="font-family:'Source Serif 4',serif; font-style:italic; font-size:15px; color:oklch(0.5 0.014 250);">Woody Allen, 2009</div>
+      </div>
+    </div>
+  </div>
+
+  <div style="padding:48px 52px; margin-top:30px; background:oklch(0.96 0.01 235); border-top:1px solid oklch(0.9 0.012 235);">
+    <div style="font-family:'IBM Plex Mono',monospace; font-size:11px; font-weight:600; letter-spacing:0.24em; text-transform:uppercase; color:oklch(0.46 0.15 248); margin-bottom:18px;">epigraph</div>
+    <div style="font-family:'Newsreader',serif; font-size:21px; color:oklch(0.36 0.06 248); margin-bottom:18px;">When I Heard the Learn'd Astronomer</div>
+    <div style="font-family:'Source Serif 4',serif; font-style:italic; font-size:17px; line-height:1.95; color:oklch(0.32 0.012 250); max-width:none; white-space:nowrap;">
+      When I heard the learn'd astronomer,<br>
+      When the proofs, the figures, were ranged in columns before me,<br>
+      When I was shown the charts and diagrams, to add, divide, and measure them,<br>
+      When I sitting heard the astronomer where he lectured with much applause in the lecture-room,<br>
+      How soon unaccountable I became tired and sick,<br>
+      Till rising and gliding out I wander'd off by myself,<br>
+      In the mystical moist night-air, and from time to time,<br>
+      Look'd up in perfect silence at the stars.
+    </div>
+    <div style="font-family:'IBM Plex Mono',monospace; font-size:12px; color:oklch(0.5 0.014 250); margin-top:18px;">— Walt Whitman</div>
+  </div>
+
+  <div style="display:flex; align-items:center; justify-content:space-between; padding:24px 52px; background:#fff; border-top:1px solid oklch(0.9 0.012 235); font-family:'IBM Plex Mono',monospace; font-size:12px; color:oklch(0.45 0.014 250);">
+    <span>japogm@ciencias.unam.mx</span>
+    <span style="display:flex; gap:18px;"><a href="https://x.com/Japogm" style="color:oklch(0.46 0.15 248); text-decoration:none;">x/Japogm</a><a href="https://www.instagram.com/Japogm" style="color:oklch(0.46 0.15 248); text-decoration:none;">ig/Japogm</a></span>
+  </div>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  renderVals() {
+    // Years tutoring high-school students, started June 2006.
+    // Auto-increments every summer (after the June 21 anniversary).
+    const now = new Date();
+    let years = now.getFullYear() - 2006;
+    const anniversary = new Date(now.getFullYear(), 5, 21); // June 21
+    if (now < anniversary) years -= 1;
+    return { years };
+  }
+}
+</script>
 </body>
 </html>

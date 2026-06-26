@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="../support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,300;0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,300;1,6..72,400&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,500;0,8..60,600;1,8..60,400&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  body { margin: 0; background: #07020a; }
+  * { box-sizing: border-box; }
+  @keyframes flick { 0%,96%,100%{opacity:1} 97%{opacity:.55} 98%{opacity:.9} }
+</style>
+</helmet>
+
+<div style="max-width:840px; margin:0 auto; background-color:oklch(0.24 0.045 340); background-image:repeating-linear-gradient(0deg, rgba(255,60,160,0.03) 0px, rgba(255,60,160,0.03) 1px, transparent 1px, transparent 4px); box-shadow:0 0 0 1px oklch(0.42 0.1 345), 0 0 60px rgba(255,40,150,0.12); color:oklch(0.94 0.018 345); min-height:100vh;">
+
+  <div style="display:flex; align-items:center; justify-content:space-between; padding:18px 56px; border-bottom:1px solid oklch(0.42 0.1 345); background:oklch(0.17 0.045 345); position:sticky; top:0; z-index:5;">
+    <a href="../index.html" style="display:flex; align-items:center; gap:12px; text-decoration:none; color:inherit;">
+      <div style="width:27px; height:27px; border:1.5px solid oklch(0.72 0.21 350); display:flex; align-items:center; justify-content:center; font-family:'IBM Plex Mono',monospace; font-size:11px; font-weight:600; color:oklch(0.8 0.2 350); box-shadow:0 0 10px rgba(255,45,150,0.5);">J</div>
+      <div style="font-family:'IBM Plex Mono',monospace; font-size:12px; letter-spacing:0.06em; color:oklch(0.88 0.03 345);">Javier Gómez Morales</div>
+    </a>
+    <div style="display:flex; gap:24px; font-family:'IBM Plex Mono',monospace; font-size:12px; letter-spacing:0.04em; color:oklch(0.72 0.06 345);">
+      <a href="../index.html" style="color:inherit; text-decoration:none;">home</a>
+      <a href="../research.html" style="color:inherit; text-decoration:none;">research</a>
+      <a href="../scientific-notes.html" style="color:inherit; text-decoration:none;">notes</a>
+      <a href="../scenes-in-motion.html" style="color:oklch(0.82 0.2 350); text-decoration:none; text-shadow:0 0 10px rgba(255,45,150,0.6);">cinema</a>
+    </div>
+  </div>
+
+  <div style="padding:44px 56px 30px; background:radial-gradient(120% 100% at 80% 0%, rgba(255,40,120,0.14), transparent 60%);">
+    <a href="../scenes-in-motion.html" style="font-family:'IBM Plex Mono',monospace; font-size:12px; letter-spacing:0.04em; color:oklch(0.74 0.18 25); text-decoration:none;">← Scenes in Motion</a>
+    <div style="font-family:'IBM Plex Mono',monospace; font-size:11px; letter-spacing:0.22em; text-transform:uppercase; color:oklch(0.74 0.18 25); margin:26px 0 16px;">Film · Jim Jarmusch · 2025</div>
+    <h1 style="font-family:'Source Serif 4',serif; font-weight:600; font-size:50px; line-height:1.05; letter-spacing:-0.015em; margin:0 0 22px; color:oklch(0.96 0.018 350); text-shadow:0 0 22px rgba(255,45,150,0.4), 0 0 2px rgba(255,90,170,0.8); animation:flick 7s infinite;">Father Mother Sister Brother</h1>
+    <div style="display:flex; align-items:center; gap:14px; flex-wrap:wrap; font-family:'IBM Plex Mono',monospace; font-size:12px; color:oklch(0.74 0.05 345);">
+      <span>April 14, 2026</span>
+      <span style="width:4px; height:4px; border-radius:50%; background:oklch(0.62 0.1 345);"></span>
+      <span style="border:1px solid oklch(0.62 0.24 22); color:oklch(0.8 0.2 25); padding:3px 9px; letter-spacing:0.06em; text-transform:uppercase;">⚠ Spoilers</span>
+    </div>
+  </div>
+
+  <div style="padding:0 56px;">
+    <div style="border:1px solid oklch(0.52 0.12 345); box-shadow:0 0 26px rgba(255,40,150,0.18); overflow:hidden; background:#000;">
+      <img src="../images/father.jpg" alt="Still from Father Mother Sister Brother" style="width:100%; height:auto; display:block;">
+    </div>
+    <div style="font-family:'Source Serif 4',serif; font-style:italic; font-size:14px; color:oklch(0.72 0.05 345); margin-top:12px;">Still from <em>Father Mother Sister Brother</em>. Image © IMDb.</div>
+  </div>
+
+  <div style="padding:40px 56px 52px;">
+    <p style="font-family:'Source Serif 4',serif; font-size:18px; line-height:1.8; text-align:justify; hyphens:auto; margin:0 0 22px; color:oklch(0.9 0.022 345);"><span style="float:left; font-family:'Newsreader',serif; font-size:62px; line-height:0.8; padding:8px 14px 0 0; color:oklch(0.84 0.11 200); text-shadow:0 0 14px rgba(90,210,255,0.38);">T</span>his movie offers insight into the complicated dynamics between parents and siblings. Father reveals himself as rather cool, without a running car, and is manipulative by sharing economic matters only with his son Jeff.</p>
+    <p style="font-family:'Source Serif 4',serif; font-size:18px; line-height:1.8; text-align:justify; hyphens:auto; margin:0 0 22px; color:oklch(0.9 0.022 345);">Jeff shows his empathy by bringing a box full of useful groceries and food, even putting thought into the special marinara sauce that already has the cheese incorporated. Father exploits his son's empathy in economic issues, even giving a fake dignified refusal of money.</p>
+    <p style="font-family:'Source Serif 4',serif; font-size:18px; line-height:1.8; text-align:justify; hyphens:auto; margin:0 0 22px; color:oklch(0.9 0.022 345);">Emily seems more analytical and questions childhood memories of their father, needing to make sense of his strange behavior. Emily and Father both know Jeff's emotions, and it is difficult for him to speak openly about his divorce.</p>
+    <p style="font-family:'Source Serif 4',serif; font-size:18px; line-height:1.8; text-align:justify; hyphens:auto; margin:0 0 22px; color:oklch(0.9 0.022 345);">Few directors have the magical ability to bring characters together over a cup of coffee and a cup of tea. We have seen this magic in Jarmusch's previous work such as <em>Coffee and Cigarettes</em>.</p>
+    <p style="font-family:'Source Serif 4',serif; font-size:18px; line-height:1.8; text-align:justify; hyphens:auto; margin:0 0 22px; color:oklch(0.9 0.022 345);">My favorite scene is the one where Mother brings the tea with beautiful china, together with scones, sandwiches, cakes, and pastries. Cate Blanchett's portrayal of an anxious character is flawless as she looks at herself in the mirror to assess whether her smile is good enough for this meeting with her mother.</p>
+    <p style="font-family:'Source Serif 4',serif; font-size:18px; line-height:1.8; text-align:justify; hyphens:auto; margin:0 0 22px; color:oklch(0.9 0.022 345);">Lilith probably knows that she does not meet her mother's standards and continuously lies about her partner, the Uber, and the Lexus. Probably a strict mother, the daughters are curious about their mother's intellectual work, yet that work does not seem to belong to the emotional language of this family.</p>
+    <p style="font-family:'Source Serif 4',serif; font-size:18px; line-height:1.8; text-align:justify; hyphens:auto; margin:0 0 22px; color:oklch(0.9 0.022 345);">The episode between Sister and Brother leaves us with the theme of loss, grieving over the death of a parent in an accident. Skye still deals with sadness, and her brother, who uses substances, becomes a strong vessel of remembrance from childhood. Their shared past returns through drawings from childhood and an ID full of mystery from California. How about some siblings where you have an intense connection because he or she is your twin? How would your memories of your parents change if you were deeply connected in that way?</p>
+    <p style="font-family:'Source Serif 4',serif; font-size:18px; line-height:1.8; text-align:justify; hyphens:auto; margin:0 0 22px; color:oklch(0.9 0.022 345);">The house where I grew up is filled with old books, notebooks, and memories from the past. I felt really connected when Skye asks what they are going to do with the storage full of stuff, because sometimes you simply cannot deal with those objects that force you to remember. All these stories deal with some type of mystery inherited from parents: emotional ambiguity, silences, documents, memories, and unresolved versions of the past.</p>
+    <p style="font-family:'Source Serif 4',serif; font-size:18px; line-height:1.8; text-align:justify; hyphens:auto; margin:0 0 22px; color:oklch(0.9 0.022 345);">This movie is sweet in a peculiar way. It shows that differences in age, affection, need, and distance make our relationships with our parents very unique. You are a child only once, and emotional patterns, secrets, fears, and trauma are formed with our parents. Adulthood and separation create that strange dynamic in which you were once vulnerable and later find yourself living with regrets, problems, unresolved tensions, and the question of whether your memories still mean what they once meant when you were a child.</p>
+    <p style="font-family:'Source Serif 4',serif; font-size:18px; line-height:1.8; text-align:justify; hyphens:auto; margin:0; color:oklch(0.9 0.022 345);">The film ties the three stories together with recurring details such as the Rolex watches and the British expression <strong style="font-weight:600; color:oklch(0.84 0.11 200);">Bob's your uncle</strong>. In the end, the movie made me reflect and, in an unexpected way, feel at ease with the family dynamics of other people.</p>
+  </div>
+
+  <div style="display:flex; align-items:center; justify-content:space-between; padding:24px 56px; background:oklch(0.17 0.045 345); border-top:1px solid oklch(0.42 0.1 345); font-family:'IBM Plex Mono',monospace; font-size:12px; color:oklch(0.72 0.06 345);">
+    <span>japogm@ciencias.unam.mx</span>
+    <span style="display:flex; gap:18px;"><a href="https://x.com/Japogm" style="color:oklch(0.82 0.2 350); text-decoration:none;">x/Japogm</a><a href="https://www.instagram.com/Japogm" style="color:oklch(0.82 0.2 350); text-decoration:none;">ig/Japogm</a></span>
+  </div>
+
+</div>
+</x-dc>
+</body>
+</html>

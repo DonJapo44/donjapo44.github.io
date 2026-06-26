@@ -1,0 +1,75 @@
+SITIO PERSONAL — JAVIER GÓMEZ MORALES
+=====================================
+
+Sitio listo para publicar en GitHub Pages, organizado en carpetas.
+Cada .html es una página autónoma. "support.js" (en la raíz) es el motor
+que las renderiza: se carga solo y únicamente necesita conexión a internet.
+
+ESTRUCTURA
+----------
+raíz del repo:
+  index.html ................. Portada (incluye el video de YouTube)
+  research.html .............. Research
+  scientific-notes.html ...... Scientific Notes
+  scenes-in-motion.html ...... Cine — películas y series (índice)
+  support.js ................. Motor de render (NO borrar, debe ir en la raíz)
+
+  images/ .................... UNA sola carpeta con TODAS las imágenes.
+
+  research/
+    undergraduate-thesis.html  Tesis de licenciatura
+
+  Notes/
+    Landau Mechanics/
+      ch1.html ............... Cap. 1 · The Equations of Motion
+      ch2.html ............... Cap. 2 · Conservation Laws
+
+  scenes-in-motion/
+    song-sung-blue.html
+    project-hail-mary.html
+    super-mario-galaxy-movie.html
+    perchance-to-dream.html
+    pluribus.html
+    father-mother-sister-brother.html
+
+IMÁGENES (colócalas TODAS dentro de images/ con estos nombres exactos)
+----------------------------------------------------------------------
+  AvgMats_q20_k4_cl1.png
+  ClustersOrden_q40_k4_TransMatrix_Flat.png
+  Jim-Jarmusch.jpg
+  Mario-Galaxy-Movie.jpg
+  Toad-Galaxy.jpg
+  btas_perchance_to_dream.jpg
+  carol.jpg
+  father.jpg
+  hail-mary.png
+  jervis.jpg
+  pluribus.jpg
+  song_sung_blue.png
+
+(Estas imágenes ya están en tu repo actual, repartidas entre
+ research/images/ y cinema/images/. Solo muévelas todas a la nueva
+ carpeta images/ y conserva los nombres.)
+
+CÓMO PUBLICAR EN GITHUB
+-----------------------
+Opción A — Web de GitHub (más fácil):
+  1. Guarda una copia de tu versión actual por seguridad.
+  2. En tu repo donjapo44.github.io, sube TODO respetando las carpetas
+     (index.html y support.js en la raíz; las subcarpetas tal cual).
+  3. Pon tus imágenes dentro de images/.
+  4. "Commit changes". En 1–2 min se publica en https://donjapo44.github.io
+
+Opción B — Terminal con Git:
+  git clone https://github.com/donjapo44/donjapo44.github.io.git
+  cd donjapo44.github.io
+  # copia aquí el contenido de esta carpeta, respetando subcarpetas
+  git add .
+  git commit -m "Subtitulos rediseñados (sin // ni guion)"
+  git push origin main
+
+NOTAS
+-----
+- Mantén index.html y support.js en la raíz del repo.
+- El video del Home se reproduce desde YouTube (necesita internet).
+- Los enlaces internos ya usan rutas relativas correctas; no toques el HTML.

@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="../../support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,300;0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,300;1,6..72,400&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,500;0,8..60,600;1,8..60,400&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  body { margin: 0; background: oklch(0.965 0.008 235); }
+  * { box-sizing: border-box; }
+  mjx-container[display="true"] { margin: 0 !important; }
+  .eq { scrollbar-width: none; -ms-overflow-style: none; }
+  .eq::-webkit-scrollbar { display: none; }
+</style>
+<script>
+  window.MathJax = {
+    tex: { inlineMath: [['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+    svg: { fontCache: 'global' },
+    startup: { typeset: false }
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js" async></script>
+</helmet>
+
+<div style="max-width:820px; margin:0 auto; background:oklch(0.985 0.004 235); box-shadow:0 1px 3px rgba(0,0,0,.07), 0 12px 40px rgba(20,40,80,.06); color:oklch(0.22 0.014 250); min-height:100vh;">
+
+  <div style="display:flex; align-items:center; justify-content:space-between; padding:18px 56px; border-bottom:1px solid oklch(0.9 0.012 235); background:#fff; position:sticky; top:0; z-index:5;">
+    <a href="../../index.html" style="display:flex; align-items:center; gap:12px; text-decoration:none; color:inherit;">
+      <div style="width:27px; height:27px; border:1.5px solid oklch(0.46 0.15 248); display:flex; align-items:center; justify-content:center; font-family:'IBM Plex Mono',monospace; font-size:11px; font-weight:600; color:oklch(0.46 0.15 248);">J</div>
+      <div style="font-family:'IBM Plex Mono',monospace; font-size:12px; letter-spacing:0.06em; color:oklch(0.3 0.014 250);">Javier Gómez Morales</div>
+    </a>
+    <div style="display:flex; gap:24px; font-family:'IBM Plex Mono',monospace; font-size:12px; letter-spacing:0.04em; color:oklch(0.45 0.014 250);">
+      <a href="../../index.html" style="color:inherit; text-decoration:none;">home</a>
+      <a href="../../research.html" style="color:inherit; text-decoration:none;">research</a>
+      <a href="../../scientific-notes.html" style="color:oklch(0.46 0.15 248); text-decoration:none;">notes</a>
+      <a href="../../scenes-in-motion.html" style="color:inherit; text-decoration:none;">cinema</a>
+    </div>
+  </div>
+
+  <div style="padding:48px 56px 36px; background:linear-gradient(180deg, oklch(0.99 0.003 250), #fff); border-bottom:1px solid oklch(0.9 0.012 235);">
+    <a href="../../scientific-notes.html" style="font-family:'IBM Plex Mono',monospace; font-size:12px; letter-spacing:0.04em; color:oklch(0.5 0.1 198); text-decoration:none;">← Scientific Notes</a>
+    <div style="font-family:'IBM Plex Mono',monospace; font-size:11px; letter-spacing:0.16em; text-transform:uppercase; color:oklch(0.5 0.1 198); margin:24px 0 14px;">Landau · Classical Mechanics · Ch. 2</div>
+    <h1 style="font-family:'Source Serif 4',serif; font-weight:600; font-size:42px; line-height:1.08; letter-spacing:-0.015em; margin:0 0 16px;">Conservation Laws</h1>
+    <div style="font-family:'IBM Plex Mono',monospace; font-size:12px; color:oklch(0.5 0.014 250);">March 15, 2026</div>
+  </div>
+
+  <div style="padding:40px 56px 52px;">
+    <p style="font-family:'Source Serif 4',serif; font-size:18px; line-height:1.8; text-align:justify; hyphens:auto; margin:0 0 18px; color:oklch(0.28 0.012 250);">One of the most eye-opening and intellectually satisfying aspects of this chapter is the way the conservation laws emerge directly from symmetry principles. It is quite elegant to see that <strong style="font-weight:600;">conservation of energy</strong> follows from the <em>homogeneity of time</em>, that <strong style="font-weight:600;">linear momentum</strong> follows as a conservation law from the <em>homogeneity of space</em>, and that <strong style="font-weight:600;">angular momentum</strong> follows as a conservation law from the <em>isotropy of space</em>. In this way, Landau presents the basic structure of mechanics not as a list of separate facts, but as a unified consequence of the symmetries of nature.</p>
+
+    <h2 style="font-family:'Source Serif 4',serif; font-weight:600; font-size:25px; margin:40px 0 16px; color:oklch(0.26 0.014 250); padding-bottom:8px; border-bottom:1px solid oklch(0.9 0.012 235);">Euler's theorem for homogeneous functions</h2>
+    <p style="font-family:'Source Serif 4',serif; font-size:18px; line-height:1.8; text-align:justify; hyphens:auto; margin:0 0 18px; color:oklch(0.28 0.012 250);">Before discussing conservation laws, it is useful to recall Euler's theorem for homogeneous functions. Let \(f(x_1,\dots,x_n)\) be a differentiable function homogeneous of degree \(k\), meaning that</p>
+    <div class="eq" style="overflow:auto hidden; margin:22px 0; text-align:center;">$$ f(\lambda x_1,\dots,\lambda x_n)=\lambda^k f(x_1,\dots,x_n). $$</div>
+    <p style="font-family:'Source Serif 4',serif; font-size:18px; line-height:1.8; text-align:justify; hyphens:auto; margin:0 0 18px; color:oklch(0.28 0.012 250);">Define the auxiliary one-variable function \(g(\lambda)=f(\lambda x_1,\dots,\lambda x_n)\). By homogeneity, this can also be written as \(g(\lambda)=\lambda^k f(x_1,\dots,x_n)\). Differentiating with respect to \(\lambda\) gives \(g'(\lambda)=k\lambda^{k-1}f\). On the other hand, applying the chain rule directly to \(g(\lambda)=f(\lambda x_1,\dots,\lambda x_n)\) gives</p>
+    <div class="eq" style="overflow:auto hidden; margin:22px 0; text-align:center;">$$ g'(\lambda) = \sum_{i=1}^n x_i\,\frac{\partial f}{\partial x_i}(\lambda x_1,\dots,\lambda x_n). $$</div>
+    <p style="font-family:'Source Serif 4',serif; font-size:18px; line-height:1.8; text-align:justify; hyphens:auto; margin:0 0 18px; color:oklch(0.28 0.012 250);">Since both expressions represent the same derivative, they must be equal. Evaluating at \(\lambda=1\) one arrives at Euler's theorem,</p>
+    <div class="eq" style="overflow:auto hidden; margin:22px 0; text-align:center;">$$ \sum_{i=1}^n x_i\,\frac{\partial f}{\partial x_i}=k f. $$</div>
+
+    <h2 style="font-family:'Source Serif 4',serif; font-weight:600; font-size:25px; margin:40px 0 16px; color:oklch(0.26 0.014 250); padding-bottom:8px; border-bottom:1px solid oklch(0.9 0.012 235);">Euler's theorem applied to the kinetic energy</h2>
+    <p style="font-family:'Source Serif 4',serif; font-size:18px; line-height:1.8; text-align:justify; hyphens:auto; margin:0 0 18px; color:oklch(0.28 0.012 250);">In mechanics, the kinetic energy \(T=T(\dot{q}_1,\dots,\dot{q}_n)\) is a homogeneous function of degree \(2\) in the generalized velocities. Therefore, by Euler's theorem,</p>
+    <div class="eq" style="overflow:auto hidden; margin:22px 0; text-align:center;">$$ \sum_i \dot{q}_i\,\frac{\partial T}{\partial \dot{q}_i}=2T. $$</div>
+
+    <h2 style="font-family:'Source Serif 4',serif; font-weight:600; font-size:25px; margin:40px 0 16px; color:oklch(0.26 0.014 250); padding-bottom:8px; border-bottom:1px solid oklch(0.9 0.012 235);">Momentum</h2>
+    <p style="font-family:'Source Serif 4',serif; font-size:18px; line-height:1.8; text-align:justify; hyphens:auto; margin:0 0 18px; color:oklch(0.28 0.012 250);">Consider an infinitesimal translation of the whole system, \(\mathbf{r}_a \to \mathbf{r}_a+\boldsymbol{\epsilon}\), so that each position changes by \(\delta \mathbf{r}_a=\boldsymbol{\epsilon}\). Since \(\boldsymbol{\epsilon}\) is constant, the velocities do not change: \(\delta \dot{\mathbf{r}}_a=0\). The first-order Taylor expansion of the Lagrangian then reduces to</p>
+    <div class="eq" style="overflow:auto hidden; margin:22px 0; text-align:center;">$$ \delta L = \sum_a \frac{\partial L}{\partial \mathbf{r}_a}\cdot \boldsymbol{\epsilon}. $$</div>
+    <p style="font-family:'Source Serif 4',serif; font-size:18px; line-height:1.8; text-align:justify; hyphens:auto; margin:0 0 18px; color:oklch(0.28 0.012 250);">If space is homogeneous, a global translation cannot change the physics, so \(\delta L=0\). Because \(\boldsymbol{\epsilon}\) is arbitrary, \(\sum_a \partial L/\partial \mathbf{r}_a=0\). Using the Lagrange equations to replace \(\partial L/\partial \mathbf{r}_a\) by a time derivative, one obtains</p>
+    <div class="eq" style="overflow:auto hidden; margin:22px 0; text-align:center;">$$ \frac{d}{dt}\left(\sum_a \frac{\partial L}{\partial \dot{\mathbf{r}}_a}\right)=0. $$</div>
+    <p style="font-family:'Source Serif 4',serif; font-size:18px; line-height:1.8; text-align:justify; hyphens:auto; margin:0 0 18px; color:oklch(0.28 0.012 250);">Thus the sum of the conjugate momenta is conserved. This quantity is the total linear momentum,</p>
+    <div class="eq" style="overflow:auto hidden; margin:22px 0; text-align:center;">$$ \mathbf{P} = \sum_a \mathbf{p}_a = \sum_a \frac{\partial L}{\partial \dot{\mathbf{r}}_a}. $$</div>
+
+    <h2 style="font-family:'Source Serif 4',serif; font-weight:600; font-size:25px; margin:40px 0 16px; color:oklch(0.26 0.014 250); padding-bottom:8px; border-bottom:1px solid oklch(0.9 0.012 235);">Angular momentum</h2>
+    <p style="font-family:'Source Serif 4',serif; font-size:18px; line-height:1.8; text-align:justify; hyphens:auto; margin:0 0 18px; color:oklch(0.28 0.012 250);">Consider an infinitesimal rotation by \(\delta \boldsymbol{\phi}\). The corresponding variations are \(\delta \mathbf{r}_a=\delta \boldsymbol{\phi}\times \mathbf{r}_a\) and \(\delta \mathbf{v}_a=\delta \boldsymbol{\phi}\times \mathbf{v}_a\). Using \(\mathbf{p}_a=\partial L/\partial \mathbf{v}_a\) and \(\partial L/\partial \mathbf{r}_a=\dot{\mathbf{p}}_a\), the first-order variation of the Lagrangian becomes</p>
+    <div class="eq" style="overflow:auto hidden; margin:22px 0; text-align:center;">$$ \delta L = \delta \boldsymbol{\phi}\cdot \sum_a \left( \mathbf{r}_a\times \dot{\mathbf{p}}_a + \mathbf{v}_a\times \mathbf{p}_a \right). $$</div>
+    <p style="font-family:'Source Serif 4',serif; font-size:18px; line-height:1.8; text-align:justify; hyphens:auto; margin:0 0 18px; color:oklch(0.28 0.012 250);">Recognizing the bracket as a total time derivative and imposing isotropy of space (\(\delta L=0\) for any rotation), one finds the conserved total angular momentum,</p>
+    <div class="eq" style="overflow:auto hidden; margin:22px 0; text-align:center;">$$ \mathbf{M} = \sum_a \mathbf{r}_a\times \mathbf{p}_a. $$</div>
+
+    <h2 style="font-family:'Source Serif 4',serif; font-weight:600; font-size:25px; margin:40px 0 16px; color:oklch(0.26 0.014 250); padding-bottom:8px; border-bottom:1px solid oklch(0.9 0.012 235);">Mechanical similarity</h2>
+    <p style="font-family:'Source Serif 4',serif; font-size:18px; line-height:1.8; text-align:justify; hyphens:auto; margin:0 0 18px; color:oklch(0.28 0.012 250);">The mechanical-similarity relations begin by scaling the trajectory and time as \(\mathbf{r}'=\alpha \mathbf{r}\) and \(t'=\beta t\). The velocity then scales as \(\mathbf{v}'=(\alpha/\beta)\,\mathbf{v}\), so the kinetic energy scales as \((\alpha/\beta)^2 T\). If the potential is homogeneous of degree \(k\), i.e. \(U(\alpha \mathbf{r})=\alpha^k U(\mathbf{r})\), then matching the scaling of the kinetic and potential terms requires \((\alpha/\beta)^2=\alpha^k\), hence</p>
+    <div class="eq" style="overflow:auto hidden; margin:22px 0; text-align:center;">$$ \beta=\alpha^{\,1-k/2}. $$</div>
+    <p style="font-family:'Source Serif 4',serif; font-size:18px; line-height:1.8; text-align:justify; hyphens:auto; margin:0 0 18px; color:oklch(0.28 0.012 250);">Writing \(\alpha=l'/l\), the time, velocity, energy, and angular momentum transform as</p>
+    <div class="eq" style="overflow:auto hidden; margin:22px 0; text-align:center;">$$ \frac{t'}{t}=\left(\frac{l'}{l}\right)^{1-k/2},\quad \frac{v'}{v}=\left(\frac{l'}{l}\right)^{k/2},\quad \frac{E'}{E}=\left(\frac{l'}{l}\right)^{k},\quad \frac{M'}{M}=\left(\frac{l'}{l}\right)^{1+k/2}. $$</div>
+    <p style="font-family:'Source Serif 4',serif; font-size:18px; line-height:1.8; text-align:justify; hyphens:auto; margin:0; color:oklch(0.28 0.012 250);">These relations show how time, velocity, energy, and angular momentum must transform when the coordinates are rescaled in a system whose potential is a homogeneous function of degree \(k\).</p>
+  </div>
+
+  <a href="../../Notes/Landau%20Mechanics/ch1.html" style="display:flex; align-items:center; gap:18px; text-decoration:none; color:inherit; margin:0 56px 48px; border:1px solid oklch(0.88 0.012 235); border-left:3px solid oklch(0.46 0.15 248); background:#fff; padding:20px 22px;">
+    <span style="font-family:'Newsreader',serif; font-size:26px; color:oklch(0.46 0.15 248);">←</span>
+    <span>
+      <span style="font-family:'IBM Plex Mono',monospace; font-size:11px; letter-spacing:0.06em; text-transform:uppercase; color:oklch(0.5 0.014 250);">Previous chapter</span>
+      <span style="display:block; font-family:'Source Serif 4',serif; font-weight:600; font-size:20px; margin-top:4px;">Chapter 1 · The Equations of Motion</span>
+    </span>
+  </a>
+
+  <div style="display:flex; align-items:center; justify-content:space-between; padding:24px 56px; background:#fff; border-top:1px solid oklch(0.9 0.012 235); font-family:'IBM Plex Mono',monospace; font-size:12px; color:oklch(0.45 0.014 250);">
+    <span>japogm@ciencias.unam.mx</span>
+    <span style="display:flex; gap:18px;"><a href="https://x.com/Japogm" style="color:oklch(0.46 0.15 248); text-decoration:none;">x/Japogm</a><a href="https://www.instagram.com/Japogm" style="color:oklch(0.46 0.15 248); text-decoration:none;">ig/Japogm</a></span>
+  </div>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  componentDidMount() {
+    const go = (n) => {
+      if (window.MathJax && window.MathJax.typesetPromise) {
+        window.MathJax.typesetPromise();
+      } else if (n < 50) {
+        setTimeout(() => go(n + 1), 150);
+      }
+    };
+    go(0);
+  }
+}
+</script>
+</body>
+</html>
