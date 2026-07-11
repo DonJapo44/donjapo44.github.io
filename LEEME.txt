@@ -31,6 +31,7 @@ raíz del repo:
     perchance-to-dream.html
     pluribus.html
     father-mother-sister-brother.html
+    the-invite.html
 
 IMÁGENES (colócalas TODAS dentro de images/ con estos nombres exactos)
 ----------------------------------------------------------------------
@@ -46,6 +47,7 @@ IMÁGENES (colócalas TODAS dentro de images/ con estos nombres exactos)
   jervis.jpg
   pluribus.jpg
   song_sung_blue.png
+  olivia-invite.jpg
 
 (Estas imágenes ya están en tu repo actual, repartidas entre
  research/images/ y cinema/images/. Solo muévelas todas a la nueva
