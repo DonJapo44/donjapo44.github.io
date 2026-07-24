@@ -19,6 +19,12 @@
   .eq { scrollbar-width: none; -ms-overflow-style: none; overflow-x: auto; overflow-y: hidden; }
   .eq::-webkit-scrollbar { display: none; }
   .no-color-mode mjx-container, .no-color-mode mjx-container * { color: oklch(0.22 0.014 250) !important; }
+  .no-color-mode mjx-container svg g[fill]:not([fill="none"]),
+  .no-color-mode mjx-container svg rect[fill]:not([fill="none"]),
+  .no-color-mode mjx-container svg path[fill]:not([fill="none"]) { fill: oklch(0.22 0.014 250) !important; }
+  .no-color-mode mjx-container svg g[stroke]:not([stroke="none"]),
+  .no-color-mode mjx-container svg rect[stroke]:not([stroke="none"]),
+  .no-color-mode mjx-container svg path[stroke]:not([stroke="none"]) { stroke: oklch(0.22 0.014 250) !important; }
   .no-color-mode .legend-chip { background: oklch(0.55 0.014 250) !important; }
 </style>
 <script>
@@ -93,7 +99,7 @@
           <span style="display:flex; align-items:center; gap:8px;"><span class="legend-chip" style="width:13px; height:13px; border-radius:3px; background:#8A3FA0; display:inline-block; flex-shrink:0;"></span>azimuthal: \(\Ea{\varphi}\)</span>
         </div>
         <p style="font-family:'Source Serif 4',serif; font-size:12.5px; line-height:1.5; color:oklch(0.5 0.014 250); margin:0 0 12px;">A cool tone for the radial direction, a neutral one for the axis and a warm one for the azimuthal. Color is a reading aid; the reliable information is always the subscript.</p>
-        <button type="button" onclick="ntp1Toggle()" id="ntp1-btn" style="width:100%; font-family:'IBM Plex Mono',monospace; font-size:12px; color:oklch(0.32 0.014 250); background:oklch(0.965 0.008 235); border:1px solid oklch(0.85 0.012 235); padding:8px; cursor:pointer;">Hide colors</button>
+        <button type="button" id="ntp1-btn" style="width:100%; font-family:'IBM Plex Mono',monospace; font-size:12px; color:oklch(0.32 0.014 250); background:oklch(0.965 0.008 235); border:1px solid oklch(0.85 0.012 235); padding:8px; cursor:pointer;">Hide colors</button>
       </div>
     </aside>
 
@@ -109,7 +115,9 @@
 
       <h3 style="font-family:'Source Serif 4',serif; font-weight:600; font-size:15px; color:oklch(0.42 0.09 40); margin:22px 0 6px;">Cylindrical, worked step by step</h3>
       <div class="eq">$$\vec r(\rho,\varphi,z)=\big(\rho\cos\varphi,\;\rho\sin\varphi,\;z\big)$$</div>
-      <div class="eq">$$\Br{\rho}=\pd{\vec r}{\rho}=(\cos\varphi,\sin\varphi,0),\quad h_\rho=1 \qquad\quad \Ba{\varphi}=\pd{\vec r}{\varphi}=(-\rho\sin\varphi,\rho\cos\varphi,0),\quad h_\varphi=\rho \qquad\quad \Bt{z}=\pd{\vec r}{z}=(0,0,1),\quad h_z=1$$</div>
+      <div class="eq">$$\Br{\rho}=\pd{\vec r}{\rho}=(\cos\varphi,\sin\varphi,0),\ h_\rho=1$$</div>
+      <div class="eq">$$\Ba{\varphi}=\pd{\vec r}{\varphi}=(-\rho\sin\varphi,\rho\cos\varphi,0),\ h_\varphi=\rho$$</div>
+      <div class="eq">$$\Bt{z}=\pd{\vec r}{z}=(0,0,1),\ h_z=1$$</div>
       <div style="border-left:3px solid oklch(0.55 0.1 40); background:oklch(0.97 0.015 60); padding:12px 16px; margin:16px 0; font-family:'Source Serif 4',serif; font-size:14.5px; line-height:1.6; color:oklch(0.35 0.03 60);">The only factor different from 1 is \(h_\varphi=\rho\): turning by \(d\varphi\) sweeps an arc \(\rho\,d\varphi\), longer the farther you are from the axis. That same \(\rho\) resurfaces in the Jacobian and in the \(\rho\dot\varphi\) term of the velocity.</div>
       <div class="eq">$$\Er{\rho}=(\cos\varphi,\sin\varphi,0),\qquad \Ea{\varphi}=(-\sin\varphi,\cos\varphi,0),\qquad \Et{z}=(0,0,1)$$</div>
 
@@ -310,12 +318,14 @@
     }
   }
   typeset(0);
-  window.ntp1Toggle = function () {
+  document.addEventListener('click', function (ev) {
+    var btn = ev.target && ev.target.closest ? ev.target.closest('#ntp1-btn') : null;
+    if (!btn) return;
     var root = document.getElementById('ntp1-root');
-    var btn = document.getElementById('ntp1-btn');
+    if (!root) return;
     var off = root.classList.toggle('no-color-mode');
     btn.textContent = off ? 'Show colors' : 'Hide colors';
-  };
+  });
 })();
 </script>
 </body>
