@@ -13,6 +13,8 @@ raíz del repo:
   scientific-notes.html ...... Scientific Notes
   scenes-in-motion.html ...... Cine — películas y series (índice)
   support.js ................. Motor de render (NO borrar, debe ir en la raíz)
+  theme.css .................. Modo oscuro compartido (NO borrar, va en la raíz)
+  theme.js ................... Interruptor luz/oscuro (NO borrar, va en la raíz)
 
   images/ .................... UNA sola carpeta con TODAS las imágenes.
 
@@ -72,6 +74,8 @@ Opción B — Terminal con Git:
 
 NOTAS
 -----
-- Mantén index.html y support.js en la raíz del repo.
+- Mantén index.html, support.js, theme.css y theme.js en la raíz del repo.
+- El modo oscuro ahora vive en theme.css/theme.js (antes estaba copiado dentro
+  de cada página). Para cambiar colores del modo oscuro edita solo theme.css.
 - El video del Home se reproduce desde YouTube (necesita internet).
 - Los enlaces internos ya usan rutas relativas correctas; no toques el HTML.
