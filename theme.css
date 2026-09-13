@@ -1,4 +1,4 @@
-/* Shared theme (dark mode + toggle). Loaded for every page via <link>. */
+/* Shared theme (dark mode + toggle). Loaded by every page via <link>. */
 
 html.dark body { background: oklch(0.135 0.022 205) !important; }
   html.dark [style*="background:oklch(0.985 0.004 235)"],
