@@ -326,6 +326,13 @@
       <p style="font-family:'Source Serif 4',serif; font-size:17px; line-height:1.75; margin:0 0 10px; color:oklch(0.34 0.014 250);">\(A\) open + \(X\) càd + right-continuous filtration \(\Rightarrow\) stopping time.<br>\(A\) closed + \(X\) continuous \(\Rightarrow\) stopping time (no right-continuity of the filtration needed).</p>
     </div>
     <div style="padding:16px 18px; border:1px solid oklch(0.9 0.012 235); background:#fff;">
+      <div style="font-family:'IBM Plex Mono',monospace; font-size:12.5px; letter-spacing:0.02em; color:oklch(0.46 0.15 248); margin-bottom:8px;">Fourier transform (characteristic function)</div>
+      <p style="font-family:'Source Serif 4',serif; font-size:17px; line-height:1.75; margin:0 0 10px; color:oklch(0.34 0.014 250);">\(\varphi_X(\theta)=E\big(e^{i\theta\cdot X}\big)\), always defined, \(|\varphi_X|\le1\). It determines the law; \(X,Y\) independent \(\Leftrightarrow\varphi_{(X,Y)}(\theta,\eta)=\varphi_X(\theta)\varphi_Y(\eta)\); \(\varphi_{X_n}\to\varphi_X\) pointwise \(\Leftrightarrow X_n\Rightarrow X\) (Lévy continuity). For Brownian increments:</p>
+      <div class="eq" style="overflow:auto hidden; margin:14px 0; text-align:center;">$$ E\big(e^{i\theta(B_t-B_s)}\mid\mathcal F_s\big)=e^{-\theta^2(t-s)/2}. $$</div>
+      <p style="font-family:'Source Serif 4',serif; font-size:17px; line-height:1.75; margin:0 0 10px; color:oklch(0.34 0.014 250);">With \(\theta\to i\theta\) this is the exponential martingale; \(\mathcal E(i\theta M)\) is how Lévy’s characterization (§11) is proved.</p>
+      <p style="display:flex; gap:10px; align-items:baseline; font-family:'Source Serif 4',serif; font-size:15px; line-height:1.55; margin:6px 0 4px; padding:8px 12px; border:1px solid oklch(0.82 0.06 45); border-left:3px solid oklch(0.55 0.1 40); background:oklch(0.97 0.025 50); color:oklch(0.35 0.03 60);"><span style="font-family:'IBM Plex Mono',monospace; font-size:11px; font-weight:600; letter-spacing:0.08em; text-transform:uppercase; color:oklch(0.5 0.14 40); flex-shrink:0;">Pitfall</span><span>Moments need not determine the law; the Fourier transform always does.</span></p>
+    </div>
+    <div style="padding:16px 18px; border:1px solid oklch(0.9 0.012 235); background:#fff;">
       <div style="font-family:'IBM Plex Mono',monospace; font-size:12.5px; letter-spacing:0.02em; color:oklch(0.46 0.15 248); margin-bottom:8px;">Stopped process</div>
       <p style="font-family:'Source Serif 4',serif; font-size:17px; line-height:1.75; margin:0 0 10px; color:oklch(0.34 0.014 250);">\(X^T_t=X_{T\wedge t}\): the original path up to \(T\), constant afterwards.</p>
     </div>
@@ -466,6 +473,14 @@
         <a href="../images/brownian_martingales.png" target="_blank" rel="noopener" style="display:block;"><img src="../images/brownian_martingales.png" alt="Figure 3" style="width:100%; height:auto; display:block;"></a>
         <figcaption style="display:flex; flex-direction:column; gap:4px; margin-top:8px; font-family:'Source Serif 4',serif; font-size:13.5px; line-height:1.5; color:oklch(0.5 0.014 250);"><span><span style="font-family:'IBM Plex Mono',monospace; font-size:11.5px; color:oklch(0.46 0.15 248);">Fig. 3</span> \(B_t\), \(B_t^2-t\) and the exponential martingale: the average stays at the initial value.</span><a href="../images/brownian_martingales.png" target="_blank" rel="noopener" style="font-family:'IBM Plex Mono',monospace; font-size:11.5px; color:oklch(0.46 0.15 248);">open full size ↗</a></figcaption>
       </figure>
+    </div>
+    <div style="grid-column:1 / -1; padding:16px 18px; border:1px solid oklch(0.75 0.08 248); background:oklch(0.975 0.018 245);">
+      <div style="font-family:'IBM Plex Mono',monospace; font-size:12.5px; letter-spacing:0.02em; color:oklch(0.46 0.15 248); margin-bottom:8px; display:flex; justify-content:space-between; gap:10px; flex-wrap:wrap;"><span>Laplace transform of hitting times</span><span style="font-size:10.5px; font-weight:600; letter-spacing:0.08em; text-transform:uppercase; color:oklch(0.46 0.15 248);">★ must-know</span></div>
+      <p style="font-family:'Source Serif 4',serif; font-size:17px; line-height:1.75; margin:0 0 10px; color:oklch(0.34 0.014 250);">For \(X\ge0\), \(L_X(\lambda)=E(e^{-\lambda X})\), \(\lambda\ge0\), determines the law. Optional stopping on \(\exp\{\theta B_t-\tfrac{\theta^2}{2}t\}\) with \(\theta=\sqrt{2\lambda}\):</p>
+      <div class="eq" style="overflow:auto hidden; margin:14px 0; text-align:center;">$$ E\big(e^{-\lambda T_a}\big)=e^{-a\sqrt{2\lambda}},\qquad T_a=\inf\{t:B_t=a\}, $$</div>
+      <div class="eq" style="overflow:auto hidden; margin:14px 0; text-align:center;">$$ E\big(e^{-\lambda\tau}\big)=\frac{1}{\cosh(a\sqrt{2\lambda})},\qquad \tau=\inf\{t:|B_t|=a\}. $$</div>
+      <p style="font-family:'Source Serif 4',serif; font-size:17px; line-height:1.75; margin:0 0 10px; color:oklch(0.34 0.014 250);">Letting \(\lambda\downarrow0\): \(P(T_a\lt\infty)=1\); differentiating: \(E(T_a)=\infty\) but \(E(\tau)=a^2\).</p>
+      <p style="display:flex; gap:10px; align-items:baseline; font-family:'Source Serif 4',serif; font-size:15px; line-height:1.55; margin:6px 0 4px; padding:8px 12px; border:1px solid oklch(0.82 0.06 45); border-left:3px solid oklch(0.55 0.1 40); background:oklch(0.97 0.025 50); color:oklch(0.35 0.03 60);"><span style="font-family:'IBM Plex Mono',monospace; font-size:11px; font-weight:600; letter-spacing:0.08em; text-transform:uppercase; color:oklch(0.5 0.14 40); flex-shrink:0;">Pitfall</span><span>Stop at \(T_a\wedge t\) first: the stopped martingale is bounded by \(e^{\theta a}\) only for \(\theta,a>0\), and it tends to 0 on \(\{T_a=\infty\}\).</span></p>
     </div>
     </div>
 
