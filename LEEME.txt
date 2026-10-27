@@ -27,6 +27,7 @@ raíz del repo:
       ch2.html ............... Cap. 2 · Conservation Laws
 
   scenes-in-motion/
+    street-fighter.html
     song-sung-blue.html
     project-hail-mary.html
     super-mario-galaxy-movie.html
