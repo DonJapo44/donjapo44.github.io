@@ -27,6 +27,7 @@ raíz del repo:
       ch2.html ............... Cap. 2 · Conservation Laws
 
   scenes-in-motion/
+    clayface.html
     the-social-reckoning.html
     street-fighter.html
     song-sung-blue.html
